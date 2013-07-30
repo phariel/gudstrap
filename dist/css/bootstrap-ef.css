@@ -6333,6 +6333,10 @@ fieldset[disabled] .btn-info.active {
   border-bottom-width: 1px;
 }
 
+.navbar-brand {
+  font-size: 18px;
+}
+
 .pagination > li > a,
 .pagination > li > span {
   min-width: 30px;
@@ -6443,6 +6447,7 @@ fieldset[disabled] .btn-info.active {
 }
 
 .progress-bar {
+  padding-right: 5px;
   text-align: right;
   text-shadow: none;
   box-shadow: none;

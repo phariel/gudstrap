@@ -57,8 +57,38 @@
 .bs-example-submenu > .pull-left > .dropdown > .dropdown-menu {
 	position: relative;
 }
-.bs-top,
 .bs-example,
 .carbonad {
 	border-radius: 0;
 }
+
+/* Hide the top link initially */
+.bs-top {
+  display: none;
+}
+/* Tablets and up */
+@media screen and (min-width: 768px) {
+
+  /* Back to top link */
+  .bs-top {
+    display: block; /* Unhide */
+    float: left;
+    padding: 7px 15px;
+    font-weight: 500;
+    color: #999;
+    background-color: #eee;
+    border-radius: 0;
+  }
+  .bs-top:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #999;
+  }
+  .bs-top.affix {
+    position: fixed;
+    right:  15px;
+    bottom: 15px;
+  }
+  
+}
+
