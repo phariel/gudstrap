@@ -6447,6 +6447,7 @@ fieldset[disabled] .btn-info.active {
 }
 
 .progress-bar {
+  padding-right: 5px;
   text-align: right;
   text-shadow: none;
   box-shadow: none;
