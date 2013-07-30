@@ -7,9 +7,7 @@ module.exports = function(grunt) {
         // Metadata.
         pkg: grunt.file.readJSON('package.json'),
         banner: '/**\n' +
-                '* <%= pkg.name %>.js v<%= pkg.version %> by @fat and @mdo\n' +
-                '* Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
-                '* <%= _.pluck(pkg.licenses, "url").join(", ") %>\n' +
+                '* <%= pkg.name %>.js v<%= pkg.version %>, a fork of twitter bootstrap\n' +
                 '*/\n',
         jqueryCheck: 'if (!jQuery) { throw new Error(\"Bootstrap requires jQuery\") }\n\n',
         // Task configuration.
@@ -23,7 +21,7 @@ module.exports = function(grunt) {
             },
             bootstrap: {
                 src: ['js/transition.js', 'js/alert.js', 'js/button.js', 'js/carousel.js', 'js/collapse.js', 'js/dropdown.js', 'js/modal.js', 'js/tooltip.js', 'js/popover.js', 'js/scrollspy.js', 'js/tab.js', 'js/affix.js'],
-                dest: 'dist/js/<%= pkg.name %>.js'
+                dest: 'dist/js/bootstrap.js'
             }
         },
         jshint: {
@@ -66,7 +64,7 @@ module.exports = function(grunt) {
             },
             bootstrap: {
                 files: {
-                    'dist/js/<%= pkg.name %>.min.js': ['<%= concat.bootstrap.dest %>']
+                    'dist/js/bootstrap.min.js': ['<%= concat.bootstrap.dest %>']
                 }
             }
         },
