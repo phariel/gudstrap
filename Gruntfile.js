@@ -26,7 +26,6 @@ module.exports = function(grunt) {
         },
         jshint: {
             options: {
-                ignores: [],// HACK: workaround https://github.com/gruntjs/grunt-contrib-jshint/issues/86
                 jshintrc: 'js/.jshintrc'
             },
             gruntfile: {
