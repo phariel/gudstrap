@@ -1528,14 +1528,14 @@ textarea.form-control {
   margin-left: 10px;
 }
 
-.form-control.input-large {
+.input-large {
   height: 50px;
   padding: 15px 30px;
   font-size: 12px;
   border-radius: 0;
 }
 
-.form-control.input-small {
+.input-small {
   height: 30px;
   padding: 5px 10px;
   font-size: 12px;
@@ -1550,6 +1550,11 @@ select.input-large {
 select.input-small {
   height: 30px;
   line-height: 30px;
+}
+
+textarea.input-large,
+textarea.input-small {
+  height: auto;
 }
 
 .has-warning .help-block,
@@ -1770,6 +1775,11 @@ select.input-small {
   cursor: pointer;
   border: 1px solid transparent;
   border-radius: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+       -o-user-select: none;
+          user-select: none;
 }
 
 .btn:focus {
@@ -2194,11 +2204,16 @@ fieldset[disabled] .btn-link:focus {
   border-radius: 0;
 }
 
-.btn-small {
+.btn-small,
+.btn-mini {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
   border-radius: 0;
+}
+
+.btn-mini {
+  padding: 3px 5px;
 }
 
 .btn-block {
@@ -2582,7 +2597,6 @@ input[type="button"].btn-block {
 .list-group {
   padding-left: 0;
   margin-bottom: 20px;
-  background-color: #ffffff;
 }
 
 .list-group-item {
@@ -2590,6 +2604,7 @@ input[type="button"].btn-block {
   display: block;
   padding: 10px 30px 10px 15px;
   margin-bottom: -1px;
+  background-color: #ffffff;
   border: 1px solid #dddddd;
 }
 
@@ -2997,7 +3012,7 @@ button.close {
   float: none;
 }
 
-.nav-stacked > li + li > a {
+.nav-stacked > li + li {
   margin-top: 2px;
   margin-left: 0;
 }
@@ -3493,6 +3508,8 @@ button.close {
 
 .btn-group > .btn:hover,
 .btn-group-vertical > .btn:hover,
+.btn-group > .btn:focus,
+.btn-group-vertical > .btn:focus,
 .btn-group > .btn:active,
 .btn-group-vertical > .btn:active {
   z-index: 2;
