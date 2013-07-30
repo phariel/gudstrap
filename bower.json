@@ -1,5 +1,5 @@
 {
-  "name": "bootstrap",
+  "name": "bootstrap-ef",
   "version": "3.0.0",
   "main": ["./docs/assets/js/bootstrap.js", "./docs/assets/css/bootstrap.css"],
   "ignore": [

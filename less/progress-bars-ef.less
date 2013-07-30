@@ -1,0 +1,58 @@
+//
+// Progress bars
+// --------------------------------------------------
+
+
+// Bar animations
+// -------------------------
+
+// Webkit
+@-webkit-keyframes progress-bar-stripes {
+  from  { background-position: 36px 0; }
+  to    { background-position: 0 0; }
+}
+
+// Firefox
+@-moz-keyframes progress-bar-stripes {
+  from  { background-position: 36px 0; }
+  to    { background-position: 0 0; }
+}
+
+// IE9
+@-ms-keyframes progress-bar-stripes {
+  from  { background-position: 36px 0; }
+  to    { background-position: 0 0; }
+}
+
+// Opera
+@-o-keyframes progress-bar-stripes {
+  from  { background-position: 0 0; }
+  to    { background-position: 36px 0; }
+}
+
+// Spec
+@keyframes progress-bar-stripes {
+  from  { background-position: 36px 0; }
+  to    { background-position: 0 0; }
+}
+
+
+// Bar itself
+// -------------------------
+
+// Outer container
+.progress {
+  box-shadow: none;
+}
+
+// Bar of progress
+.progress-bar {
+  text-align: right;
+  text-shadow: none;
+  box-shadow: none;
+}
+
+// Striped bars
+.progress-striped .progress-bar {
+  .background-size(12px 12px);
+}

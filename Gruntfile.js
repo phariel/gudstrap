@@ -47,7 +47,8 @@ module.exports = function(grunt) {
             },
             bootstrap: {
                 files: {
-                    'dist/css/bootstrap.css': ['less/bootstrap.less']
+                    'dist/css/bootstrap.css': ['less/bootstrap.less'],
+                    'dist/css/bootstrap-ef.css': ['less/bootstrap-ef.less']
                 }
             },
             min: {
@@ -55,7 +56,8 @@ module.exports = function(grunt) {
                     compress: true
                 },
                 files: {
-                    'dist/css/bootstrap.min.css': ['less/bootstrap.less']
+                    'dist/css/bootstrap.min.css': ['less/bootstrap.less'],
+                    'dist/css/bootstrap-ef.min.css': ['less/bootstrap-ef.less']
                 }
             }
         },

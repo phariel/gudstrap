@@ -1,0 +1,112 @@
+//
+// Tables
+// --------------------------------------------------
+
+
+// Baseline styles
+// ---------------
+
+.table {
+  // Cells
+  thead,
+  tbody,
+  tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: @table-cell-padding-vertical @table-cell-padding-horizontal;
+      }
+      &:first-child{
+        > th,
+        > td {
+          border-top-color: @table-headborder-color;
+        }
+      }
+    }
+  }
+}
+
+// Condensed table w/ half padding
+// -------------------------------
+
+.table-condensed {
+  thead,
+  tbody,
+  tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: @table-condensed-cell-padding;
+      }
+    }
+  }
+}
+
+// Zebra-striping
+// --------------
+
+// Default zebra-stripe styles (alternating gray and transparent backgrounds)
+.table-striped {
+  > tbody {
+    > tr {
+      > td,
+      > th {
+        border-top-color: transparent;
+      }
+    }
+  }
+}
+
+// Hover effect
+// ------------
+
+// Placed here since it has to come after the potential zebra striping
+.table-hover {
+  > tbody {
+    > tr:hover {
+      > td,
+      > th {
+        border-top-color: transparent;
+      }
+    }
+  }
+}
+
+// Table backgrounds
+// -----------------
+// Exact selectors below required to override `.table-striped` and prevent
+// inheritance to nested tables.
+
+.table > thead > tr,
+.table > tbody > tr,
+.table > tfoot > tr {
+  > td.active,
+  > th.active,
+  &.active > td,
+  &.active > th  {
+    color: #fff;
+    border-top-color: transparent;
+    background-color: @table-bg-active;
+  }
+  > td.success,
+  > th.success,
+  &.success > td,
+  &.success > th {
+    color: #fff;
+    border-top-color: transparent;
+  }
+  > td.danger,
+  > th.danger,
+  &.danger > td,
+  &.danger > th {
+    color: #fff;
+    border-top-color: transparent;
+  }
+  > td.warning,
+  > th.warning,
+  &.warning > td,
+  &.warning > th {
+    color: #fff;
+    border-top-color: transparent;
+  }
+}

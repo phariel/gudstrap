@@ -1,0 +1,154 @@
+//
+// Forms
+// --------------------------------------------------
+
+// Common form controls
+//
+// Shared size and type resets for form controls. Apply `.form-control` to any
+// of the following form controls:
+//
+// select
+// textarea
+// input[type="text"]
+// input[type="password"]
+// input[type="datetime"]
+// input[type="datetime-local"]
+// input[type="date"]
+// input[type="month"]
+// input[type="time"]
+// input[type="week"]
+// input[type="number"]
+// input[type="email"]
+// input[type="url"]
+// input[type="search"]
+// input[type="tel"]
+// input[type="color"]
+
+.form-control
+{
+  .input-horizontal-padding(@padding-base-horizontal);
+  border-color: @brand-trivia;
+  color: @brand-trivia;
+  .placeholder(@brand-trivia-disable);
+  box-shadow: none;
+
+  &:hover {
+    border-color: @brand-trivia-hover;
+    color: @brand-trivia-hover;
+    .placeholder(@brand-trivia);
+  }
+
+  &:focus {
+    border-color: @brand-active;
+    color: @brand-active;
+    .box-shadow(none);
+    .placeholder(@brand-active-disable);
+  }
+
+  &[disabled],
+    fieldset[disabled] & {
+    border-color: @brand-trivia-disable;
+    color: @brand-trivia-disable;
+    background-color: @body-bg;
+    .placeholder(@brand-trivia-disable);
+    &:hover {
+    	border-color: @brand-trivia-disable;
+	    color: @brand-trivia-disable;
+	    background-color: @body-bg;
+	    .placeholder(@brand-trivia-disable);
+    }
+  }
+
+  select& {
+    -webkit-appearance: none;
+    color: contrast(@brand-default-hover);
+    border-color: @brand-default;
+    background: 
+        @brand-default 
+        url(data:image/gif;base64,R0lGODlhDwAFAIABAP///////yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2ODZCMkM1RkVGQTYxMUUyOEM4RDhFNDBENzBDRjMzRSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2ODZCMkM2MEVGQTYxMUUyOEM4RDhFNDBENzBDRjMzRSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjY4NkIyQzVERUZBNjExRTI4QzhEOEU0MEQ3MENGMzNFIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjY4NkIyQzVFRUZBNjExRTI4QzhEOEU0MEQ3MENGMzNFIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAQAAAQAsAAAAAA8ABQAAAg2Ef6EbmMwcnG9CYFcBADs=)
+        right center no-repeat;
+        ;
+
+    &:hover {
+    	color: contrast(@brand-default-hover);
+        border-color: @brand-default-hover; 
+        background-color: @brand-default-hover;
+    }
+
+    &:focus {
+        color: contrast(@brand-default-hover);
+        border-color: @brand-active; 
+        background-color: @brand-active;
+    }
+
+    &[multiple] {
+        background-image: none;
+    }
+
+    &[disabled],
+    fieldset[disabled] & {
+        color: @brand-default;
+        border-color: transparent;
+        background-color: @brand-default-disable;
+        &:hover {
+        	color: @brand-default;
+	        border-color: transparent;
+	        background-color: @brand-default-disable;
+        }
+    }
+  }
+}
+
+// Form control sizing
+//
+// Relative text size, padding, and border-radii changes for form controls. For
+// horizontal sizing, wrap controls in the predefined grid classes. `<select>`
+// element gets special love because it's special, and that's a fact!
+
+.form-control {
+  &.input-large {
+    .input-horizontal-padding(@padding-large-horizontal);
+  }
+  &.input-small {
+    .input-horizontal-padding(@padding-small-horizontal);
+  }
+  select& {
+	  &.input-large {
+	    line-height: @line-height-computed;
+	  }
+	  &.input-small {
+	    line-height: @line-height-computed;
+	  }
+	}
+}
+
+// Form control feedback states
+//
+// Apply contextual and semantic states to individual form controls.
+
+// Warning
+.has-warning {
+  .form-control-validation(@form-state-warning-text, @form-state-warning-text, @form-state-warning-bg);
+}
+// Error
+.has-error {
+  .form-control-validation(@form-state-danger-text, @form-state-danger-text, @form-state-danger-bg);
+}
+// Success
+.has-success {
+  .form-control-validation(@form-state-success-text, @form-state-success-text, @form-state-success-bg);
+}
+
+// Text input groups
+// -------------------------
+.input-group-addon {
+  padding: @padding-base-vertical - 1 @padding-base-horizontal;
+
+  &.input-small {
+    padding: @padding-small-vertical - 1 @padding-small-horizontal;
+  }
+  &.input-large {
+    padding: @padding-large-vertical - 1 @padding-large-horizontal;
+  }
+}
+

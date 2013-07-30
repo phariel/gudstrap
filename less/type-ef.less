@@ -1,0 +1,40 @@
+//
+// Typography
+// --------------------------------------------------
+
+
+// Body text
+// -------------------------
+
+.lead {
+	font-family: @font-family-serif;
+	font-style: italic;
+	font-size: @font-size-small * 1.5;
+	line-height: ceil(@font-size-base * 2.14); // ~30px;
+}
+.source {
+	text-transform: uppercase;
+}
+
+// Contextual emphasis
+.text-muted          { color: @text-muted; }
+.text-primary        { color: @brand-primary; }
+.text-warning        { color: @state-warning-bg; }
+.text-danger         { color: @state-danger-bg; }
+.text-success        { color: @state-success-bg; }
+.text-info           { color: @state-info-bg; }
+
+// Headings
+// -------------------------
+
+h1, h2, h3, h4,
+.h1, .h2, .h3, .h4 {
+	text-transform: uppercase;
+}
+
+h1, .h1 { font-size: ceil(@font-size-base * 2.70); } // ~38px
+h2, .h2 { font-size: ceil(@font-size-base * 1.85); } // ~26px
+h3, .h3 { font-size: ceil(@font-size-base * 1.57); } // ~22px
+h4, .h4 { font-size: ceil(@font-size-base * 1.25); } // ~18px
+h5, .h5 { font-size: ceil(@font-size-base * 1.14); } // ~16px
+
