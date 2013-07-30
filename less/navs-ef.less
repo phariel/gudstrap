@@ -1,0 +1,55 @@
+//
+// Navs
+// --------------------------------------------------
+
+
+// Nav variations
+// --------------------------------------------------
+
+// Tabs
+// -------------------------
+
+// Give the tabs something to sit on
+// 1. To keep nav height = 40px;
+// 2. Make sure all the active navs have "strict right angle"
+.nav-tabs {
+  > li {
+
+    // Actual tabs (as links)
+    > a {
+    	padding-top: 9px;
+        border-bottom-width: 0;
+    }
+
+    // Active state, and it's :hover to override normal :hover
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        border-bottom-width: 0;
+      }
+    }
+
+  }
+}
+
+
+// Pills
+// -------------------------
+.nav-pills {
+  > li {
+
+	    // Links rendered as pills
+	    > a {
+	      border-radius: @border-radius-base;
+	    }
+	}
+}
+
+// Move borders to anchors instead of bottom of list
+.nav-tabs-justified {
+  > li > a {
+    padding-bottom: 9px;
+    border-bottom-width: 1px;
+  }
+}

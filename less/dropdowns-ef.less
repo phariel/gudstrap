@@ -1,0 +1,98 @@
+//
+// Dropdown menus
+// --------------------------------------------------
+
+// The dropdown menu (ul)
+// ----------------------
+.dropdown-menu {
+  .box-shadow(none);
+  padding: 0;
+  margin: @padding-base-vertical * 2 0 0 0;
+  border: 0px solid transparent;
+
+  .divider {
+    margin: 0;
+  }
+
+  > li > a {
+    padding: @padding-base-vertical @padding-base-horizontal;
+  }
+}
+
+// Hover/Focus state
+// -----------
+.dropdown-menu > li > a {
+  text-decoration: none;
+  outline: 0;
+
+  &:hover {
+    color: @dropdown-link-hover-color;
+    background: @dropdown-link-hover-bg;
+  }
+
+  &:focus {
+    color: @dropdown-link-hover-color;
+    background: @brand-active;
+  }
+}
+
+// Active state
+// ------------
+.dropdown-menu > .active > a {
+  &,
+  &:hover,
+  &:focus {
+    color: @dropdown-link-hover-color;
+    background: @brand-active;
+  }
+}
+
+// Dropdown section headers
+// ---------------------------
+.dropdown-header {
+  padding: @padding-base-vertical @padding-base-horizontal;
+}
+
+// Dropdown Arrow
+// ---------------------------
+.dropdown-menu {
+  &:before {
+    content: "";
+    display: block;
+    box-sizing: content-box;
+    position: absolute;
+
+    bottom: 100%;
+    left: 10px;
+
+    heigth: 0;
+    width: 0;
+
+    font-size: 0;
+
+    border-top: none;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid @brand-default;
+  }
+  &.pull-right {
+    &:before {
+      left: auto;
+      right: 10px;
+    }
+  }
+
+  .dropup & {
+    margin: 0 0 @padding-base-vertical 0;
+    &:before
+    {
+      border-top: 8px solid @brand-default;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: none;
+
+      bottom: auto;
+      top: 100%;
+    }
+  }
+}

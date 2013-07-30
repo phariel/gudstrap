@@ -459,27 +459,27 @@ base_url: "../"
       <table class="table">
         <tbody>
           <tr>
-            <th><h1>Bootstrap heading</h1></th>
-            <td>Semibold 38px</td>
+            <th><h1>THE QUICK BROWN FOX</h1></th>
+            <td>Semibold 38px, text transform: UPPERCASE</td>
           </tr>
           <tr>
-            <th><h2>Bootstrap heading</h2></th>
-            <td>Semibold 32px</td>
+            <th><h2>THE QUICK BROWN FOX</h2></th>
+            <td>Semibold 26px, text transform: UPPERCASE</td>
           </tr>
           <tr>
-            <th><h3>Bootstrap heading</h3></th>
-            <td>Semibold 24px</td>
+            <th><h3>THE QUICK BROWN FOX</h3></th>
+            <td>Semibold 22px, text transform: UPPERCASE</td>
           </tr>
           <tr>
-            <th><h4>Bootstrap heading</h4></th>
-            <td>Semibold 18px</td>
+            <th><h4>THE QUICK BROWN FOX</h4></th>
+            <td>Semibold 18px, text transform: UPPERCASE</td>
           </tr>
           <tr>
-            <th><h5>Bootstrap heading</h5></th>
+            <th><h5>The quick brown fox</h5></th>
             <td>Semibold 16px</td>
           </tr>
           <tr>
-            <th><h6>Bootstrap heading</h6></th>
+            <th><h6>The quick brown fox</h6></th>
             <td>Semibold 12px</td>
           </tr>
         </tbody>
@@ -514,6 +514,16 @@ base_url: "../"
     </div>
 {% highlight html %}
 <p class="lead">...</p>
+{% endhighlight %}
+
+    <!-- Body copy .source -->
+    <h3>Source</h3>
+    <p>In conjunction with a lead body copy to describe the source of a quote by adding <code>.source</code>.</p>
+    <div class="bs-example">
+      <p class="source">- MAURICIO ESTRELLA, CHAOS DIRECTOR</p>
+    </div>
+{% highlight html %}
+<p class="source">...</p>
 {% endhighlight %}
 
     <!-- Using LESS -->
@@ -1043,6 +1053,46 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 </table>
 {% endhighlight %}
 
+    <h3 id="tables-hover-rows">Active rows</h3>
+    <p>Add <code>.active</code> to enable a active state on table rows within a <code>&lt;tbody&gt;</code>.</p>
+    <div class="bs-example">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr class="active">
+            <td>2</td>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+    </div><!-- /example -->
+{% highlight html %}
+<table class="table">
+  ...
+  <tr class="active"></tr>
+  ...
+</table>
+{% endhighlight %}
 
     <h3 id="tables-condensed">Condensed</h3>
     <p>Add <code>.table-condensed</code> to make tables more compact by cutting cell padding in half.</p>
@@ -1568,6 +1618,259 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 {% endhighlight %}
 
 
+    <h2 id="forms-input-groups">Input groups</h3>
+    <p>Add text or buttons before, after, or on both sides of any text-based input. Use <code>.input-group</code> with an <code>.add-on</code> to prepend or append elements to an <code>&lt;input&gt;</code>.</p>
+
+    <div class="bs-callout bs-callout-danger">
+      <h4>Cross-browser compatibility</h4>
+      <p>Avoid using <code>&lt;select&gt;</code> elements here as they cannot be fully styled in WebKit browsers.</p>
+    </div>
+    <div class="bs-callout bs-callout-info">
+      <h4>Tooltips &amp; popovers in input groups require special setting</h4>
+      <p>When using tooltips or popovers on elements within an <code>.input-group</code>, you'll have to specify the option <code>container: 'body'</code> to avoid unwanted side effects (such as the element growing wider and/or losing its rounded corners when the tooltip or popover is triggered).</p>
+    </div>
+
+    <form class="bs-example bs-example-form">
+      <div class="input-group">
+        <span class="input-group-addon">@</span>
+        <input type="text" class="form-control" placeholder="Username">
+      </div>
+      <br>
+      <div class="input-group">
+        <input type="text" class="form-control">
+        <span class="input-group-addon">.00</span>
+      </div>
+      <br>
+      <div class="input-group">
+        <span class="input-group-addon">$</span>
+        <input type="text" class="form-control">
+        <span class="input-group-addon">.00</span>
+      </div>
+    </form>
+{% highlight html %}
+<div class="input-group">
+  <span class="input-group-addon">@</span>
+  <input type="text" class="form-control" placeholder="Username">
+</div>
+
+<div class="input-group">
+  <input type="text" class="form-control">
+  <span class="input-group-addon">.00</span>
+</div>
+
+<div class="input-group">
+  <span class="input-group-addon">$</span>
+  <input type="text" class="form-control">
+  <span class="input-group-addon">.00</span>
+</div>
+{% endhighlight %}
+
+    <h3>Optional sizes</h3>
+    <p>Add the relative form sizing classes to the <code>.input-group-addon</code>.</p>
+    <form class="bs-example bs-example-form">
+      <div class="input-group">
+        <span class="input-group-addon input-large">@</span>
+        <input type="text" class="form-control input-large" placeholder="Username">
+      </div>
+      <br>
+      <div class="input-group">
+        <span class="input-group-addon">@</span>
+        <input type="text" class="form-control" placeholder="Username">
+      </div>
+      <br>
+      <div class="input-group">
+        <span class="input-group-addon input-small">@</span>
+        <input type="text" class="form-control input-small" placeholder="Username">
+      </div>
+    </form>
+{% highlight html %}
+<div class="input-group">
+  <span class="input-group-addon input-large">@</span>
+  <input type="text" class="form-control input-large" placeholder="Username">
+</div>
+
+<div class="input-group">
+  <span class="input-group-addon">@</span>
+  <input type="text" class="form-control" placeholder="Username">
+</div>
+
+<div class="input-group">
+  <span class="input-group-addon input-small">@</span>
+  <input type="text" class="form-control input-small" placeholder="Username">
+</div>
+{% endhighlight %}
+
+    <h3>Buttons instead of text</h3>
+    <p>Buttons in input groups are a bit different and require one extra level of nesting. Instead of <code>.input-group-addon</code>, you'll need to use <code>.input-group-btn</code> to wrap the buttons. This is required due to default browser styles that cannot be overridden.</p>
+    <form class="bs-example bs-example-form">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button">Go!</button>
+            </span>
+            <input type="text" class="form-control">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+        <div class="col-lg-6">
+          <div class="input-group">
+            <input type="text" class="form-control">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button">Go!</button>
+            </span>
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+    </form>
+{% highlight html %}
+<div class="row">
+  <div class="col-lg-6">
+    <div class="input-group">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Go!</button>
+      </span>
+      <input type="text" class="form-control">
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+  <div class="col-lg-6">
+    <div class="input-group">
+      <input type="text" class="form-control">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Go!</button>
+      </span>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+{% endhighlight %}
+
+    <h3>Button dropdowns</h3>
+    <p></p>
+    <form class="bs-example bs-example-form">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <div class="input-group-btn">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </div><!-- /btn-group -->
+            <input type="text" class="form-control">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+        <div class="col-lg-6">
+          <div class="input-group">
+            <input type="text" class="form-control">
+            <div class="input-group-btn">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </div><!-- /btn-group -->
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+    </form>
+{% highlight html %}
+<div class="row">
+  <div class="col-lg-6">
+    <div class="input-group">
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div><!-- /btn-group -->
+      <input type="text" class="form-control">
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+  <div class="col-lg-6">
+    <div class="input-group">
+      <input type="text" class="form-control">
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div><!-- /btn-group -->
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+{% endhighlight %}
+
+    <h3>Segmented dropdown groups</h3>
+    <form class="bs-example bs-example-form">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <div class="input-group-btn">
+              <button type="button" class="btn btn-default" tabindex="-1">Action</button>
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" tabindex="-1">
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </div>
+            <input type="text" class="form-control">
+          </div><!-- /.input-group -->
+        </div><!-- /.col-lg-6 -->
+        <div class="col-lg-6">
+          <div class="input-group">
+            <input type="text" class="form-control">
+            <div class="input-group-btn">
+              <button type="button" class="btn btn-default" tabindex="-1">Action</button>
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" tabindex="-1">
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu pull-right">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </div>
+          </div><!-- /.input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+    </form>
+{% highlight html %}
+<div class="input-group">
+  <div class="input-group-btn">
+    <!-- Button and dropdown menu -->
+  </div>
+  <input type="text" class="form-control">
+</div>
+
+<div class="input-group">
+  <input type="text" class="form-control">
+  <div class="input-group-btn btn-group">
+    <!-- Button and dropdown menu -->
+  </div>
+</div>
+{% endhighlight %}
+
     <h2 id="forms-control-sizes">Control sizing</h2>
     <p>Set heights using classes like <code>.input-large</code>, and set widths using grid column classes like <code>.col-lg-*</code>.</p>
 
@@ -1688,6 +1991,10 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
     <p>Fancy larger or smaller buttons? Add <code>.btn-large</code> or <code>.btn-small</code> for additional sizes.</p>
     <div class="bs-example">
       <p>
+        <button type="button" class="btn btn-primary btn-xlarge">XLarge button</button>
+        <button type="button" class="btn btn-default btn-xlarge">XLarge button</button>
+      </p>
+      <p>
         <button type="button" class="btn btn-primary btn-large">Large button</button>
         <button type="button" class="btn btn-default btn-large">Large button</button>
       </p>
@@ -1705,6 +2012,10 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
       </p>
     </div>
 {% highlight html %}
+<p>
+  <button type="button" class="btn btn-primary btn-xlarge">XLarge button</button>
+  <button type="button" class="btn btn-default btn-xlarge">XLarge button</button>
+</p>
 <p>
   <button type="button" class="btn btn-primary btn-large">Large button</button>
   <button type="button" class="btn btn-default btn-large">Large button</button>
@@ -1812,9 +2123,9 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
       <p>Keep in mind that Internet Explorer 8 lacks support for rounded corners.</p>
     </div>
     <div class="bs-example bs-example-images">
-      <img data-src="holder.js/140x140" class="img-rounded">
-      <img data-src="holder.js/140x140" class="img-circle">
-      <img data-src="holder.js/140x140" class="img-thumbnail">
+      <img data-src="holder.js/100x100" class="img-rounded">
+      <img data-src="holder.js/100x100" class="img-circle">
+      <img data-src="holder.js/100x100" class="img-thumbnail">
     </div>
 {% highlight html %}
 <img src="..." class="img-rounded">

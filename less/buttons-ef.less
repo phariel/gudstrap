@@ -1,0 +1,61 @@
+//
+// Buttons
+// --------------------------------------------------
+
+
+// Base styles
+// --------------------------------------------------
+
+// Core styles
+.btn {
+  border-width: 0;
+  font-weight: 400;
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    .opacity(@brand-variant-disable-computed);
+  }
+}
+
+// Alternate buttons
+// --------------------------------------------------
+
+.btn-default {
+  .btn-pseudo-states(@btn-default-color, @btn-default-bg, @btn-default-bg-hover);
+}
+.btn-primary {
+  .btn-pseudo-states(@btn-primary-color, @btn-primary-bg, @btn-primary-bg-hover);
+}
+// Warning appears as orange
+.btn-warning {
+  .btn-pseudo-states(@btn-warning-color, @btn-warning-bg, @btn-warning-bg-hover);
+}
+// Danger and error appear as red
+.btn-danger {
+  .btn-pseudo-states(@btn-danger-color, @btn-danger-bg, @btn-danger-bg-hover);
+}
+// Success appears as green
+.btn-success {
+  .btn-pseudo-states(@btn-success-color, @btn-success-bg, @btn-success-bg-hover);
+}
+// Info appears as blue-green
+.btn-info {
+  .btn-pseudo-states(@btn-info-color, @btn-info-bg, @btn-info-bg-hover);
+}
+
+// Button Sizes
+// --------------------------------------------------
+
+.btn-xlarge {
+  padding: @padding-xlarge-vertical @padding-xlarge-horizontal;
+  font-size: @font-size-xlarge;
+  line-height: @line-height-computed;
+  border-radius: @border-radius-xlarge;
+}
+.btn-large {
+  line-height: @line-height-computed;
+}
+.btn-small {
+  line-height: @line-height-computed;
+}
