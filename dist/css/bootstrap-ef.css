@@ -6354,6 +6354,14 @@ fieldset[disabled] .btn-info.active {
   font-size: 18px;
 }
 
+.btn-group .btn + .btn {
+  margin-left: 0;
+}
+
+.btn-group-vertical > .btn + .btn {
+  margin-top: 0;
+}
+
 .pagination > li > a,
 .pagination > li > span {
   min-width: 30px;
