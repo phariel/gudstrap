@@ -429,8 +429,8 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
   line-height: 1.1;
 }
 
@@ -5303,6 +5303,14 @@ td.visible-print {
   }
 }
 
+@font-face {
+  font-family: 'Helvetica Neue Bold Condensed';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/HelveticaNeueLTPro-BdCn.eot');
+  src: local('☺'), url('../fonts/HelveticaNeueLTPro-BdCn.eot?#iefix') format('embedded-opentype'), url('../fonts/HelveticaNeueLTPro-BdCn.woff') format('woff'), url('../fonts/HelveticaNeueLTPro-BdCn.otf') format('opentype'), url('../fonts/HelveticaNeueLTPro-BdCn.ttf') format('truetype'), url('../fonts/HelveticaNeueLTPro-BdCn.svg#HelveticaNeueLTPro-BdCn') format('svg');
+}
+
 .lead {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 18px;
@@ -5346,6 +5354,9 @@ h4,
 .h2,
 .h3,
 .h4 {
+  font-family: "Helvetica Neue Bold Condensed";
+  font-weight: 500;
+  line-height: 1.1;
   text-transform: uppercase;
 }
 
@@ -5371,6 +5382,11 @@ h4,
 
 h5,
 .h5 {
+  font-size: 14px;
+}
+
+h6,
+.h6 {
   font-size: 14px;
 }
 
