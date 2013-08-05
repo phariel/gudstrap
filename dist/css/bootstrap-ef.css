@@ -6592,6 +6592,37 @@ fieldset[disabled] .btn-info.active {
   background-size: 12px 12px;
 }
 
+.toggle-btn-group {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.toggle-btn-group > .btn {
+  position: relative;
+  float: left;
+}
+
+.toggle-btn-group > .btn:hover,
+.toggle-btn-group > .btn:focus,
+.toggle-btn-group > .btn:active,
+.toggle-btn-group > .btn.active {
+  z-index: 2;
+}
+
+.toggle-btn-group .btn {
+  padding: 0.34em 1em 0.25em;
+}
+
+.toggle-btn-group .active {
+  background-color: #00c3ed;
+}
+
+.toggle-btn-group-icons .btn {
+  padding: 0.22em 0.79em 0.07em;
+  font-size: 14px;
+}
+
 .clearfix:before,
 .clearfix:after {
   display: table;
