@@ -4648,7 +4648,6 @@ a.thumbnail:focus {
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
-  background-color: #999999;
   border-radius: .25em;
 }
 
@@ -4657,6 +4656,14 @@ a.thumbnail:focus {
   color: #ffffff;
   text-decoration: none;
   cursor: pointer;
+}
+
+.label-default {
+  background-color: #999999;
+}
+
+.label-default[href]:hover,
+.label-default[href]:focus {
   background-color: #808080;
 }
 
@@ -5636,7 +5643,8 @@ h6,
   padding-left: 10px;
   color: #cccccc;
   border-color: #cccccc;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .form-control:-moz-placeholder {
@@ -5790,21 +5798,21 @@ fieldset[disabled] select.form-control:hover {
   border-color: transparent;
 }
 
-.form-control.input-large {
+.form-control.input-lg {
   padding-right: 15px;
   padding-left: 15px;
 }
 
-.form-control.input-small {
+.form-control.input-sm {
   padding-right: 5px;
   padding-left: 5px;
 }
 
-select.form-control.input-large {
+select.form-control.input-lg {
   line-height: 20px;
 }
 
-select.form-control.input-small {
+select.form-control.input-sm {
   line-height: 20px;
 }
 
@@ -6007,17 +6015,23 @@ select.form-control.input-small {
   padding: 9px 20px;
 }
 
-.input-group-addon.input-small {
+.input-group-addon.input-sm {
   padding: 4px 10px;
 }
 
-.input-group-addon.input-large {
+.input-group-addon.input-lg {
   padding: 14px 30px;
 }
 
 .btn {
   font-weight: 400;
   border-width: 0;
+}
+
+.btn:active,
+.btn.active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .btn.disabled,
@@ -6381,18 +6395,18 @@ fieldset[disabled] .btn-info.active {
   background-color: #00c3ed;
 }
 
-.btn-xlarge {
+.btn-xl {
   padding: 20px 40px;
   font-size: 14px;
   line-height: 20px;
   border-radius: 0;
 }
 
-.btn-large {
+.btn-lg {
   line-height: 20px;
 }
 
-.btn-small {
+.btn-sm {
   line-height: 20px;
 }
 
@@ -6537,14 +6551,14 @@ fieldset[disabled] .btn-info.active {
   background-color: #00c3ed;
 }
 
-.pagination-large > li > a,
-.pagination-large > li > span {
+.pagination-lg > li > a,
+.pagination-lg > li > span {
   min-width: 50px;
   padding: 15px 0;
 }
 
-.pagination-small > li > a,
-.pagination-small > li > span {
+.pagination-sm > li > a,
+.pagination-sm > li > span {
   min-width: 20px;
   padding: 0 0;
 }
