@@ -564,68 +564,59 @@ dd {
   margin-left: 0;
 }
 
-.dl-horizontal dt {
-  float: left;
-  width: 160px;
-  overflow: hidden;
-  clear: left;
-  text-align: right;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.dl-horizontal dd {
-  margin-left: 180px;
-}
-
-.dl-horizontal dd:before,
-.dl-horizontal dd:after {
-  display: table;
-  content: " ";
-}
-
-.dl-horizontal dd:after {
-  clear: both;
-}
-
-.dl-horizontal dd:before,
-.dl-horizontal dd:after {
-  display: table;
-  content: " ";
-}
-
-.dl-horizontal dd:after {
-  clear: both;
-}
-
-.dl-horizontal dd:before,
-.dl-horizontal dd:after {
-  display: table;
-  content: " ";
-}
-
-.dl-horizontal dd:after {
-  clear: both;
-}
-
-.dl-horizontal dd:before,
-.dl-horizontal dd:after {
-  display: table;
-  content: " ";
-}
-
-.dl-horizontal dd:after {
-  clear: both;
-}
-
-.dl-horizontal dd:before,
-.dl-horizontal dd:after {
-  display: table;
-  content: " ";
-}
-
-.dl-horizontal dd:after {
-  clear: both;
+@media (min-width: 768px) {
+  .dl-horizontal dt {
+    float: left;
+    width: 160px;
+    overflow: hidden;
+    clear: left;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .dl-horizontal dd {
+    margin-left: 180px;
+  }
+  .dl-horizontal dd:before,
+  .dl-horizontal dd:after {
+    display: table;
+    content: " ";
+  }
+  .dl-horizontal dd:after {
+    clear: both;
+  }
+  .dl-horizontal dd:before,
+  .dl-horizontal dd:after {
+    display: table;
+    content: " ";
+  }
+  .dl-horizontal dd:after {
+    clear: both;
+  }
+  .dl-horizontal dd:before,
+  .dl-horizontal dd:after {
+    display: table;
+    content: " ";
+  }
+  .dl-horizontal dd:after {
+    clear: both;
+  }
+  .dl-horizontal dd:before,
+  .dl-horizontal dd:after {
+    display: table;
+    content: " ";
+  }
+  .dl-horizontal dd:after {
+    clear: both;
+  }
+  .dl-horizontal dd:before,
+  .dl-horizontal dd:after {
+    display: table;
+    content: " ";
+  }
+  .dl-horizontal dd:after {
+    clear: both;
+  }
 }
 
 abbr[title],
@@ -666,7 +657,6 @@ blockquote small:before {
 }
 
 blockquote.pull-right {
-  float: right;
   padding-right: 15px;
   padding-left: 0;
   border-right: 5px solid #eeeeee;
@@ -1853,6 +1843,11 @@ textarea.input-sm {
   border-color: #ffffff;
 }
 
+.form-control-static {
+  padding-top: 10px;
+  margin-bottom: 0;
+}
+
 .help-block {
   display: block;
   margin-top: 5px;
@@ -1868,14 +1863,21 @@ textarea.input-sm {
 
 .form-inline .radio,
 .form-inline .checkbox {
+  padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.form-inline .radio input[type="radio"],
+.form-inline .checkbox input[type="checkbox"] {
+  float: none;
+  margin-left: 0;
 }
 
 .form-horizontal .control-label,
 .form-horizontal .radio-inline,
 .form-horizontal .checkbox-inline {
-  padding-top: 9px;
+  padding-top: 10px;
 }
 
 .form-horizontal .form-group:before,
@@ -1951,7 +1953,7 @@ textarea.input-sm {
   padding: 10px 20px;
   margin-bottom: 0;
   font-size: 12px;
-  font-weight: 500;
+  font-weight: bold;
   line-height: 1.6666666667;
   text-align: center;
   white-space: nowrap;
@@ -2006,8 +2008,9 @@ fieldset[disabled] .btn {
 .btn-default:focus,
 .btn-default:active,
 .btn-default.active {
-  background-color: #3d3d3d;
-  border-color: #313131;
+  color: #ffffff;
+  background-color: #363636;
+  border-color: #2b2b2b;
 }
 
 .btn-default.disabled,
@@ -2064,8 +2067,9 @@ fieldset[disabled] .btn-default.active {
 .btn-primary:focus,
 .btn-primary:active,
 .btn-primary.active {
-  background-color: #d3007d;
-  border-color: #b9006e;
+  color: #ffffff;
+  background-color: #c30074;
+  border-color: #af0068;
 }
 
 .btn-primary.disabled,
@@ -2122,8 +2126,9 @@ fieldset[disabled] .btn-primary.active {
 .btn-warning:focus,
 .btn-warning:active,
 .btn-warning.active {
-  background-color: #e68200;
-  border-color: #cc7300;
+  color: #ffffff;
+  background-color: #d67900;
+  border-color: #c26d00;
 }
 
 .btn-warning.disabled,
@@ -2180,8 +2185,9 @@ fieldset[disabled] .btn-warning.active {
 .btn-danger:focus,
 .btn-danger:active,
 .btn-danger.active {
-  background-color: #e6004c;
-  border-color: #cc0043;
+  color: #ffffff;
+  background-color: #d60047;
+  border-color: #c20040;
 }
 
 .btn-danger.disabled,
@@ -2238,8 +2244,9 @@ fieldset[disabled] .btn-danger.active {
 .btn-success:focus,
 .btn-success:active,
 .btn-success.active {
-  background-color: #79b101;
-  border-color: #679701;
+  color: #ffffff;
+  background-color: #6ea101;
+  border-color: #608d01;
 }
 
 .btn-success.disabled,
@@ -2296,8 +2303,9 @@ fieldset[disabled] .btn-success.active {
 .btn-info:focus,
 .btn-info:active,
 .btn-info.active {
-  background-color: #00aed4;
-  border-color: #0099ba;
+  color: #ffffff;
+  background-color: #00a1c4;
+  border-color: #0091b0;
 }
 
 .btn-info.disabled,
@@ -2378,7 +2386,7 @@ fieldset[disabled] .btn-link {
 fieldset[disabled] .btn-link:hover,
 .btn-link[disabled]:focus,
 fieldset[disabled] .btn-link:focus {
-  color: #333333;
+  color: #999999;
   text-decoration: none;
 }
 
@@ -2484,27 +2492,22 @@ input[type="button"].btn-block {
   padding: 10px 20px;
   font-size: 12px;
   font-weight: normal;
-  line-height: 1.6666666667;
+  line-height: 1;
   text-align: center;
   background-color: #eeeeee;
   border: 1px solid #cccccc;
   border-radius: 0;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 .input-group-addon.input-sm {
   padding: 5px 10px;
   font-size: 12px;
-  line-height: 1.5;
   border-radius: 0;
 }
 
 .input-group-addon.input-lg {
   padding: 15px 30px;
   font-size: 12px;
-  line-height: 1.33;
   border-radius: 0;
 }
 
@@ -3031,10 +3034,6 @@ button.close {
   border-bottom-color: #ffffff;
 }
 
-.nav > .pull-right {
-  float: right;
-}
-
 .nav .nav-divider {
   height: 1px;
   margin: 9px 0;
@@ -3351,6 +3350,15 @@ button.close {
   margin-bottom: 0;
 }
 
+@media (max-width: 768px) {
+  .nav-collapse-scrollable {
+    max-height: 360px;
+    margin-bottom: 15px;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
 .navbar-brand {
   display: block;
   max-width: 200px;
@@ -3414,8 +3422,15 @@ button.close {
 
 .navbar-form .radio,
 .navbar-form .checkbox {
+  padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.navbar-form .radio input[type="radio"],
+.navbar-form .checkbox input[type="checkbox"] {
+  float: none;
+  margin-left: 0;
 }
 
 .navbar-nav > li > .dropdown-menu {
@@ -3558,7 +3573,6 @@ button.close {
     border-radius: 0;
   }
   .navbar-nav.pull-right {
-    float: right;
     width: auto;
   }
   .navbar-toggle {
@@ -3601,12 +3615,28 @@ button.close {
   color: #ffffff;
 }
 
-.btn .caret {
+.btn-default .caret {
   border-top-color: #ffffff;
 }
 
-.dropup .btn .caret {
+.btn-primary .caret,
+.btn-success .caret,
+.btn-warning .caret,
+.btn-danger .caret,
+.btn-info .caret {
+  border-top-color: #fff;
+}
+
+.btn-default .dropup .caret {
   border-bottom-color: #ffffff;
+}
+
+.btn-primary .dropup .caret,
+.btn-success .dropup .caret,
+.btn-warning .dropup .caret,
+.btn-danger .dropup .caret,
+.btn-info .dropup .caret {
+  border-bottom-color: #fff;
 }
 
 .btn-group,
@@ -3631,6 +3661,11 @@ button.close {
 .btn-group > .btn.active,
 .btn-group-vertical > .btn.active {
   z-index: 2;
+}
+
+.btn-group > .btn:focus,
+.btn-group-vertical > .btn:focus {
+  outline: none;
 }
 
 .btn-group .btn + .btn {
@@ -4720,15 +4755,6 @@ a.list-group-item.active > .badge,
   }
 }
 
-@-ms-keyframes progress-bar-stripes {
-  from {
-    background-position: 40px 0;
-  }
-  to {
-    background-position: 0 0;
-  }
-}
-
 @-o-keyframes progress-bar-stripes {
   from {
     background-position: 0 0;
@@ -5018,9 +5044,9 @@ a.list-group-item.active > .badge,
   bottom: 10px;
   left: 50%;
   z-index: 15;
-  width: 120px;
+  width: 60%;
   padding-left: 0;
-  margin-left: -60px;
+  margin-left: -30%;
   text-align: center;
   list-style: none;
 }
@@ -5130,11 +5156,11 @@ a.list-group-item.active > .badge,
 }
 
 .pull-right {
-  float: right;
+  float: right !important;
 }
 
 .pull-left {
-  float: left;
+  float: left !important;
 }
 
 .hide {
@@ -6011,8 +6037,9 @@ fieldset[disabled] .btn {
 .btn-default:focus,
 .btn-default:active,
 .btn-default.active {
-  background-color: #3d3d3d;
-  border-color: #515151;
+  color: #ffffff;
+  background-color: #363636;
+  border-color: #4b4b4b;
 }
 
 .btn-default.disabled,
@@ -6069,8 +6096,9 @@ fieldset[disabled] .btn-default.active {
 .btn-primary:focus,
 .btn-primary:active,
 .btn-primary.active {
-  background-color: #d3007d;
-  border-color: #d2017d;
+  color: #ffffff;
+  background-color: #c30074;
+  border-color: #c80177;
 }
 
 .btn-primary.disabled,
@@ -6127,8 +6155,9 @@ fieldset[disabled] .btn-primary.active {
 .btn-warning:focus,
 .btn-warning:active,
 .btn-warning.active {
-  background-color: #e68200;
-  border-color: #cc8b00;
+  color: #ffffff;
+  background-color: #d67900;
+  border-color: #c28400;
 }
 
 .btn-warning.disabled,
@@ -6185,8 +6214,9 @@ fieldset[disabled] .btn-warning.active {
 .btn-danger:focus,
 .btn-danger:active,
 .btn-danger.active {
-  background-color: #e6004c;
-  border-color: #ff0f42;
+  color: #ffffff;
+  background-color: #d60047;
+  border-color: #ff053a;
 }
 
 .btn-danger.disabled,
@@ -6243,8 +6273,9 @@ fieldset[disabled] .btn-danger.active {
 .btn-success:focus,
 .btn-success:active,
 .btn-success.active {
-  background-color: #79b101;
-  border-color: #79b200;
+  color: #ffffff;
+  background-color: #6ea101;
+  border-color: #72a800;
 }
 
 .btn-success.disabled,
@@ -6301,8 +6332,9 @@ fieldset[disabled] .btn-success.active {
 .btn-info:focus,
 .btn-info:active,
 .btn-info.active {
-  background-color: #00aed4;
-  border-color: #00a8cc;
+  color: #ffffff;
+  background-color: #00a1c4;
+  border-color: #00a0c2;
 }
 
 .btn-info.disabled,
@@ -6610,6 +6642,10 @@ fieldset[disabled] .btn-info.active {
   z-index: 2;
 }
 
+.toggle-btn-group > .btn:focus {
+  outline: none;
+}
+
 .toggle-btn-group .btn {
   padding: 0.34em 1em 0.25em;
 }
@@ -6644,11 +6680,11 @@ fieldset[disabled] .btn-info.active {
 }
 
 .pull-right {
-  float: right;
+  float: right !important;
 }
 
 .pull-left {
-  float: left;
+  float: left !important;
 }
 
 .hide {
