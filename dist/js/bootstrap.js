@@ -1980,3 +1980,19 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   })
 
 }(window.jQuery);
+
+/* ========================================================================
+* Bootstrap-ef: sdtoogle.js v1.0
+* For button group toggle of EF project only
+* ======================================================================== */
+
+(function($) {
+
+  $(function(){
+    $('.toggle-btn-group').on('click', '.btn', function(e){
+      $(this)
+        .addClass('active')
+        .siblings().removeClass('active')
+    })
+  })
+})(window.jQuery)
