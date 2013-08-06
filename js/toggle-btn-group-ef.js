@@ -3,7 +3,7 @@
 * For button group toggle of EF project only
 * ======================================================================== */
 
-(function($) {
+(function($) { "use strict";
 
   $(function(){
     $('.toggle-btn-group').on('click', '.btn', function(e){
