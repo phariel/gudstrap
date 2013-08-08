@@ -5523,8 +5523,8 @@ td.visible-print {
   font-family: 'Helvetica Neue Bold Condensed';
   font-style: normal;
   font-weight: normal;
-  src: url('../fonts/HelveticaNeueLTPro-BdCn.eot');
-  src: local('☺'), url('../fonts/HelveticaNeueLTPro-BdCn.eot?#iefix') format('embedded-opentype'), url('../fonts/HelveticaNeueLTPro-BdCn.woff') format('woff'), url('../fonts/HelveticaNeueLTPro-BdCn.otf') format('opentype'), url('../fonts/HelveticaNeueLTPro-BdCn.ttf') format('truetype'), url('../fonts/HelveticaNeueLTPro-BdCn.svg#HelveticaNeueLTPro-BdCn') format('svg');
+  src: url('../font/HelveticaNeueLTPro-BdCn.eot');
+  src: local('☺'), url('../font/HelveticaNeueLTPro-BdCn.eot?#iefix') format('embedded-opentype'), url('../font/HelveticaNeueLTPro-BdCn.woff') format('woff'), url('../font/HelveticaNeueLTPro-BdCn.otf') format('opentype'), url('../font/HelveticaNeueLTPro-BdCn.ttf') format('truetype'), url('../font/HelveticaNeueLTPro-BdCn.svg#HelveticaNeueLTPro-BdCn') format('svg');
 }
 
 /* FONT PATH
@@ -5534,8 +5534,8 @@ td.visible-print {
   font-family: 'FontAwesome';
   font-style: normal;
   font-weight: normal;
-  src: url('../fonts/fontawesome-webfont.eot?v=3.2.1');
-  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=3.2.1') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=3.2.1') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=3.2.1') format('truetype'), url('../fonts/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1') format('svg');
+  src: url('../font/fontawesome-webfont.eot?v=3.2.1');
+  src: url('../font/fontawesome-webfont.eot?#iefix&v=3.2.1') format('embedded-opentype'), url('../font/fontawesome-webfont.woff?v=3.2.1') format('woff'), url('../font/fontawesome-webfont.ttf?v=3.2.1') format('truetype'), url('../font/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1') format('svg');
 }
 
 /* FONT AWESOME CORE
