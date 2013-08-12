@@ -533,7 +533,7 @@ base_url: "../"
     </div>
 
     <h2 id="input-groups-basic">Basic input group</h2>
-    <form class="bs-example bs-example-form">
+    <form class="bs-example bs-example-form" role="form">
       <div class="input-group">
         <span class="input-group-addon">@</span>
         <input type="text" class="form-control" placeholder="Username">
@@ -570,7 +570,7 @@ base_url: "../"
 
     <h2 id="input-groups-sizes">Optional sizes</h2>
     <p>Add the relative form sizing classes to the <code>.input-group-addon</code>.</p>
-    <form class="bs-example bs-example-form">
+    <form class="bs-example bs-example-form" role="form">
       <div class="input-group">
         <span class="input-group-addon input-lg">@</span>
         <input type="text" class="form-control input-lg" placeholder="Username">
@@ -693,7 +693,7 @@ base_url: "../"
 
     <h2 id="input-groups-buttons-dropdowns">Buttons with dropdowns</h2>
     <p></p>
-    <form class="bs-example bs-example-form">
+    <form class="bs-example bs-example-form" role="form">
       <div class="row">
         <div class="col-lg-6">
           <div class="input-group">
@@ -763,7 +763,7 @@ base_url: "../"
 {% endhighlight %}
 
     <h2 id="input-groups-buttons-segmented">Segmented dropdown groups</h2>
-    <form class="bs-example bs-example-form">
+    <form class="bs-example bs-example-form" role="form">
       <div class="row">
         <div class="col-lg-6">
           <div class="input-group">
@@ -1084,14 +1084,14 @@ base_url: "../"
     <div class="bs-example">
 
       <nav class="navbar" role="navigation">
-        <form class="navbar-form pull-left">
+        <form class="navbar-form pull-left" role="form">
           <input type="text" class="form-control" style="width: 200px;">
           <button type="submit" class="btn btn-default">Submit</button>
         </form>
       </nav>
 
       <nav class="navbar" role="navigation">
-        <form class="navbar-form pull-left">
+        <form class="navbar-form pull-left" role="form">
           <select name="" id="" class="form-control" style="width: 200px;">
             <option value="1">1</option>
             <option value="2">2</option>
@@ -1103,7 +1103,7 @@ base_url: "../"
       </nav>
 
       <nav class="navbar" role="navigation">
-        <form class="navbar-form pull-left">
+        <form class="navbar-form pull-left" role="form">
           <input type="text" class="form-control" style="width: 200px;">
           <input type="checkbox">
           <button type="submit" class="btn btn-default">Submit</button>
@@ -1111,7 +1111,7 @@ base_url: "../"
       </nav>
 
       <nav class="navbar" role="navigation">
-        <form class="navbar-form pull-left">
+        <form class="navbar-form pull-left" role="form">
           <input type="text" class="form-control" style="width: 200px;">
           <label class="checkbox-inline">
             <input type="checkbox"> Remember me
@@ -1122,7 +1122,7 @@ base_url: "../"
 
     </div><!-- /example -->
 {% highlight html %}
-<form class="navbar-form pull-left">
+<form class="navbar-form pull-left" role="form">
   <input type="text" class="form-control" style="width: 200px;">
   <button type="submit" class="btn btn-default">Submit</button>
 </form>
@@ -1286,8 +1286,8 @@ body { padding-bottom: 70px; }
                 </ul>
               </li>
             </ul>
-            <form class="navbar-form pull-left" action="">
-              <input type="text" class="form-control col-lg-8" placeholder="Search">
+            <form class="navbar-form pull-left" action="" role="form">
+              <input type="text" class="form-control col-lg-8" placeholder="Search" role="search">
             </form>
             <ul class="nav navbar-nav pull-right">
               <li><a href="#">Link</a></li>
@@ -1356,8 +1356,8 @@ body { padding-bottom: 70px; }
               <li><a href="#">Link</a></li>
               <li><a href="#">Link</a></li>
             </ul>
-            <form class="navbar-form pull-left" action="">
-              <input type="text" class="form-control col-lg-8" placeholder="Search">
+            <form class="navbar-form pull-left" action="" role="form">
+              <input type="text" class="form-control col-lg-8" placeholder="Search" role="search">
             </form>
           </div><!-- /.nav-collapse -->
         </div><!-- /.container -->
@@ -1406,8 +1406,8 @@ body { padding-bottom: 70px; }
                 </ul>
               </li>
             </ul>
-            <form class="navbar-form pull-left" action="">
-              <input type="text" class="form-control col-lg-8" placeholder="Search">
+            <form class="navbar-form pull-left" action="" role="form">
+              <input type="text" class="form-control col-lg-8" placeholder="Search" role="search">
             </form>
             <ul class="nav navbar-nav pull-right">
               <li><a href="#">Link</a></li>
