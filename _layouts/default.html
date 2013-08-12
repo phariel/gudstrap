@@ -12,7 +12,7 @@
     {% include nav-main.html %}
 
     <!-- Docs page layout -->
-    <div class="bs-header" id="content" role="banner">
+    <div class="bs-header" id="content">
       <div class="container">
         <h1>{{ page.title }}</h1>
         <p>{{ page.lead }}</p>
@@ -42,9 +42,9 @@
             </ul>
           </div>
         </div>
-        <div class="col-lg-9" role="main">
+        <main class="col-lg-9" role="main">
           {{ content }}
-        </div>
+        </main>
       </div>
 
     </div>
