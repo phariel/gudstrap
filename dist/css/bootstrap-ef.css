@@ -256,8 +256,8 @@ table {
   p,
   h2,
   h3 {
-    orphans: 3;
     widows: 3;
+    orphans: 3;
   }
   h2,
   h3 {
@@ -8024,6 +8024,7 @@ select.form-control.input-sm {
 
 .btn {
   font-weight: 400;
+  line-height: 20px;
   border-width: 0;
 }
 
@@ -8397,16 +8398,11 @@ fieldset[disabled] .btn-info.active {
 .btn-xl {
   padding: 20px 40px;
   font-size: 20px;
-  line-height: 20px;
   border-radius: 0;
 }
 
-.btn-lg {
-  line-height: 20px;
-}
-
-.btn-sm {
-  line-height: 20px;
+.btn-xs {
+  padding: 0 5px;
 }
 
 .dropdown-menu {
