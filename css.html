@@ -96,7 +96,7 @@ base_url: "../"
 /* Small devices (tablets, 768px and up) */
 @media (min-width: @screen-tablet) { ... }
 
-/* Medium devices (tablets, 992px and up) */
+/* Medium devices (desktops, 992px and up) */
 @media (min-width: @screen-desktop) { ... }
 
 /* Large devices (large desktops, 1200px and up) */
@@ -123,15 +123,15 @@ base_url: "../"
             </th>
             <th>
               Small devices
-              <small>Tablets (&gt;768px)</small>
+              <small>Tablets (&ge;768px)</small>
             </th>
             <th>
               Medium devices
-              <small>Desktops (&gt;992px)</small>
+              <small>Desktops (&ge;992px)</small>
             </th>
             <th>
               Large devices
-              <small>Desktops (&gt;1200px)</small>
+              <small>Desktops (&ge;1200px)</small>
             </th>
           </tr>
         </thead>
@@ -291,40 +291,51 @@ base_url: "../"
     <p>Build on the previous example by creating even more dynamic and powerful layouts with tablet <code>.col-sm-*</code> classes.</p>
     <div class="bs-docs-grid">
       <div class="row show-grid">
-        <div class="col-xs-12 col-sm-8 col-md-8">.col-xs-12 .col-sm-8 .col-md-8</div>
-        <div class="col-xs-6 col-sm-4 col-md-4">.col-xs-6 .col-sm-4 .col-md-4</div>
+        <div class="col-xs-12 col-sm-6 col-md-8">.col-xs-12 .col-sm-6 .col-md-8</div>
+        <div class="col-xs-6 col-sm-6 col-md-4">.col-xs-6 .col-sm-6 .col-md-4</div>
       </div>
       <div class="row show-grid">
         <div class="col-xs-6 col-sm-4 col-md-4">.col-xs-6 .col-sm-4 .col-md-4</div>
         <div class="col-xs-6 col-sm-4 col-md-4">.col-xs-6 .col-sm-4 .col-md-4</div>
+        <!-- Optional: clear the XS cols if their content doesn't match in height -->
+        <div class="clearfix visible-xs"></div>
         <div class="col-xs-6 col-sm-4 col-md-4">.col-xs-6 .col-sm-4 .col-md-4</div>
-      </div>
-      <div class="row show-grid">
-        <div class="col-xs-6 col-sm-6 col-md-6">.col-xs-6 .col-sm-6 .col-md-6</div>
-        <div class="col-xs-6 col-sm-6 col-md-6">.col-xs-6 .col-sm-6 .col-md-6</div>
       </div>
     </div>
 {% highlight html %}
 <div class="row">
-  <div class="col-xs-12 col-sm-8 col-md-8">.col-xs-12 .col-sm-8 .col-md-8</div>
-  <div class="col-xs-6 col-sm-4 col-md-4">.col-xs-6 .col-sm-4 .col-md-4</div>
+  <div class="col-xs-12 col-sm-6 col-md-8">.col-xs-12 .col-sm-6 .col-md-8</div>
+  <div class="col-xs-6 col-sm-6 col-md-4">.col-xs-6 .col-sm-6 .col-md-4</div>
 </div>
 <div class="row">
   <div class="col-xs-6 col-sm-4 col-md-4">.col-xs-6 .col-sm-4 .col-md-4</div>
   <div class="col-xs-6 col-sm-4 col-md-4">.col-xs-6 .col-sm-4 .col-md-4</div>
+  <!-- Optional: clear the XS cols if their content doesn't match in height -->
+  <div class="clearfix visible-xs"></div>
   <div class="col-xs-6 col-sm-4 col-md-4">.col-xs-6 .col-sm-4 .col-md-4</div>
-</div>
-<div class="row">
-  <div class="col-xs-6 col-sm-6 col-md-6">.col-xs-6 .col-sm-6 .col-md-6</div>
-  <div class="col-xs-6 col-sm-6 col-md-6">.col-xs-6 .col-sm-6 .col-md-6</div>
 </div>
 {% endhighlight %}
 
-    <div class="bs-callout bs-callout-danger">
+    <div class="bs-callout bs-callout-info">
       <h4>Need more examples?</h4>
       <p>We dive into more grid layouts in a separate page, free of chrome and documentation to better show you the power of the grid.</p>
       <p><a class="btn btn-danger" target="_blank" href="http://examples.getbootstrap.com/grid/">More grid examples</a></p>
     </div>
+
+    <h3 id="grid-responsive-clearing">Responsive column clearing</h3>
+    <p>With the four tiers of grids available you're bound to run into issues where, at certain breakpoints, your columns don't clear quite right as one is taller than the other. To fix that, use a combination of a <code>.clearfix</code> and our <a href="../css#responsive-utilities">responsive utility classes</a>.</p>
+{% highlight html %}
+<div class="row">
+  <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+  <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+
+  <!-- Add the extra clearfix for only the required viewport -->
+  <div class="clearfix visible-xs"></div>
+
+  <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+  <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+</div>
+{% endhighlight %}
 
     <h3 id="grid-offsetting">Offsetting columns</h3>
     <p>Move columns to the right using <code>.col-md-offset-*</code> classes. These classes increase the left margin of a column by <code>*</code> columns. For example, <code>.col-md-offset-4</code> moves <code>.col-md-4</code> over four columns.</p>
@@ -716,18 +727,18 @@ base_url: "../"
     <div class="bs-example">
       <p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
       <p class="text-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-      <p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
-      <p class="text-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
       <p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
       <p class="text-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+      <p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
+      <p class="text-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
     </div>
 {% highlight html %}
 <p class="text-muted">...</p>
 <p class="text-primary">...</p>
-<p class="text-warning">...</p>
-<p class="text-danger">...</p>
 <p class="text-success">...</p>
 <p class="text-info">...</p>
+<p class="text-warning">...</p>
+<p class="text-danger">...</p>
 {% endhighlight %}
 
 
@@ -1265,7 +1276,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 
 
 
-    <h2 id="tables-row-classes">Contextual table classes</h2>
+    <h2 id="tables-contextual-classes">Contextual table classes</h2>
     <p>Use contextual classes to color table rows or individual cells.</p>
     <div class="bs-table-scrollable">
       <table class="table table-bordered table-striped bs-table">
@@ -1282,15 +1293,15 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
         <tbody>
           <tr>
             <td>
-              <code>.success</code>
+              <code>.active</code>
             </td>
-            <td>Indicates a successful or positive action</td>
+            <td>Applies the hover color to a particular row or cell</td>
           </tr>
           <tr>
             <td>
-              <code>.danger</code>
+              <code>.success</code>
             </td>
-            <td>Indicates a dangerous or potentially negative action</td>
+            <td>Indicates a successful or positive action</td>
           </tr>
           <tr>
             <td>
@@ -1300,9 +1311,9 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
           </tr>
           <tr>
             <td>
-              <code>.active</code>
+              <code>.danger</code>
             </td>
-            <td>Applies the hover color to a particular row or cell</td>
+            <td>Indicates a dangerous or potentially negative action</td>
           </tr>
         </tbody>
       </table>
@@ -1318,7 +1329,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
           </tr>
         </thead>
         <tbody>
-          <tr class="success">
+          <tr class="active">
             <td>1</td>
             <td>Column content</td>
             <td>Column content</td>
@@ -1330,7 +1341,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
             <td>Column content</td>
             <td>Column content</td>
           </tr>
-          <tr class="danger">
+          <tr class="success">
             <td>3</td>
             <td>Column content</td>
             <td>Column content</td>
@@ -1354,7 +1365,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
             <td>Column content</td>
             <td>Column content</td>
           </tr>
-          <tr class="active">
+          <tr class="danger">
             <td>7</td>
             <td>Column content</td>
             <td>Column content</td>
@@ -1364,11 +1375,18 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
       </table>
     </div><!-- /example -->
 {% highlight html %}
-<tr class="success">
-  <td>1</td>
-  <td>Column content</td>
-  <td>Column content</td>
-  <td>Column content</td>
+<!-- On rows -->
+<tr class="active">...</tr>
+<tr class="success">...</tr>
+<tr class="warning">...</tr>
+<tr class="danger">...</tr>
+
+<!-- On cells (`td` or `th`) -->
+<tr>
+  <td class="active">...</td>
+  <td class="success">...</td>
+  <td class="warning">...</td>
+  <td class="danger">...</td>
 </tr>
 {% endhighlight %}
 
@@ -1386,53 +1404,47 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
     <h2 id="forms-example">Basic example</h2>
     <p>Individual form controls automatically receive some global styling. All textual <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, and <code>&lt;select&gt;</code> elements with <code>.form-control</code> are set to <code>width: 100%;</code> by default. Wrap labels and controls in <code>.form-group</code> for optimum spacing.</p>
     <form class="bs-example" role="form">
-      <fieldset>
-        <legend>Legend</legend>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-        </div>
-        <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-        </div>
-        <div class="form-group">
-          <label for="exampleInputFile">File input</label>
-          <input type="file" id="exampleInputFile">
-          <p class="help-block">Example block-level help text here.</p>
-        </div>
-        <div class="checkbox">
-          <label>
-            <input type="checkbox"> Check me out
-          </label>
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </fieldset>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputFile">File input</label>
+        <input type="file" id="exampleInputFile">
+        <p class="help-block">Example block-level help text here.</p>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox"> Check me out
+        </label>
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
     </form><!-- /example -->
 {% highlight html %}
 <form role="form">
-  <fieldset>
-    <legend>Legend</legend>
-    <div class="form-group">
-      <label for="exampleInputEmail1">Email address</label>
-      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-    </div>
-    <div class="form-group">
-      <label for="exampleInputPassword1">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-    </div>
-    <div class="form-group">
-      <label for="exampleInputFile">File input</label>
-      <input type="file" id="exampleInputFile">
-      <p class="help-block">Example block-level help text here.</p>
-    </div>
-    <div class="checkbox">
-      <label>
-        <input type="checkbox"> Check me out
-      </label>
-    </div>
-    <button type="submit" class="btn btn-default">Submit</button>
-  </fieldset>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputFile">File input</label>
+    <input type="file" id="exampleInputFile">
+    <p class="help-block">Example block-level help text here.</p>
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"> Check me out
+    </label>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
 </form>
 {% endhighlight %}
 
@@ -1450,7 +1462,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
     <form class="bs-example form-inline" role="form">
       <div class="form-group">
         <label class="sr-only" for="exampleInputEmail2">Email address</label>
-        <input type="text" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
+        <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
       </div>
       <div class="form-group">
         <label class="sr-only" for="exampleInputPassword2">Password</label>
@@ -1467,7 +1479,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 <form class="form-inline" role="form">
   <div class="form-group">
     <label class="sr-only" for="exampleInputEmail2">Email address</label>
-    <input type="text" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
+    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
   </div>
   <div class="form-group">
     <label class="sr-only" for="exampleInputPassword2">Password</label>
@@ -1488,7 +1500,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
       <div class="form-group">
         <label for="inputEmail1" class="col-lg-2 control-label">Email</label>
         <div class="col-lg-10">
-          <input type="text" class="form-control" id="inputEmail1" placeholder="Email">
+          <input type="email" class="form-control" id="inputEmail1" placeholder="Email">
         </div>
       </div>
       <div class="form-group">
@@ -1517,7 +1529,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
   <div class="form-group">
     <label for="inputEmail1" class="col-lg-2 control-label">Email</label>
     <div class="col-lg-10">
-      <input type="text" class="form-control" id="inputEmail1" placeholder="Email">
+      <input type="email" class="form-control" id="inputEmail1" placeholder="Email">
     </div>
   </div>
   <div class="form-group">
@@ -1793,6 +1805,10 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
     <p>Bootstrap includes validation styles for error, warning, and success states on form controls. To use, add <code>.has-warning</code>, <code>.has-error</code>, or <code>.has-success</code> to the parent element. Any <code>.control-label</code>, <code>.form-control</code>, and <code>.help-block</code> within that element will receive the validation styles.</p>
 
     <form class="bs-example">
+      <div class="form-group has-success">
+        <label class="control-label" for="inputSuccess">Input with success</label>
+        <input type="text" class="form-control" id="inputSuccess">
+      </div>
       <div class="form-group has-warning">
         <label class="control-label" for="inputWarning">Input with warning</label>
         <input type="text" class="form-control" id="inputWarning">
@@ -1801,12 +1817,12 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
         <label class="control-label" for="inputError">Input with error</label>
         <input type="text" class="form-control" id="inputError">
       </div>
-      <div class="form-group has-success">
-        <label class="control-label" for="inputSuccess">Input with success</label>
-        <input type="text" class="form-control" id="inputSuccess">
-      </div>
     </form>
 {% highlight html %}
+<div class="form-group has-success">
+  <label class="control-label" for="inputSuccess">Input with success</label>
+  <input type="text" class="form-control" id="inputSuccess">
+</div>
 <div class="form-group has-warning">
   <label class="control-label" for="inputWarning">Input with warning</label>
   <input type="text" class="form-control" id="inputWarning">
@@ -1814,10 +1830,6 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 <div class="form-group has-error">
   <label class="control-label" for="inputError">Input with error</label>
   <input type="text" class="form-control" id="inputError">
-</div>
-<div class="form-group has-success">
-  <label class="control-label" for="inputSuccess">Input with success</label>
-  <input type="text" class="form-control" id="inputSuccess">
 </div>
 {% endhighlight %}
 
@@ -2181,27 +2193,19 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
             </th>
             <th>
               Small devices
-              <small>Tablets (&gt;768px)</small>
+              <small>Tablets (&ge;768px)</small>
             </th>
             <th>
               Medium devices
-              <small>Desktops (&gt;992px)</small>
+              <small>Desktops (&ge;992px)</small>
             </th>
             <th>
               Large devices
-              <small>Desktops (&gt;1200px)</small>
+              <small>Desktops (&ge;1200px)</small>
             </th>
           </tr>
         </thead>
-<!--         <thead>
-          <tr>
-            <th>Class</th>
-            <th>Small devices <small>Up to 768px</small></th>
-            <th>Medium devices <small>768px to 991px</small></th>
-            <th>Large devices <small>992px and up</small></th>
-          </tr>
-        </thead>
- -->        <tbody>
+        <tbody>
           <tr>
             <th><code>.visible-xs</code></th>
             <td class="is-visible">Visible</td>
@@ -2305,6 +2309,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
         <span class="hidden-sm">Small</span>
         <span class="visible-sm">&#10004; Visible on small</span>
       </div>
+      <div class="clearfix visible-xs"></div>
       <div class="col-xs-6 col-sm-3">
         <span class="hidden-md">Medium</span>
         <span class="visible-md">&#10004; Visible on medium</span>
@@ -2325,6 +2330,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
         <span class="visible-sm">Small</span>
         <span class="hidden-sm">&#10004; Hidden on small</span>
       </div>
+      <div class="clearfix visible-xs"></div>
       <div class="col-xs-6 col-sm-3">
         <span class="visible-md">Medium</span>
         <span class="hidden-md">&#10004; Hidden on medium</span>
