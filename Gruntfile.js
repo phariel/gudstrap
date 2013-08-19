@@ -34,16 +34,7 @@ module.exports = function(grunt) {
         src: ['js/tests/unit/*.js']
       }
     },
-    copy: {
-      dist: {
-        files: [{
-          expand: true,
-          flatten: true,
-          src: [ "font/*", "bower_components/fontawesome/font/*" ],
-          dest: 'dist/font/'
-        }]
-      }
-    },
+
     concat: {
       options: {
         banner: '<%= banner %><%= jqueryCheck %>',
@@ -98,6 +89,26 @@ module.exports = function(grunt) {
           'dist/css/bootstrap.min.css': ['less/bootstrap.less'],
           'dist/css/bootstrap-ef.min.css': ['less/bootstrap-ef.less']
         }
+      },
+      theme: {
+        src: ['less/theme.less'],
+        dest: 'dist/css/bootstrap-theme.css'
+      },
+      theme_min: {
+        options: {
+          compress: true
+        },
+        src: ['less/theme.less'],
+        dest: 'dist/css/bootstrap-theme.min.css'
+      }
+    },
+
+    copy: {
+      fonts: {
+        expand: true,
+        flatten: true,
+        src: [ "fonts/*", "bower_components/fontawesome/font/*" ],
+        dest: 'dist/fonts'
       }
     },
 
@@ -151,10 +162,10 @@ module.exports = function(grunt) {
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
   // Docs HTML validation task
-  grunt.registerTask('validate-docs', ['jekyll', 'validation']);
+  grunt.registerTask('validate-html', ['jekyll', 'validation']);
 
   // Test task.
-  var testSubtasks = ['jshint', 'qunit', 'validate-docs'];
+  var testSubtasks = ['dist-css', 'jshint', 'qunit', 'validate-html'];
   // Only run BrowserStack tests under Travis
   if (process.env.TRAVIS) {
     // Only run BrowserStack tests if this is a mainline commit in twbs/bootstrap, or you have your own BrowserStack key
@@ -170,11 +181,11 @@ module.exports = function(grunt) {
   // CSS distribution task.
   grunt.registerTask('dist-css', ['recess']);
 
-  // Font distribution task.
-  grunt.registerTask('dist-font', ['copy']);
+  // Fonts distribution task.
+  grunt.registerTask('dist-fonts', ['copy']);
 
   // Full distribution task.
-  grunt.registerTask('dist', ['clean', 'dist-font', 'dist-css', 'dist-js']);
+  grunt.registerTask('dist', ['clean', 'dist-css', 'dist-fonts', 'dist-js']);
 
   // Default task.
   grunt.registerTask('default', ['test', 'dist']);
