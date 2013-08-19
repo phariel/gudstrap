@@ -134,10 +134,15 @@ module.exports = function(grunt) {
 
     validation: {
       options: {
-        reset: true,
+        reset: true
       },
       files: {
-        src: ["_gh_pages/**/*.html"]
+        src: [
+          "_gh_pages/**/*.html",
+          "!_gh_pages/build/**/*",
+          "!_gh_pages/2.3.2/**/*",
+          "!_gh_pages/bower_components/**/*"
+        ]
       }
     },
 
