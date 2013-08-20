@@ -139,7 +139,6 @@ module.exports = function(grunt) {
       files: {
         src: [
           "_gh_pages/**/*.html",
-          "!_gh_pages/build/**/*",
           "!_gh_pages/2.3.2/**/*",
           "!_gh_pages/bower_components/**/*"
         ]
@@ -203,7 +202,7 @@ module.exports = function(grunt) {
       var files = {}
       fs.readdirSync(type)
         .filter(function (path) {
-          return new RegExp('\\.' + type + '$').test(path)
+          return type == 'fonts' ? true : new RegExp('\\.' + type + '$').test(path)
         })
         .forEach(function (path) {
           return files[path] = fs.readFileSync(type + '/' + path, 'utf8')
@@ -212,7 +211,7 @@ module.exports = function(grunt) {
     }
 
     var customize = fs.readFileSync('customize.html', 'utf-8')
-    var files = '<!-- generated -->\n<script id="files">\n' + getFiles('js') + getFiles('less') + '<\/script>\n<!-- /generated -->'
-    fs.writeFileSync('customize.html', customize.replace(/<!-- generated -->(.|[\n\r])*<!-- \/generated -->/, files))
+    var files = getFiles('js') + getFiles('less') + getFiles('fonts')
+    fs.writeFileSync('assets/js/raw-files.js', files)
   });
 };
