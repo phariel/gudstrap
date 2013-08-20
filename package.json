@@ -1,9 +1,9 @@
 {
-    "name": "bootstrap-ef"
+    "name": "gudstrap"
   , "description": "Sleek, intuitive, and powerful front-end framework for faster and easier web development."
   , "version": "3.0.0"
   , "keywords": ["bootstrap", "css"]
-  , "homepage": "http://englishtown.github.com/bootstrap/"
+  , "homepage": "http://englishtown.github.io/bootstrap/"
   , "author": "Twitter Inc."
   , "scripts": {
        "test": "grunt test"
