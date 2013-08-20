@@ -56,7 +56,7 @@ module.exports = function(grunt) {
           'js/affix.js',
           'js/toggle-btn-group-ef.js'
         ],
-        dest: 'dist/js/bootstrap.js'
+        dest: 'dist/js/<%= pkg.name %>.js'
       }
     },
 
@@ -65,9 +65,8 @@ module.exports = function(grunt) {
         banner: '<%= banner %>'
       },
       bootstrap: {
-        files: {
-          'dist/js/bootstrap.min.js': ['<%= concat.bootstrap.dest %>']
-        }
+        src: ['<%= concat.bootstrap.dest %>'],
+        dest: 'dist/js/<%= pkg.name %>.min.js'
       }
     },
 
@@ -76,30 +75,26 @@ module.exports = function(grunt) {
         compile: true
       },
       bootstrap: {
-        files: {
-          'dist/css/bootstrap.css': ['less/bootstrap.less'],
-          'dist/css/bootstrap-ef.css': ['less/bootstrap-ef.less']
-        }
+        src: ['less/bootstrap-ef.less'],
+        dest: 'dist/css/<%= pkg.name %>.css'
       },
       min: {
         options: {
           compress: true
         },
-        files: {
-          'dist/css/bootstrap.min.css': ['less/bootstrap.less'],
-          'dist/css/bootstrap-ef.min.css': ['less/bootstrap-ef.less']
-        }
+        src: ['less/bootstrap-ef.less'],
+        dest: 'dist/css/<%= pkg.name %>.min.css'
       },
       theme: {
         src: ['less/theme.less'],
-        dest: 'dist/css/bootstrap-theme.css'
+        dest: 'dist/css/<%= pkg.name %>-theme.css'
       },
       theme_min: {
         options: {
           compress: true
         },
         src: ['less/theme.less'],
-        dest: 'dist/css/bootstrap-theme.min.css'
+        dest: 'dist/css/<%= pkg.name %>-theme.min.css'
       }
     },
 
