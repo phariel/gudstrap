@@ -1,5 +1,5 @@
 {
-    "name": "englishtown/bootstrap"
+    "name": "englishtown/gudstrap"
   , "description": "Sleek, intuitive, and powerful front-end framework for faster and easier web development."
   , "keywords": ["bootstrap", "css"]
   , "homepage": "http://getbootstrap.com"
@@ -14,7 +14,7 @@
       }
     ]
   , "support": {
-      "issues": "https://github.com/englishtown/bootstrap/issues"
+      "issues": "https://github.com/englishtown/gudstrap/issues"
     }
   , "license": "Apache-2.0"
 }

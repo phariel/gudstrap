@@ -3,7 +3,7 @@
   , "description": "Sleek, intuitive, and powerful front-end framework for faster and easier web development."
   , "version": "3.0.0"
   , "keywords": ["bootstrap", "css"]
-  , "homepage": "http://englishtown.github.io/bootstrap/"
+  , "homepage": "http://englishtown.github.io/gudstrap/"
   , "author": "Twitter Inc."
   , "scripts": {
        "test": "grunt test"
@@ -11,7 +11,7 @@
   }
   , "repository": {
       "type": "git"
-    , "url": "https://github.com/englishtown/bootstrap.git"
+    , "url": "https://github.com/englishtown/gudstrap.git"
   }
   , "licenses": [
     {
