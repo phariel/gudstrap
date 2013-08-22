@@ -256,8 +256,8 @@ table {
   p,
   h2,
   h3 {
-    orphans: 3;
     widows: 3;
+    orphans: 3;
   }
   h2,
   h3 {
@@ -5442,8 +5442,8 @@ a.list-group-item.active > .badge,
 }
 
 .thumbnail {
-  display: inline-block;
   display: block;
+  display: inline-block;
   height: auto;
   max-width: 100%;
   padding: 4px;
