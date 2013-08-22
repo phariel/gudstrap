@@ -1,9 +1,9 @@
 {
-    "name": "bootstrap-ef"
+    "name": "gudstrap"
   , "description": "Sleek, intuitive, and powerful front-end framework for faster and easier web development."
   , "version": "3.0.0"
   , "keywords": ["bootstrap", "css"]
-  , "homepage": "http://englishtown.github.com/bootstrap/"
+  , "homepage": "http://englishtown.github.io/gudstrap/"
   , "author": "Twitter Inc."
   , "scripts": {
        "test": "grunt test"
@@ -11,7 +11,7 @@
   }
   , "repository": {
       "type": "git"
-    , "url": "https://github.com/englishtown/bootstrap.git"
+    , "url": "https://github.com/englishtown/gudstrap.git"
   }
   , "licenses": [
     {
@@ -21,10 +21,10 @@
   ]
   , "devDependencies": {
       "grunt": "~0.4.1"
-    , "grunt-contrib-copy": "~0.4.0"
-    , "grunt-contrib-connect": "~0.3.0"
     , "grunt-contrib-clean": "~0.5.0"
+    , "grunt-contrib-connect": "~0.3.0"
     , "grunt-contrib-concat": "~0.3.0"
+    , "grunt-contrib-copy": "~0.4.0"
     , "grunt-contrib-jshint": "~0.6.0"
     , "grunt-contrib-uglify": "~0.2.2"
     , "grunt-contrib-qunit": "~0.2.2"
