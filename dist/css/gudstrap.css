@@ -256,8 +256,8 @@ table {
   p,
   h2,
   h3 {
-    widows: 3;
     orphans: 3;
+    widows: 3;
   }
   h2,
   h3 {
@@ -1606,7 +1606,8 @@ table th[class*="col-"] {
 
 .table-hover > tbody > tr > td.success:hover,
 .table-hover > tbody > tr > th.success:hover,
-.table-hover > tbody > tr.success:hover > td {
+.table-hover > tbody > tr.success:hover > td,
+.table-hover > tbody > tr.success:hover > th {
   background-color: #79b101;
   border-color: #79b101;
 }
@@ -1629,7 +1630,8 @@ table th[class*="col-"] {
 
 .table-hover > tbody > tr > td.danger:hover,
 .table-hover > tbody > tr > th.danger:hover,
-.table-hover > tbody > tr.danger:hover > td {
+.table-hover > tbody > tr.danger:hover > td,
+.table-hover > tbody > tr.danger:hover > th {
   background-color: #e6004c;
   border-color: #e6004c;
 }
@@ -1652,7 +1654,8 @@ table th[class*="col-"] {
 
 .table-hover > tbody > tr > td.warning:hover,
 .table-hover > tbody > tr > th.warning:hover,
-.table-hover > tbody > tr.warning:hover > td {
+.table-hover > tbody > tr.warning:hover > td,
+.table-hover > tbody > tr.warning:hover > th {
   background-color: #e68200;
   border-color: #e68200;
 }
@@ -5442,8 +5445,8 @@ a.list-group-item.active > .badge,
 }
 
 .thumbnail {
-  display: block;
   display: inline-block;
+  display: block;
   height: auto;
   max-width: 100%;
   padding: 4px;
