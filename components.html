@@ -2,16 +2,678 @@
 layout: default
 title: Components
 slug: components
-lead: "Dozens of reusable components built to provide iconography, dropdowns, navigation, alerts, popovers, and much more."
+lead: "Over a dozen reusable components built to provide iconography, dropdowns, navigation, alerts, popovers, and much more."
 base_url: "../"
 ---
 
 
-  <!-- Dropdowns
+  <!-- Glyphicons
   ================================================== -->
   <div class="bs-docs-section">
     <div class="page-header">
-      <h1 id="dropdowns">Dropdown menus</h1>
+      <h1 id="glyphicons">Glyphicons</h1>
+    </div>
+
+    <h2 id="glyphicons-glyphs">Available glyphs</h2>
+    <p>Includes 180 glyphs in font format from the Glyphicon Halflings set. <a href="http://glyphicons.com/">Glyphicons</a> Halflings are normally not available for free, but their creator has made them available for Bootstrap free of cost. As a thank you, we only ask that you to include a link back to <a href="http://glyphicons.com/">Glyphicons</a> whenever possible.</p>
+    <p>Also included is additional glyphs from <a href="http://fontawesome.io/">Font Awesome</a> - The iconic font designed for Bootstrap</p>
+    <ul class="bs-glyphicons">
+      <li><span class="glyphicon glyphicon-adjust"></span> .glyphicon .glyphicon-adjust</li>
+      <li><span class="glyphicon glyphicon-align-center"></span> .glyphicon .glyphicon-align-center</li>
+      <li><span class="glyphicon glyphicon-align-justify"></span> .glyphicon .glyphicon-align-justify</li>
+      <li><span class="glyphicon glyphicon-align-left"></span> .glyphicon .glyphicon-align-left</li>
+      <li><span class="glyphicon glyphicon-align-right"></span> .glyphicon .glyphicon-align-right</li>
+      <li><span class="glyphicon glyphicon-arrow-down"></span> .glyphicon .glyphicon-arrow-down</li>
+      <li><span class="glyphicon glyphicon-arrow-left"></span> .glyphicon .glyphicon-arrow-left</li>
+      <li><span class="glyphicon glyphicon-arrow-right"></span> .glyphicon .glyphicon-arrow-right</li>
+      <li><span class="glyphicon glyphicon-arrow-up"></span> .glyphicon .glyphicon-arrow-up</li>
+      <li><span class="glyphicon glyphicon-asterisk"></span> .glyphicon .glyphicon-asterisk</li>
+      <li><span class="glyphicon glyphicon-backward"></span> .glyphicon .glyphicon-backward</li>
+      <li><span class="glyphicon glyphicon-ban-circle"></span> .glyphicon .glyphicon-ban-circle</li>
+      <li><span class="glyphicon glyphicon-barcode"></span> .glyphicon .glyphicon-barcode</li>
+      <li><span class="glyphicon glyphicon-bell"></span> .glyphicon .glyphicon-bell</li>
+      <li><span class="glyphicon glyphicon-bold"></span> .glyphicon .glyphicon-bold</li>
+      <li><span class="glyphicon glyphicon-book"></span> .glyphicon .glyphicon-book</li>
+      <li><span class="glyphicon glyphicon-bookmark"></span> .glyphicon .glyphicon-bookmark</li>
+      <li><span class="glyphicon glyphicon-briefcase"></span> .glyphicon .glyphicon-briefcase</li>
+      <li><span class="glyphicon glyphicon-bullhorn"></span> .glyphicon .glyphicon-bullhorn</li>
+      <li><span class="glyphicon glyphicon-calendar"></span> .glyphicon .glyphicon-calendar</li>
+      <li><span class="glyphicon glyphicon-camera"></span> .glyphicon .glyphicon-camera</li>
+      <li><span class="glyphicon glyphicon-certificate"></span> .glyphicon .glyphicon-certificate</li>
+      <li><span class="glyphicon glyphicon-check"></span> .glyphicon .glyphicon-check</li>
+      <li><span class="glyphicon glyphicon-chevron-down"></span> .glyphicon .glyphicon-chevron-down</li>
+      <li><span class="glyphicon glyphicon-chevron-left"></span> .glyphicon .glyphicon-chevron-left</li>
+      <li><span class="glyphicon glyphicon-chevron-right"></span> .glyphicon .glyphicon-chevron-right</li>
+      <li><span class="glyphicon glyphicon-chevron-up"></span> .glyphicon .glyphicon-chevron-up</li>
+      <li><span class="glyphicon glyphicon-circle-arrow-down"></span> .glyphicon .glyphicon-circle-arrow-down</li>
+      <li><span class="glyphicon glyphicon-circle-arrow-left"></span> .glyphicon .glyphicon-circle-arrow-left</li>
+      <li><span class="glyphicon glyphicon-circle-arrow-right"></span> .glyphicon .glyphicon-circle-arrow-right</li>
+      <li><span class="glyphicon glyphicon-circle-arrow-up"></span> .glyphicon .glyphicon-circle-arrow-up</li>
+      <li><span class="glyphicon glyphicon-cloud"></span> .glyphicon .glyphicon-cloud</li>
+      <li><span class="glyphicon glyphicon-cloud-download"></span> .glyphicon .glyphicon-cloud-download</li>
+      <li><span class="glyphicon glyphicon-cloud-upload"></span> .glyphicon .glyphicon-cloud-upload</li>
+      <li><span class="glyphicon glyphicon-cog"></span> .glyphicon .glyphicon-cog</li>
+      <li><span class="glyphicon glyphicon-collapse-down"></span> .glyphicon .glyphicon-collapse-down</li>
+      <li><span class="glyphicon glyphicon-collapse-up"></span> .glyphicon .glyphicon-collapse-up</li>
+      <li><span class="glyphicon glyphicon-comment"></span> .glyphicon .glyphicon-comment</li>
+      <li><span class="glyphicon glyphicon-compressed"></span> .glyphicon .glyphicon-compressed</li>
+      <li><span class="glyphicon glyphicon-copyright-mark"></span> .glyphicon .glyphicon-copyright-mark</li>
+      <li><span class="glyphicon glyphicon-credit-card"></span> .glyphicon .glyphicon-credit-card</li>
+      <li><span class="glyphicon glyphicon-cutlery"></span> .glyphicon .glyphicon-cutlery</li>
+      <li><span class="glyphicon glyphicon-dashboard"></span> .glyphicon .glyphicon-dashboard</li>
+      <li><span class="glyphicon glyphicon-download"></span> .glyphicon .glyphicon-download</li>
+      <li><span class="glyphicon glyphicon-download-alt"></span> .glyphicon .glyphicon-download-alt</li>
+      <li><span class="glyphicon glyphicon-earphone"></span> .glyphicon .glyphicon-earphone</li>
+      <li><span class="glyphicon glyphicon-edit"></span> .glyphicon .glyphicon-edit</li>
+      <li><span class="glyphicon glyphicon-eject"></span> .glyphicon .glyphicon-eject</li>
+      <li><span class="glyphicon glyphicon-envelope"></span> .glyphicon .glyphicon-envelope</li>
+      <li><span class="glyphicon glyphicon-euro"></span> .glyphicon .glyphicon-euro</li>
+      <li><span class="glyphicon glyphicon-exclamation-sign"></span> .glyphicon .glyphicon-exclamation-sign</li>
+      <li><span class="glyphicon glyphicon-expand"></span> .glyphicon .glyphicon-expand</li>
+      <li><span class="glyphicon glyphicon-export"></span> .glyphicon .glyphicon-export</li>
+      <li><span class="glyphicon glyphicon-eye-close"></span> .glyphicon .glyphicon-eye-close</li>
+      <li><span class="glyphicon glyphicon-eye-open"></span> .glyphicon .glyphicon-eye-open</li>
+      <li><span class="glyphicon glyphicon-facetime-video"></span> .glyphicon .glyphicon-facetime-video</li>
+      <li><span class="glyphicon glyphicon-fast-backward"></span> .glyphicon .glyphicon-fast-backward</li>
+      <li><span class="glyphicon glyphicon-fast-forward"></span> .glyphicon .glyphicon-fast-forward</li>
+      <li><span class="glyphicon glyphicon-file"></span> .glyphicon .glyphicon-file</li>
+      <li><span class="glyphicon glyphicon-film"></span> .glyphicon .glyphicon-film</li>
+      <li><span class="glyphicon glyphicon-filter"></span> .glyphicon .glyphicon-filter</li>
+      <li><span class="glyphicon glyphicon-fire"></span> .glyphicon .glyphicon-fire</li>
+      <li><span class="glyphicon glyphicon-flag"></span> .glyphicon .glyphicon-flag</li>
+      <li><span class="glyphicon glyphicon-flash"></span> .glyphicon .glyphicon-flash</li>
+      <li><span class="glyphicon glyphicon-floppy-disk"></span> .glyphicon .glyphicon-floppy-disk</li>
+      <li><span class="glyphicon glyphicon-floppy-open"></span> .glyphicon .glyphicon-floppy-open</li>
+      <li><span class="glyphicon glyphicon-floppy-remove"></span> .glyphicon .glyphicon-floppy-remove</li>
+      <li><span class="glyphicon glyphicon-floppy-save"></span> .glyphicon .glyphicon-floppy-save</li>
+      <li><span class="glyphicon glyphicon-floppy-saved"></span> .glyphicon .glyphicon-floppy-saved</li>
+      <li><span class="glyphicon glyphicon-folder-close"></span> .glyphicon .glyphicon-folder-close</li>
+      <li><span class="glyphicon glyphicon-folder-open"></span> .glyphicon .glyphicon-folder-open</li>
+      <li><span class="glyphicon glyphicon-font"></span> .glyphicon .glyphicon-font</li>
+      <li><span class="glyphicon glyphicon-forward"></span> .glyphicon .glyphicon-forward</li>
+      <li><span class="glyphicon glyphicon-fullscreen"></span> .glyphicon .glyphicon-fullscreen</li>
+      <li><span class="glyphicon glyphicon-gbp"></span> .glyphicon .glyphicon-gbp</li>
+      <li><span class="glyphicon glyphicon-gift"></span> .glyphicon .glyphicon-gift</li>
+      <li><span class="glyphicon glyphicon-glass"></span> .glyphicon .glyphicon-glass</li>
+      <li><span class="glyphicon glyphicon-globe"></span> .glyphicon .glyphicon-globe</li>
+      <li><span class="glyphicon glyphicon-hand-down"></span> .glyphicon .glyphicon-hand-down</li>
+      <li><span class="glyphicon glyphicon-hand-left"></span> .glyphicon .glyphicon-hand-left</li>
+      <li><span class="glyphicon glyphicon-hand-right"></span> .glyphicon .glyphicon-hand-right</li>
+      <li><span class="glyphicon glyphicon-hand-up"></span> .glyphicon .glyphicon-hand-up</li>
+      <li><span class="glyphicon glyphicon-hd-video"></span> .glyphicon .glyphicon-hd-video</li>
+      <li><span class="glyphicon glyphicon-hdd"></span> .glyphicon .glyphicon-hdd</li>
+      <li><span class="glyphicon glyphicon-header"></span> .glyphicon .glyphicon-header</li>
+      <li><span class="glyphicon glyphicon-headphones"></span> .glyphicon .glyphicon-headphones</li>
+      <li><span class="glyphicon glyphicon-heart"></span> .glyphicon .glyphicon-heart</li>
+      <li><span class="glyphicon glyphicon-heart-empty"></span> .glyphicon .glyphicon-heart-empty</li>
+      <li><span class="glyphicon glyphicon-home"></span> .glyphicon .glyphicon-home</li>
+      <li><span class="glyphicon glyphicon-import"></span> .glyphicon .glyphicon-import</li>
+      <li><span class="glyphicon glyphicon-inbox"></span> .glyphicon .glyphicon-inbox</li>
+      <li><span class="glyphicon glyphicon-indent-left"></span> .glyphicon .glyphicon-indent-left</li>
+      <li><span class="glyphicon glyphicon-indent-right"></span> .glyphicon .glyphicon-indent-right</li>
+      <li><span class="glyphicon glyphicon-info-sign"></span> .glyphicon .glyphicon-info-sign</li>
+      <li><span class="glyphicon glyphicon-italic"></span> .glyphicon .glyphicon-italic</li>
+      <li><span class="glyphicon glyphicon-leaf"></span> .glyphicon .glyphicon-leaf</li>
+      <li><span class="glyphicon glyphicon-link"></span> .glyphicon .glyphicon-link</li>
+      <li><span class="glyphicon glyphicon-list"></span> .glyphicon .glyphicon-list</li>
+      <li><span class="glyphicon glyphicon-list-alt"></span> .glyphicon .glyphicon-list-alt</li>
+      <li><span class="glyphicon glyphicon-lock"></span> .glyphicon .glyphicon-lock</li>
+      <li><span class="glyphicon glyphicon-log-in"></span> .glyphicon .glyphicon-log-in</li>
+      <li><span class="glyphicon glyphicon-log-out"></span> .glyphicon .glyphicon-log-out</li>
+      <li><span class="glyphicon glyphicon-magnet"></span> .glyphicon .glyphicon-magnet</li>
+      <li><span class="glyphicon glyphicon-map-marker"></span> .glyphicon .glyphicon-map-marker</li>
+      <li><span class="glyphicon glyphicon-minus"></span> .glyphicon .glyphicon-minus</li>
+      <li><span class="glyphicon glyphicon-minus-sign"></span> .glyphicon .glyphicon-minus-sign</li>
+      <li><span class="glyphicon glyphicon-move"></span> .glyphicon .glyphicon-move</li>
+      <li><span class="glyphicon glyphicon-music"></span> .glyphicon .glyphicon-music</li>
+      <li><span class="glyphicon glyphicon-new-window"></span> .glyphicon .glyphicon-new-window</li>
+      <li><span class="glyphicon glyphicon-off"></span> .glyphicon .glyphicon-off</li>
+      <li><span class="glyphicon glyphicon-ok"></span> .glyphicon .glyphicon-ok</li>
+      <li><span class="glyphicon glyphicon-ok-circle"></span> .glyphicon .glyphicon-ok-circle</li>
+      <li><span class="glyphicon glyphicon-ok-sign"></span> .glyphicon .glyphicon-ok-sign</li>
+      <li><span class="glyphicon glyphicon-open"></span> .glyphicon .glyphicon-open</li>
+      <li><span class="glyphicon glyphicon-paperclip"></span> .glyphicon .glyphicon-paperclip</li>
+      <li><span class="glyphicon glyphicon-pause"></span> .glyphicon .glyphicon-pause</li>
+      <li><span class="glyphicon glyphicon-pencil"></span> .glyphicon .glyphicon-pencil</li>
+      <li><span class="glyphicon glyphicon-phone"></span> .glyphicon .glyphicon-phone</li>
+      <li><span class="glyphicon glyphicon-phone-alt"></span> .glyphicon .glyphicon-phone-alt</li>
+      <li><span class="glyphicon glyphicon-picture"></span> .glyphicon .glyphicon-picture</li>
+      <li><span class="glyphicon glyphicon-plane"></span> .glyphicon .glyphicon-plane</li>
+      <li><span class="glyphicon glyphicon-play"></span> .glyphicon .glyphicon-play</li>
+      <li><span class="glyphicon glyphicon-play-circle"></span> .glyphicon .glyphicon-play-circle</li>
+      <li><span class="glyphicon glyphicon-plus"></span> .glyphicon .glyphicon-plus</li>
+      <li><span class="glyphicon glyphicon-plus-sign"></span> .glyphicon .glyphicon-plus-sign</li>
+      <li><span class="glyphicon glyphicon-print"></span> .glyphicon .glyphicon-print</li>
+      <li><span class="glyphicon glyphicon-pushpin"></span> .glyphicon .glyphicon-pushpin</li>
+      <li><span class="glyphicon glyphicon-qrcode"></span> .glyphicon .glyphicon-qrcode</li>
+      <li><span class="glyphicon glyphicon-question-sign"></span> .glyphicon .glyphicon-question-sign</li>
+      <li><span class="glyphicon glyphicon-random"></span> .glyphicon .glyphicon-random</li>
+      <li><span class="glyphicon glyphicon-record"></span> .glyphicon .glyphicon-record</li>
+      <li><span class="glyphicon glyphicon-refresh"></span> .glyphicon .glyphicon-refresh</li>
+      <li><span class="glyphicon glyphicon-registration-mark"></span> .glyphicon .glyphicon-registration-mark</li>
+      <li><span class="glyphicon glyphicon-remove"></span> .glyphicon .glyphicon-remove</li>
+      <li><span class="glyphicon glyphicon-remove-circle"></span> .glyphicon .glyphicon-remove-circle</li>
+      <li><span class="glyphicon glyphicon-remove-sign"></span> .glyphicon .glyphicon-remove-sign</li>
+      <li><span class="glyphicon glyphicon-repeat"></span> .glyphicon .glyphicon-repeat</li>
+      <li><span class="glyphicon glyphicon-resize-full"></span> .glyphicon .glyphicon-resize-full</li>
+      <li><span class="glyphicon glyphicon-resize-horizontal"></span> .glyphicon .glyphicon-resize-horizontal</li>
+      <li><span class="glyphicon glyphicon-resize-small"></span> .glyphicon .glyphicon-resize-small</li>
+      <li><span class="glyphicon glyphicon-resize-vertical"></span> .glyphicon .glyphicon-resize-vertical</li>
+      <li><span class="glyphicon glyphicon-retweet"></span> .glyphicon .glyphicon-retweet</li>
+      <li><span class="glyphicon glyphicon-road"></span> .glyphicon .glyphicon-road</li>
+      <li><span class="glyphicon glyphicon-save"></span> .glyphicon .glyphicon-save</li>
+      <li><span class="glyphicon glyphicon-saved"></span> .glyphicon .glyphicon-saved</li>
+      <li><span class="glyphicon glyphicon-screenshot"></span> .glyphicon .glyphicon-screenshot</li>
+      <li><span class="glyphicon glyphicon-sd-video"></span> .glyphicon .glyphicon-sd-video</li>
+      <li><span class="glyphicon glyphicon-search"></span> .glyphicon .glyphicon-search</li>
+      <li><span class="glyphicon glyphicon-send"></span> .glyphicon .glyphicon-send</li>
+      <li><span class="glyphicon glyphicon-share"></span> .glyphicon .glyphicon-share</li>
+      <li><span class="glyphicon glyphicon-share-alt"></span> .glyphicon .glyphicon-share-alt</li>
+      <li><span class="glyphicon glyphicon-shopping-cart"></span> .glyphicon .glyphicon-shopping-cart</li>
+      <li><span class="glyphicon glyphicon-signal"></span> .glyphicon .glyphicon-signal</li>
+      <li><span class="glyphicon glyphicon-sort"></span> .glyphicon .glyphicon-sort</li>
+      <li><span class="glyphicon glyphicon-sort-by-alphabet"></span> .glyphicon .glyphicon-sort-by-alphabet</li>
+      <li><span class="glyphicon glyphicon-sort-by-alphabet-alt"></span> .glyphicon .glyphicon-sort-by-alphabet-alt</li>
+      <li><span class="glyphicon glyphicon-sort-by-attributes"></span> .glyphicon .glyphicon-sort-by-attributes</li>
+      <li><span class="glyphicon glyphicon-sort-by-attributes-alt"></span> .glyphicon .glyphicon-sort-by-attributes-alt</li>
+      <li><span class="glyphicon glyphicon-sort-by-order"></span> .glyphicon .glyphicon-sort-by-order</li>
+      <li><span class="glyphicon glyphicon-sort-by-order-alt"></span> .glyphicon .glyphicon-sort-by-order-alt</li>
+      <li><span class="glyphicon glyphicon-sound-5-1"></span> .glyphicon .glyphicon-sound-5-1</li>
+      <li><span class="glyphicon glyphicon-sound-6-1"></span> .glyphicon .glyphicon-sound-6-1</li>
+      <li><span class="glyphicon glyphicon-sound-7-1"></span> .glyphicon .glyphicon-sound-7-1</li>
+      <li><span class="glyphicon glyphicon-sound-dolby"></span> .glyphicon .glyphicon-sound-dolby</li>
+      <li><span class="glyphicon glyphicon-sound-stereo"></span> .glyphicon .glyphicon-sound-stereo</li>
+      <li><span class="glyphicon glyphicon-star"></span> .glyphicon .glyphicon-star</li>
+      <li><span class="glyphicon glyphicon-star-empty"></span> .glyphicon .glyphicon-star-empty</li>
+      <li><span class="glyphicon glyphicon-stats"></span> .glyphicon .glyphicon-stats</li>
+      <li><span class="glyphicon glyphicon-step-backward"></span> .glyphicon .glyphicon-step-backward</li>
+      <li><span class="glyphicon glyphicon-step-forward"></span> .glyphicon .glyphicon-step-forward</li>
+      <li><span class="glyphicon glyphicon-stop"></span> .glyphicon .glyphicon-stop</li>
+      <li><span class="glyphicon glyphicon-subtitles"></span> .glyphicon .glyphicon-subtitles</li>
+      <li><span class="glyphicon glyphicon-tag"></span> .glyphicon .glyphicon-tag</li>
+      <li><span class="glyphicon glyphicon-tags"></span> .glyphicon .glyphicon-tags</li>
+      <li><span class="glyphicon glyphicon-tasks"></span> .glyphicon .glyphicon-tasks</li>
+      <li><span class="glyphicon glyphicon-text-height"></span> .glyphicon .glyphicon-text-height</li>
+      <li><span class="glyphicon glyphicon-text-width"></span> .glyphicon .glyphicon-text-width</li>
+      <li><span class="glyphicon glyphicon-th"></span> .glyphicon .glyphicon-th</li>
+      <li><span class="glyphicon glyphicon-th-large"></span> .glyphicon .glyphicon-th-large</li>
+      <li><span class="glyphicon glyphicon-th-list"></span> .glyphicon .glyphicon-th-list</li>
+      <li><span class="glyphicon glyphicon-thumbs-down"></span> .glyphicon .glyphicon-thumbs-down</li>
+      <li><span class="glyphicon glyphicon-thumbs-up"></span> .glyphicon .glyphicon-thumbs-up</li>
+      <li><span class="glyphicon glyphicon-time"></span> .glyphicon .glyphicon-time</li>
+      <li><span class="glyphicon glyphicon-tint"></span> .glyphicon .glyphicon-tint</li>
+      <li><span class="glyphicon glyphicon-tower"></span> .glyphicon .glyphicon-tower</li>
+      <li><span class="glyphicon glyphicon-transfer"></span> .glyphicon .glyphicon-transfer</li>
+      <li><span class="glyphicon glyphicon-trash"></span> .glyphicon .glyphicon-trash</li>
+      <li><span class="glyphicon glyphicon-tree-conifer"></span> .glyphicon .glyphicon-tree-conifer</li>
+      <li><span class="glyphicon glyphicon-tree-deciduous"></span> .glyphicon .glyphicon-tree-deciduous</li>
+      <li><span class="glyphicon glyphicon-unchecked"></span> .glyphicon .glyphicon-unchecked</li>
+      <li><span class="glyphicon glyphicon-upload"></span> .glyphicon .glyphicon-upload</li>
+      <li><span class="glyphicon glyphicon-usd"></span> .glyphicon .glyphicon-usd</li>
+      <li><span class="glyphicon glyphicon-user"></span> .glyphicon .glyphicon-user</li>
+      <li><span class="glyphicon glyphicon-volume-down"></span> .glyphicon .glyphicon-volume-down</li>
+      <li><span class="glyphicon glyphicon-volume-off"></span> .glyphicon .glyphicon-volume-off</li>
+      <li><span class="glyphicon glyphicon-volume-up"></span> .glyphicon .glyphicon-volume-up</li>
+      <li><span class="glyphicon glyphicon-warning-sign"></span> .glyphicon .glyphicon-warning-sign</li>
+      <li><span class="glyphicon glyphicon-wrench"></span> .glyphicon .glyphicon-wrench</li>
+      <li><span class="glyphicon glyphicon-zoom-in"></span> .glyphicon .glyphicon-zoom-in</li>
+      <li><span class="glyphicon glyphicon-zoom-out"></span> .glyphicon .glyphicon-zoom-out</li>
+    </ul>
+
+    <h2 id="glyphicons-web-application">Web application icons</h2>
+    <ul class="bs-glyphicons">
+      <li><span class="glyphicon icon-adjust"></span> .glyphicon .icon-adjust</li>
+      <li><span class="glyphicon icon-anchor"></span> .glyphicon .icon-anchor</li>
+      <li><span class="glyphicon icon-archive"></span> .glyphicon .icon-archive</li>
+      <li><span class="glyphicon icon-asterisk"></span> .glyphicon .icon-asterisk</li>
+      <li><span class="glyphicon icon-ban-circle"></span> .glyphicon .icon-ban-circle</li>
+      <li><span class="glyphicon icon-bar-chart"></span> .glyphicon .icon-bar-chart</li>
+      <li><span class="glyphicon icon-barcode"></span> .glyphicon .icon-barcode</li>
+      <li><span class="glyphicon icon-beaker"></span> .glyphicon .icon-beaker</li>
+      <li><span class="glyphicon icon-beer"></span> .glyphicon .icon-beer</li>
+      <li><span class="glyphicon icon-bell"></span> .glyphicon .icon-bell</li>
+      <li><span class="glyphicon icon-bell-alt"></span> .glyphicon .icon-bell-alt</li>
+      <li><span class="glyphicon icon-bolt"></span> .glyphicon .icon-bolt</li>
+      <li><span class="glyphicon icon-book"></span> .glyphicon .icon-book</li>
+      <li><span class="glyphicon icon-bookmark"></span> .glyphicon .icon-bookmark</li>
+      <li><span class="glyphicon icon-bookmark-empty"></span> .glyphicon .icon-bookmark-empty</li>
+      <li><span class="glyphicon icon-briefcase"></span> .glyphicon .icon-briefcase</li>
+      <li><span class="glyphicon icon-bug"></span> .glyphicon .icon-bug</li>
+      <li><span class="glyphicon icon-building"></span> .glyphicon .icon-building</li>
+      <li><span class="glyphicon icon-bullhorn"></span> .glyphicon .icon-bullhorn</li>
+      <li><span class="glyphicon icon-bullseye"></span> .glyphicon .icon-bullseye</li>
+      <li><span class="glyphicon icon-calendar"></span> .glyphicon .icon-calendar</li>
+      <li><span class="glyphicon icon-calendar-empty"></span> .glyphicon .icon-calendar-empty</li>
+      <li><span class="glyphicon icon-camera"></span> .glyphicon .icon-camera</li>
+      <li><span class="glyphicon icon-camera-retro"></span> .glyphicon .icon-camera-retro</li>
+      <li><span class="glyphicon icon-certificate"></span> .glyphicon .icon-certificate</li>
+      <li><span class="glyphicon icon-check"></span> .glyphicon .icon-check</li>
+      <li><span class="glyphicon icon-check-empty"></span> .glyphicon .icon-check-empty</li>
+      <li><span class="glyphicon icon-check-minus"></span> .glyphicon .icon-check-minus</li>
+      <li><span class="glyphicon icon-check-sign"></span> .glyphicon .icon-check-sign</li>
+      <li><span class="glyphicon icon-circle"></span> .glyphicon .icon-circle</li>
+      <li><span class="glyphicon icon-circle-blank"></span> .glyphicon .icon-circle-blank</li>
+      <li><span class="glyphicon icon-cloud"></span> .glyphicon .icon-cloud</li>
+      <li><span class="glyphicon icon-cloud-download"></span> .glyphicon .icon-cloud-download</li>
+      <li><span class="glyphicon icon-cloud-upload"></span> .glyphicon .icon-cloud-upload</li>
+      <li><span class="glyphicon icon-code"></span> .glyphicon .icon-code</li>
+      <li><span class="glyphicon icon-code-fork"></span> .glyphicon .icon-code-fork</li>
+      <li><span class="glyphicon icon-coffee"></span> .glyphicon .icon-coffee</li>
+      <li><span class="glyphicon icon-cog"></span> .glyphicon .icon-cog</li>
+      <li><span class="glyphicon icon-cogs"></span> .glyphicon .icon-cogs</li>
+      <li><span class="glyphicon icon-collapse"></span> .glyphicon .icon-collapse</li>
+      <li><span class="glyphicon icon-collapse-alt"></span> .glyphicon .icon-collapse-alt</li>
+      <li><span class="glyphicon icon-collapse-top"></span> .glyphicon .icon-collapse-top</li>
+      <li><span class="glyphicon icon-comment"></span> .glyphicon .icon-comment</li>
+      <li><span class="glyphicon icon-comment-alt"></span> .glyphicon .icon-comment-alt</li>
+      <li><span class="glyphicon icon-comments"></span> .glyphicon .icon-comments</li>
+      <li><span class="glyphicon icon-comments-alt"></span> .glyphicon .icon-comments-alt</li>
+      <li><span class="glyphicon icon-compass"></span> .glyphicon .icon-compass</li>
+      <li><span class="glyphicon icon-credit-card"></span> .glyphicon .icon-credit-card</li>
+      <li><span class="glyphicon icon-crop"></span> .glyphicon .icon-crop</li>
+      <li><span class="glyphicon icon-dashboard"></span> .glyphicon .icon-dashboard</li>
+      <li><span class="glyphicon icon-desktop"></span> .glyphicon .icon-desktop</li>
+      <li><span class="glyphicon icon-download"></span> .glyphicon .icon-download</li>
+      <li><span class="glyphicon icon-download-alt"></span> .glyphicon .icon-download-alt</li>
+      <li><span class="glyphicon icon-edit"></span> .glyphicon .icon-edit</li>
+      <li><span class="glyphicon icon-edit-sign"></span> .glyphicon .icon-edit-sign</li>
+      <li><span class="glyphicon icon-ellipsis-horizontal"></span> .glyphicon .icon-ellipsis-horizontal</li>
+      <li><span class="glyphicon icon-ellipsis-vertical"></span> .glyphicon .icon-ellipsis-vertical</li>
+      <li><span class="glyphicon icon-envelope"></span> .glyphicon .icon-envelope</li>
+      <li><span class="glyphicon icon-envelope-alt"></span> .glyphicon .icon-envelope-alt</li>
+      <li><span class="glyphicon icon-eraser"></span> .glyphicon .icon-eraser</li>
+      <li><span class="glyphicon icon-exchange"></span> .glyphicon .icon-exchange</li>
+      <li><span class="glyphicon icon-exclamation"></span> .glyphicon .icon-exclamation</li>
+      <li><span class="glyphicon icon-exclamation-sign"></span> .glyphicon .icon-exclamation-sign</li>
+      <li><span class="glyphicon icon-expand"></span> .glyphicon .icon-expand</li>
+      <li><span class="glyphicon icon-expand-alt"></span> .glyphicon .icon-expand-alt</li>
+      <li><span class="glyphicon icon-external-link"></span> .glyphicon .icon-external-link</li>
+      <li><span class="glyphicon icon-external-link-sign"></span> .glyphicon .icon-external-link-sign</li>
+      <li><span class="glyphicon icon-eye-close"></span> .glyphicon .icon-eye-close</li>
+      <li><span class="glyphicon icon-eye-open"></span> .glyphicon .icon-eye-open</li>
+      <li><span class="glyphicon icon-facetime-video"></span> .glyphicon .icon-facetime-video</li>
+      <li><span class="glyphicon icon-female"></span> .glyphicon .icon-female</li>
+      <li><span class="glyphicon icon-fighter-jet"></span> .glyphicon .icon-fighter-jet</li>
+      <li><span class="glyphicon icon-film"></span> .glyphicon .icon-film</li>
+      <li><span class="glyphicon icon-filter"></span> .glyphicon .icon-filter</li>
+      <li><span class="glyphicon icon-fire"></span> .glyphicon .icon-fire</li>
+      <li><span class="glyphicon icon-fire-extinguisher"></span> .glyphicon .icon-fire-extinguisher</li>
+      <li><span class="glyphicon icon-flag"></span> .glyphicon .icon-flag</li>
+      <li><span class="glyphicon icon-flag-alt"></span> .glyphicon .icon-flag-alt</li>
+      <li><span class="glyphicon icon-flag-checkered"></span> .glyphicon .icon-flag-checkered</li>
+      <li><span class="glyphicon icon-folder-close"></span> .glyphicon .icon-folder-close</li>
+      <li><span class="glyphicon icon-folder-close-alt"></span> .glyphicon .icon-folder-close-alt</li>
+      <li><span class="glyphicon icon-folder-open"></span> .glyphicon .icon-folder-open</li>
+      <li><span class="glyphicon icon-folder-open-alt"></span> .glyphicon .icon-folder-open-alt</li>
+      <li><span class="glyphicon icon-food"></span> .glyphicon .icon-food</li>
+      <li><span class="glyphicon icon-frown"></span> .glyphicon .icon-frown</li>
+      <li><span class="glyphicon icon-gamepad"></span> .glyphicon .icon-gamepad</li>
+      <li><span class="glyphicon icon-cog"></span> .glyphicon .icon-cog</li>
+      <li><span class="glyphicon icon-cogs"></span> .glyphicon .icon-cogs</li>
+      <li><span class="glyphicon icon-gift"></span> .glyphicon .icon-gift</li>
+      <li><span class="glyphicon icon-glass"></span> .glyphicon .icon-glass</li>
+      <li><span class="glyphicon icon-globe"></span> .glyphicon .icon-globe</li>
+      <li><span class="glyphicon icon-group"></span> .glyphicon .icon-group</li>
+      <li><span class="glyphicon icon-hdd"></span> .glyphicon .icon-hdd</li>
+      <li><span class="glyphicon icon-headphones"></span> .glyphicon .icon-headphones</li>
+      <li><span class="glyphicon icon-heart"></span> .glyphicon .icon-heart</li>
+      <li><span class="glyphicon icon-heart-empty"></span> .glyphicon .icon-heart-empty</li>
+      <li><span class="glyphicon icon-home"></span> .glyphicon .icon-home</li>
+      <li><span class="glyphicon icon-inbox"></span> .glyphicon .icon-inbox</li>
+      <li><span class="glyphicon icon-info"></span> .glyphicon .icon-info</li>
+      <li><span class="glyphicon icon-info-sign"></span> .glyphicon .icon-info-sign</li>
+      <li><span class="glyphicon icon-key"></span> .glyphicon .icon-key</li>
+      <li><span class="glyphicon icon-keyboard"></span> .glyphicon .icon-keyboard</li>
+      <li><span class="glyphicon icon-laptop"></span> .glyphicon .icon-laptop</li>
+      <li><span class="glyphicon icon-leaf"></span> .glyphicon .icon-leaf</li>
+      <li><span class="glyphicon icon-legal"></span> .glyphicon .icon-legal</li>
+      <li><span class="glyphicon icon-lemon"></span> .glyphicon .icon-lemon</li>
+      <li><span class="glyphicon icon-level-down"></span> .glyphicon .icon-level-down</li>
+      <li><span class="glyphicon icon-level-up"></span> .glyphicon .icon-level-up</li>
+      <li><span class="glyphicon icon-lightbulb"></span> .glyphicon .icon-lightbulb</li>
+      <li><span class="glyphicon icon-location-arrow"></span> .glyphicon .icon-location-arrow</li>
+      <li><span class="glyphicon icon-lock"></span> .glyphicon .icon-lock</li>
+      <li><span class="glyphicon icon-magic"></span> .glyphicon .icon-magic</li>
+      <li><span class="glyphicon icon-magnet"></span> .glyphicon .icon-magnet</li>
+      <li><span class="glyphicon icon-share-alt"></span> .glyphicon .icon-share-alt</li>
+      <li><span class="glyphicon icon-reply"></span> .glyphicon .icon-reply</li>
+      <li><span class="glyphicon icon-mail-reply-all"></span> .glyphicon .icon-mail-reply-all</li>
+      <li><span class="glyphicon icon-male"></span> .glyphicon .icon-male</li>
+      <li><span class="glyphicon icon-map-marker"></span> .glyphicon .icon-map-marker</li>
+      <li><span class="glyphicon icon-meh"></span> .glyphicon .icon-meh</li>
+      <li><span class="glyphicon icon-microphone"></span> .glyphicon .icon-microphone</li>
+      <li><span class="glyphicon icon-microphone-off"></span> .glyphicon .icon-microphone-off</li>
+      <li><span class="glyphicon icon-minus"></span> .glyphicon .icon-minus</li>
+      <li><span class="glyphicon icon-minus-sign"></span> .glyphicon .icon-minus-sign</li>
+      <li><span class="glyphicon icon-minus-sign-alt"></span> .glyphicon .icon-minus-sign-alt</li>
+      <li><span class="glyphicon icon-mobile-phone"></span> .glyphicon .icon-mobile-phone</li>
+      <li><span class="glyphicon icon-money"></span> .glyphicon .icon-money</li>
+      <li><span class="glyphicon icon-moon"></span> .glyphicon .icon-moon</li>
+      <li><span class="glyphicon icon-move"></span> .glyphicon .icon-move</li>
+      <li><span class="glyphicon icon-music"></span> .glyphicon .icon-music</li>
+      <li><span class="glyphicon icon-off"></span> .glyphicon .icon-off</li>
+      <li><span class="glyphicon icon-ok"></span> .glyphicon .icon-ok</li>
+      <li><span class="glyphicon icon-ok-circle"></span> .glyphicon .icon-ok-circle</li>
+      <li><span class="glyphicon icon-ok-sign"></span> .glyphicon .icon-ok-sign</li>
+      <li><span class="glyphicon icon-pencil"></span> .glyphicon .icon-pencil</li>
+      <li><span class="glyphicon icon-phone"></span> .glyphicon .icon-phone</li>
+      <li><span class="glyphicon icon-phone-sign"></span> .glyphicon .icon-phone-sign</li>
+      <li><span class="glyphicon icon-picture"></span> .glyphicon .icon-picture</li>
+      <li><span class="glyphicon icon-plane"></span> .glyphicon .icon-plane</li>
+      <li><span class="glyphicon icon-plus"></span> .glyphicon .icon-plus</li>
+      <li><span class="glyphicon icon-plus-sign"></span> .glyphicon .icon-plus-sign</li>
+      <li><span class="glyphicon icon-plus-sign-alt"></span> .glyphicon .icon-plus-sign-alt</li>
+      <li><span class="glyphicon icon-off"></span> .glyphicon .icon-off</li>
+      <li><span class="glyphicon icon-print"></span> .glyphicon .icon-print</li>
+      <li><span class="glyphicon icon-pushpin"></span> .glyphicon .icon-pushpin</li>
+      <li><span class="glyphicon icon-puzzle-piece"></span> .glyphicon .icon-puzzle-piece</li>
+      <li><span class="glyphicon icon-qrcode"></span> .glyphicon .icon-qrcode</li>
+      <li><span class="glyphicon icon-question"></span> .glyphicon .icon-question</li>
+      <li><span class="glyphicon icon-question-sign"></span> .glyphicon .icon-question-sign</li>
+      <li><span class="glyphicon icon-quote-left"></span> .glyphicon .icon-quote-left</li>
+      <li><span class="glyphicon icon-quote-right"></span> .glyphicon .icon-quote-right</li>
+      <li><span class="glyphicon icon-random"></span> .glyphicon .icon-random</li>
+      <li><span class="glyphicon icon-refresh"></span> .glyphicon .icon-refresh</li>
+      <li><span class="glyphicon icon-remove"></span> .glyphicon .icon-remove</li>
+      <li><span class="glyphicon icon-remove-circle"></span> .glyphicon .icon-remove-circle</li>
+      <li><span class="glyphicon icon-remove-sign"></span> .glyphicon .icon-remove-sign</li>
+      <li><span class="glyphicon icon-reorder"></span> .glyphicon .icon-reorder</li>
+      <li><span class="glyphicon icon-reply"></span> .glyphicon .icon-reply</li>
+      <li><span class="glyphicon icon-reply-all"></span> .glyphicon .icon-reply-all</li>
+      <li><span class="glyphicon icon-resize-horizontal"></span> .glyphicon .icon-resize-horizontal</li>
+      <li><span class="glyphicon icon-resize-vertical"></span> .glyphicon .icon-resize-vertical</li>
+      <li><span class="glyphicon icon-retweet"></span> .glyphicon .icon-retweet</li>
+      <li><span class="glyphicon icon-road"></span> .glyphicon .icon-road</li>
+      <li><span class="glyphicon icon-rocket"></span> .glyphicon .icon-rocket</li>
+      <li><span class="glyphicon icon-rss"></span> .glyphicon .icon-rss</li>
+      <li><span class="glyphicon icon-rss-sign"></span> .glyphicon .icon-rss-sign</li>
+      <li><span class="glyphicon icon-screenshot"></span> .glyphicon .icon-screenshot</li>
+      <li><span class="glyphicon icon-search"></span> .glyphicon .icon-search</li>
+      <li><span class="glyphicon icon-share"></span> .glyphicon .icon-share</li>
+      <li><span class="glyphicon icon-share-alt"></span> .glyphicon .icon-share-alt</li>
+      <li><span class="glyphicon icon-share-sign"></span> .glyphicon .icon-share-sign</li>
+      <li><span class="glyphicon icon-shield"></span> .glyphicon .icon-shield</li>
+      <li><span class="glyphicon icon-shopping-cart"></span> .glyphicon .icon-shopping-cart</li>
+      <li><span class="glyphicon icon-sign-blank"></span> .glyphicon .icon-sign-blank</li>
+      <li><span class="glyphicon icon-signal"></span> .glyphicon .icon-signal</li>
+      <li><span class="glyphicon icon-signin"></span> .glyphicon .icon-signin</li>
+      <li><span class="glyphicon icon-signout"></span> .glyphicon .icon-signout</li>
+      <li><span class="glyphicon icon-sitemap"></span> .glyphicon .icon-sitemap</li>
+      <li><span class="glyphicon icon-smile"></span> .glyphicon .icon-smile</li>
+      <li><span class="glyphicon icon-sort"></span> .glyphicon .icon-sort</li>
+      <li><span class="glyphicon icon-sort-by-alphabet"></span> .glyphicon .icon-sort-by-alphabet</li>
+      <li><span class="glyphicon icon-sort-by-alphabet-alt"></span> .glyphicon .icon-sort-by-alphabet-alt</li>
+      <li><span class="glyphicon icon-sort-by-attributes"></span> .glyphicon .icon-sort-by-attributes</li>
+      <li><span class="glyphicon icon-sort-by-attributes-alt"></span> .glyphicon .icon-sort-by-attributes-alt</li>
+      <li><span class="glyphicon icon-sort-by-order"></span> .glyphicon .icon-sort-by-order</li>
+      <li><span class="glyphicon icon-sort-by-order-alt"></span> .glyphicon .icon-sort-by-order-alt</li>
+      <li><span class="glyphicon icon-sort-down"></span> .glyphicon .icon-sort-down</li>
+      <li><span class="glyphicon icon-sort-up"></span> .glyphicon .icon-sort-up</li>
+      <li><span class="glyphicon icon-spinner"></span> .glyphicon .icon-spinner</li>
+      <li><span class="glyphicon icon-star"></span> .glyphicon .icon-star</li>
+      <li><span class="glyphicon icon-star-empty"></span> .glyphicon .icon-star-empty</li>
+      <li><span class="glyphicon icon-star-half"></span> .glyphicon .icon-star-half</li>
+      <li><span class="glyphicon icon-star-half-empty"></span> .glyphicon .icon-star-half-empty</li>
+      <li><span class="glyphicon icon-star-half-empty"></span> .glyphicon .icon-star-half-empty</li>
+      <li><span class="glyphicon icon-subscript"></span> .glyphicon .icon-subscript</li>
+      <li><span class="glyphicon icon-suitcase"></span> .glyphicon .icon-suitcase</li>
+      <li><span class="glyphicon icon-sun"></span> .glyphicon .icon-sun</li>
+      <li><span class="glyphicon icon-superscript"></span> .glyphicon .icon-superscript</li>
+      <li><span class="glyphicon icon-tablet"></span> .glyphicon .icon-tablet</li>
+      <li><span class="glyphicon icon-tag"></span> .glyphicon .icon-tag</li>
+      <li><span class="glyphicon icon-tags"></span> .glyphicon .icon-tags</li>
+      <li><span class="glyphicon icon-tasks"></span> .glyphicon .icon-tasks</li>
+      <li><span class="glyphicon icon-terminal"></span> .glyphicon .icon-terminal</li>
+      <li><span class="glyphicon icon-thumbs-down"></span> .glyphicon .icon-thumbs-down</li>
+      <li><span class="glyphicon icon-thumbs-down-alt"></span> .glyphicon .icon-thumbs-down-alt</li>
+      <li><span class="glyphicon icon-thumbs-up"></span> .glyphicon .icon-thumbs-up</li>
+      <li><span class="glyphicon icon-thumbs-up-alt"></span> .glyphicon .icon-thumbs-up-alt</li>
+      <li><span class="glyphicon icon-ticket"></span> .glyphicon .icon-ticket</li>
+      <li><span class="glyphicon icon-time"></span> .glyphicon .icon-time</li>
+      <li><span class="glyphicon icon-tint"></span> .glyphicon .icon-tint</li>
+      <li><span class="glyphicon icon-trash"></span> .glyphicon .icon-trash</li>
+      <li><span class="glyphicon icon-trophy"></span> .glyphicon .icon-trophy</li>
+      <li><span class="glyphicon icon-truck"></span> .glyphicon .icon-truck</li>
+      <li><span class="glyphicon icon-umbrella"></span> .glyphicon .icon-umbrella</li>
+      <li><span class="glyphicon icon-check-empty"></span> .glyphicon .icon-check-empty</li>
+      <li><span class="glyphicon icon-unlock"></span> .glyphicon .icon-unlock</li>
+      <li><span class="glyphicon icon-unlock-alt"></span> .glyphicon .icon-unlock-alt</li>
+      <li><span class="glyphicon icon-upload"></span> .glyphicon .icon-upload</li>
+      <li><span class="glyphicon icon-upload-alt"></span> .glyphicon .icon-upload-alt</li>
+      <li><span class="glyphicon icon-user"></span> .glyphicon .icon-user</li>
+      <li><span class="glyphicon icon-volume-down"></span> .glyphicon .icon-volume-down</li>
+      <li><span class="glyphicon icon-volume-off"></span> .glyphicon .icon-volume-off</li>
+      <li><span class="glyphicon icon-volume-up"></span> .glyphicon .icon-volume-up</li>
+      <li><span class="glyphicon icon-warning-sign"></span> .glyphicon .icon-warning-sign</li>
+      <li><span class="glyphicon icon-wrench"></span> .glyphicon .icon-wrench</li>
+      <li><span class="glyphicon icon-zoom-in"></span> .glyphicon .icon-zoom-in</li>
+      <li><span class="glyphicon icon-zoom-out"></span> .glyphicon .icon-zoom-out</li>
+    </ul>
+
+    <h2 id="glyphicons-currency">Currency icons</h2>
+    <ul class="bs-glyphicons">
+      <li><span class="glyphicon icon-bitcoin"></span> .glyphicon .icon-bitcoin</li>
+      <li><span class="glyphicon icon-btc"></span> .glyphicon .icon-btc</li>
+      <li><span class="glyphicon icon-cny"></span> .glyphicon .icon-cny</li>
+      <li><span class="glyphicon icon-dollar"></span> .glyphicon .icon-dollar</li>
+      <li><span class="glyphicon icon-eur"></span> .glyphicon .icon-eur</li>
+      <li><span class="glyphicon icon-euro"></span> .glyphicon .icon-euro</li>
+      <li><span class="glyphicon icon-gbp"></span> .glyphicon .icon-gbp</li>
+      <li><span class="glyphicon icon-inr"></span> .glyphicon .icon-inr</li>
+      <li><span class="glyphicon icon-jpy"></span> .glyphicon .icon-jpy</li>
+      <li><span class="glyphicon icon-krw"></span> .glyphicon .icon-krw</li>
+      <li><span class="glyphicon icon-renminbi"></span> .glyphicon .icon-renminbi</li>
+      <li><span class="glyphicon icon-rupee"></span> .glyphicon .icon-rupee</li>
+      <li><span class="glyphicon icon-usd"></span> .glyphicon .icon-usd</li>
+      <li><span class="glyphicon icon-won"></span> .glyphicon .icon-won</li>
+      <li><span class="glyphicon icon-yen"></span> .glyphicon .icon-yen</li>
+    </ul>
+
+    <h2 id="glyphicons-text-editor">Text editor icons</h2>
+    <ul class="bs-glyphicons">
+      <li><span class="glyphicon icon-align-center"></span> .glyphicon .icon-align-center</li>
+      <li><span class="glyphicon icon-align-justify"></span> .glyphicon .icon-align-justify</li>
+      <li><span class="glyphicon icon-align-left"></span> .glyphicon .icon-align-left</li>
+      <li><span class="glyphicon icon-align-right"></span> .glyphicon .icon-align-right</li>
+      <li><span class="glyphicon icon-bold"></span> .glyphicon .icon-bold</li>
+      <li><span class="glyphicon icon-columns"></span> .glyphicon .icon-columns</li>
+      <li><span class="glyphicon icon-copy"></span> .glyphicon .icon-copy</li>
+      <li><span class="glyphicon icon-cut"></span> .glyphicon .icon-cut</li>
+      <li><span class="glyphicon icon-eraser"></span> .glyphicon .icon-eraser</li>
+      <li><span class="glyphicon icon-file"></span> .glyphicon .icon-file</li>
+      <li><span class="glyphicon icon-file-alt"></span> .glyphicon .icon-file-alt</li>
+      <li><span class="glyphicon icon-file-text"></span> .glyphicon .icon-file-text</li>
+      <li><span class="glyphicon icon-file-text-alt"></span> .glyphicon .icon-file-text-alt</li>
+      <li><span class="glyphicon icon-font"></span> .glyphicon .icon-font</li>
+      <li><span class="glyphicon icon-indent-left"></span> .glyphicon .icon-indent-left</li>
+      <li><span class="glyphicon icon-indent-right"></span> .glyphicon .icon-indent-right</li>
+      <li><span class="glyphicon icon-italic"></span> .glyphicon .icon-italic</li>
+      <li><span class="glyphicon icon-link"></span> .glyphicon .icon-link</li>
+      <li><span class="glyphicon icon-list"></span> .glyphicon .icon-list</li>
+      <li><span class="glyphicon icon-list-alt"></span> .glyphicon .icon-list-alt</li>
+      <li><span class="glyphicon icon-list-ol"></span> .glyphicon .icon-list-ol</li>
+      <li><span class="glyphicon icon-list-ul"></span> .glyphicon .icon-list-ul</li>
+      <li><span class="glyphicon icon-paper-clip"></span> .glyphicon .icon-paper-clip</li>
+      <li><span class="glyphicon icon-paperclip"></span> .glyphicon .icon-paperclip</li>
+      <li><span class="glyphicon icon-paste"></span> .glyphicon .icon-paste</li>
+      <li><span class="glyphicon icon-repeat"></span> .glyphicon .icon-repeat</li>
+      <li><span class="glyphicon icon-rotate-left"></span> .glyphicon .icon-rotate-left</li>
+      <li><span class="glyphicon icon-rotate-right"></span> .glyphicon .icon-rotate-right</li>
+      <li><span class="glyphicon icon-save"></span> .glyphicon .icon-save</li>
+      <li><span class="glyphicon icon-strikethrough"></span> .glyphicon .icon-strikethrough</li>
+      <li><span class="glyphicon icon-table"></span> .glyphicon .icon-table</li>
+      <li><span class="glyphicon icon-text-height"></span> .glyphicon .icon-text-height</li>
+      <li><span class="glyphicon icon-text-width"></span> .glyphicon .icon-text-width</li>
+      <li><span class="glyphicon icon-th"></span> .glyphicon .icon-th</li>
+      <li><span class="glyphicon icon-th-large"></span> .glyphicon .icon-th-large</li>
+      <li><span class="glyphicon icon-th-list"></span> .glyphicon .icon-th-list</li>
+      <li><span class="glyphicon icon-underline"></span> .glyphicon .icon-underline</li>
+      <li><span class="glyphicon icon-undo"></span> .glyphicon .icon-undo</li>
+      <li><span class="glyphicon icon-unlink"></span> .glyphicon .icon-unlink</li>
+    </ul>
+
+    <h2 id="glyphicons-directional">Directional icons</h2>
+    <ul class="bs-glyphicons">
+      <li><span class="glyphicon icon-angle-down"></span> .glyphicon .icon-angle-down</li>
+      <li><span class="glyphicon icon-angle-left"></span> .glyphicon .icon-angle-left</li>
+      <li><span class="glyphicon icon-angle-right"></span> .glyphicon .icon-angle-right</li>
+      <li><span class="glyphicon icon-angle-up"></span> .glyphicon .icon-angle-up</li>
+      <li><span class="glyphicon icon-arrow-down"></span> .glyphicon .icon-arrow-down</li>
+      <li><span class="glyphicon icon-arrow-left"></span> .glyphicon .icon-arrow-left</li>
+      <li><span class="glyphicon icon-arrow-right"></span> .glyphicon .icon-arrow-right</li>
+      <li><span class="glyphicon icon-arrow-up"></span> .glyphicon .icon-arrow-up</li>
+      <li><span class="glyphicon icon-caret-down"></span> .glyphicon .icon-caret-down</li>
+      <li><span class="glyphicon icon-caret-left"></span> .glyphicon .icon-caret-left</li>
+      <li><span class="glyphicon icon-caret-right"></span> .glyphicon .icon-caret-right</li>
+      <li><span class="glyphicon icon-caret-up"></span> .glyphicon .icon-caret-up</li>
+      <li><span class="glyphicon icon-chevron-down"></span> .glyphicon .icon-chevron-down</li>
+      <li><span class="glyphicon icon-chevron-left"></span> .glyphicon .icon-chevron-left</li>
+      <li><span class="glyphicon icon-chevron-right"></span> .glyphicon .icon-chevron-right</li>
+      <li><span class="glyphicon icon-chevron-sign-down"></span> .glyphicon .icon-chevron-sign-down</li>
+      <li><span class="glyphicon icon-chevron-sign-left"></span> .glyphicon .icon-chevron-sign-left</li>
+      <li><span class="glyphicon icon-chevron-sign-right"></span> .glyphicon .icon-chevron-sign-right</li>
+      <li><span class="glyphicon icon-chevron-sign-up"></span> .glyphicon .icon-chevron-sign-up</li>
+      <li><span class="glyphicon icon-chevron-up"></span> .glyphicon .icon-chevron-up</li>
+      <li><span class="glyphicon icon-circle-arrow-down"></span> .glyphicon .icon-circle-arrow-down</li>
+      <li><span class="glyphicon icon-circle-arrow-left"></span> .glyphicon .icon-circle-arrow-left</li>
+      <li><span class="glyphicon icon-circle-arrow-right"></span> .glyphicon .icon-circle-arrow-right</li>
+      <li><span class="glyphicon icon-circle-arrow-up"></span> .glyphicon .icon-circle-arrow-up</li>
+      <li><span class="glyphicon icon-double-angle-down"></span> .glyphicon .icon-double-angle-down</li>
+      <li><span class="glyphicon icon-double-angle-left"></span> .glyphicon .icon-double-angle-left</li>
+      <li><span class="glyphicon icon-double-angle-right"></span> .glyphicon .icon-double-angle-right</li>
+      <li><span class="glyphicon icon-double-angle-up"></span> .glyphicon .icon-double-angle-up</li>
+      <li><span class="glyphicon icon-hand-down"></span> .glyphicon .icon-hand-down</li>
+      <li><span class="glyphicon icon-hand-left"></span> .glyphicon .icon-hand-left</li>
+      <li><span class="glyphicon icon-hand-right"></span> .glyphicon .icon-hand-right</li>
+      <li><span class="glyphicon icon-hand-up"></span> .glyphicon .icon-hand-up</li>
+      <li><span class="glyphicon icon-long-arrow-down"></span> .glyphicon .icon-long-arrow-down</li>
+      <li><span class="glyphicon icon-long-arrow-left"></span> .glyphicon .icon-long-arrow-left</li>
+      <li><span class="glyphicon icon-long-arrow-right"></span> .glyphicon .icon-long-arrow-right</li>
+      <li><span class="glyphicon icon-long-arrow-up"></span> .glyphicon .icon-long-arrow-up</li>
+    </ul>
+
+    <h2 id="glyphicons-video-player">Video player icons</h2>
+    <ul class="bs-glyphicons">
+      <li><span class="glyphicon icon-backward"></span> .glyphicon .icon-backward</li>
+      <li><span class="glyphicon icon-eject"></span> .glyphicon .icon-eject</li>
+      <li><span class="glyphicon icon-fast-backward"></span> .glyphicon .icon-fast-backward</li>
+      <li><span class="glyphicon icon-fast-forward"></span> .glyphicon .icon-fast-forward</li>
+      <li><span class="glyphicon icon-forward"></span> .glyphicon .icon-forward</li>
+      <li><span class="glyphicon icon-fullscreen"></span> .glyphicon .icon-fullscreen</li>
+      <li><span class="glyphicon icon-pause"></span> .glyphicon .icon-pause</li>
+      <li><span class="glyphicon icon-play"></span> .glyphicon .icon-play</li>
+      <li><span class="glyphicon icon-play-circle"></span> .glyphicon .icon-play-circle</li>
+      <li><span class="glyphicon icon-play-sign"></span> .glyphicon .icon-play-sign</li>
+      <li><span class="glyphicon icon-resize-full"></span> .glyphicon .icon-resize-full</li>
+      <li><span class="glyphicon icon-resize-small"></span> .glyphicon .icon-resize-small</li>
+      <li><span class="glyphicon icon-step-backward"></span> .glyphicon .icon-step-backward</li>
+      <li><span class="glyphicon icon-step-forward"></span> .glyphicon .icon-step-forward</li>
+      <li><span class="glyphicon icon-stop"></span> .glyphicon .icon-stop</li>
+      <li><span class="glyphicon icon-youtube-play"></span> .glyphicon .icon-youtube-play</li>
+    </ul>
+
+    <h2 id="glyphicons-brand">Brand icons</h2>
+    <div class="bs-callout bs-callout-warning">
+      <p>All brand icons are trademarks of their respective owners.</p>
+      <p>The use of these trademarks does not indicate endorsement of the trademark holder by Font Awesome, nor vice versa.</p>
+    </div>
+    <ul class="bs-glyphicons">
+      <li><span class="glyphicon icon-adn"></span> .glyphicon .icon-adn</li>
+      <li><span class="glyphicon icon-android"></span> .glyphicon .icon-android</li>
+      <li><span class="glyphicon icon-apple"></span> .glyphicon .icon-apple</li>
+      <li><span class="glyphicon icon-bitbucket"></span> .glyphicon .icon-bitbucket</li>
+      <li><span class="glyphicon icon-bitbucket-sign"></span> .glyphicon .icon-bitbucket-sign</li>
+      <li><span class="glyphicon icon-bitcoin"></span> .glyphicon .icon-bitcoin</li>
+      <li><span class="glyphicon icon-btc"></span> .glyphicon .icon-btc</li>
+      <li><span class="glyphicon icon-css3"></span> .glyphicon .icon-css3</li>
+      <li><span class="glyphicon icon-dribbble"></span> .glyphicon .icon-dribbble</li>
+      <li><span class="glyphicon icon-dropbox"></span> .glyphicon .icon-dropbox</li>
+      <li><span class="glyphicon icon-facebook"></span> .glyphicon .icon-facebook</li>
+      <li><span class="glyphicon icon-facebook-sign"></span> .glyphicon .icon-facebook-sign</li>
+      <li><span class="glyphicon icon-flickr"></span> .glyphicon .icon-flickr</li>
+      <li><span class="glyphicon icon-foursquare"></span> .glyphicon .icon-foursquare</li>
+      <li><span class="glyphicon icon-github"></span> .glyphicon .icon-github</li>
+      <li><span class="glyphicon icon-github-alt"></span> .glyphicon .icon-github-alt</li>
+      <li><span class="glyphicon icon-github-sign"></span> .glyphicon .icon-github-sign</li>
+      <li><span class="glyphicon icon-gittip"></span> .glyphicon .icon-gittip</li>
+      <li><span class="glyphicon icon-google-plus"></span> .glyphicon .icon-google-plus</li>
+      <li><span class="glyphicon icon-google-plus-sign"></span> .glyphicon .icon-google-plus-sign</li>
+      <li><span class="glyphicon icon-html5"></span> .glyphicon .icon-html5</li>
+      <li><span class="glyphicon icon-instagram"></span> .glyphicon .icon-instagram</li>
+      <li><span class="glyphicon icon-linkedin"></span> .glyphicon .icon-linkedin</li>
+      <li><span class="glyphicon icon-linkedin-sign"></span> .glyphicon .icon-linkedin-sign</li>
+      <li><span class="glyphicon icon-linux"></span> .glyphicon .icon-linux</li>
+      <li><span class="glyphicon icon-maxcdn"></span> .glyphicon .icon-maxcdn</li>
+      <li><span class="glyphicon icon-pinterest"></span> .glyphicon .icon-pinterest</li>
+      <li><span class="glyphicon icon-pinterest-sign"></span> .glyphicon .icon-pinterest-sign</li>
+      <li><span class="glyphicon icon-renren"></span> .glyphicon .icon-renren</li>
+      <li><span class="glyphicon icon-skype"></span> .glyphicon .icon-skype</li>
+      <li><span class="glyphicon icon-stackexchange"></span> .glyphicon .icon-stackexchange</li>
+      <li><span class="glyphicon icon-trello"></span> .glyphicon .icon-trello</li>
+      <li><span class="glyphicon icon-tumblr"></span> .glyphicon .icon-tumblr</li>
+      <li><span class="glyphicon icon-tumblr-sign"></span> .glyphicon .icon-tumblr-sign</li>
+      <li><span class="glyphicon icon-twitter"></span> .glyphicon .icon-twitter</li>
+      <li><span class="glyphicon icon-twitter-sign"></span> .glyphicon .icon-twitter-sign</li>
+      <li><span class="glyphicon icon-vk"></span> .glyphicon .icon-vk</li>
+      <li><span class="glyphicon icon-weibo"></span> .glyphicon .icon-weibo</li>
+      <li><span class="glyphicon icon-windows"></span> .glyphicon .icon-windows</li>
+      <li><span class="glyphicon icon-xing"></span> .glyphicon .icon-xing</li>
+      <li><span class="glyphicon icon-xing-sign"></span> .glyphicon .icon-xing-sign</li>
+      <li><span class="glyphicon icon-youtube"></span> .glyphicon .icon-youtube</li>
+      <li><span class="glyphicon icon-youtube-play"></span> .glyphicon .icon-youtube-play</li>
+      <li><span class="glyphicon icon-youtube-sign"></span> .glyphicon .icon-youtube-sign</li>
+    </ul>
+
+    <h2 id="glyphicons-medical">Medical icons</h2>
+    <ul class="bs-glyphicons">
+      <li><span class="glyphicon icon-ambulance"></span> .glyphicon .icon-ambulance</li>
+      <li><span class="glyphicon icon-h-sign"></span> .glyphicon .icon-h-sign</li>
+      <li><span class="glyphicon icon-hospital"></span> .glyphicon .icon-hospital</li>
+      <li><span class="glyphicon icon-medkit"></span> .glyphicon .icon-medkit</li>
+      <li><span class="glyphicon icon-plus-sign-alt"></span> .glyphicon .icon-plus-sign-alt</li>
+      <li><span class="glyphicon icon-stethoscope"></span> .glyphicon .icon-stethoscope</li>
+      <li><span class="glyphicon icon-user-md"></span> .glyphicon .icon-user-md</li>
+    </ul>
+
+    <h2 id="glyphicons-how-to-use">How to use</h2>
+    <p>For performance reasons, all icons require a base class and individual icon class. To use, place the following code just about anywhere. Be sure to leave a space between the icon and text for proper padding.</p>
+{% highlight html %}
+<span class="glyphicon glyphicon-search"></span>
+{% endhighlight %}
+
+
+    <h2 id="glyphicons-examples">Examples</h2>
+    <p>Use them in buttons, button groups for a toolbar, navigation, or prepended form inputs.</p>
+    <div class="bs-example">
+      <div class="btn-toolbar" role="toolbar">
+        <div class="btn-group">
+          <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-align-left"></span></button>
+          <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-align-center"></span></button>
+          <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-align-right"></span></button>
+          <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-align-justify"></span></button>
+        </div>
+      </div>
+      <div class="btn-toolbar" role="toolbar">
+        <button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-star"></span> Star</button>
+        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-star"></span> Star</button>
+        <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-star"></span> Star</button>
+        <button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-star"></span> Star</button>
+      </div>
+    </div>
+{% highlight html %}
+<button type="button" class="btn btn-default btn-lg">
+  <span class="glyphicon glyphicon-star"></span> Star
+</button>
+{% endhighlight %}
+
+  </div>
+
+
+<!-- Dropdowns
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="dropdowns">Dropdowns</h1>
     </div>
     <p class="lead">Toggleable, contextual menu for displaying lists of links. Made interactive with the <a href="../javascript/#dropdowns">dropdown JavaScript plugin</a>.</p>
 
@@ -19,7 +681,10 @@ base_url: "../"
     <p>Wrap the dropdown's trigger and the dropdown menu within <code>.dropdown</code>, or another element that declares <code>position: relative;</code>. Then add the menu's HTML.</p>
     <div class="bs-example">
       <div class="dropdown clearfix">
-        <a id="dropdownMenu1" href="#" role="button" class="sr-only dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+        <button class="btn dropdown-toggle sr-only" type="button" id="dropdownMenu1" data-toggle="dropdown">
+          Dropdown
+          <span class="caret"></span>
+        </button>
         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
           <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
           <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
@@ -31,7 +696,10 @@ base_url: "../"
     </div><!-- /example -->
 {% highlight html %}
 <div class="dropdown">
-  <!-- Link or button to toggle dropdown -->
+  <button class="btn dropdown-toggle sr-only" type="button" id="dropdownMenu1" data-toggle="dropdown">
+    Dropdown
+    <span class="caret"></span>
+  </button>
   <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
     <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
     <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
@@ -42,7 +710,7 @@ base_url: "../"
 </div>
 {% endhighlight %}
 
-    <h3 id="dropdowns-alignment">Aligning the menus</h3>
+    <h3 id="dropdowns-alignment">Alignment options</h3>
     <p>Add <code>.pull-right</code> to a <code>.dropdown-menu</code> to right align the dropdown menu.</p>
 {% highlight html %}
 <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dLabel">
@@ -50,11 +718,14 @@ base_url: "../"
 </ul>
 {% endhighlight %}
 
-    <h3 id="dropdowns-headers">Dropdown headers</h3>
+    <h3 id="dropdowns-headers">Headers</h3>
     <p>Add a header to label sections of actions in any dropdown menu.</p>
     <div class="bs-example">
       <div class="dropdown clearfix">
-        <a id="dropdownMenu2" href="#" role="button" class="sr-only dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+        <button class="btn dropdown-toggle sr-only" type="button" id="dropdownMenu2" data-toggle="dropdown">
+          Dropdown
+          <span class="caret"></span>
+        </button>
         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
           <li role="presentation" class="dropdown-header">Dropdown header</li>
           <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
@@ -76,11 +747,14 @@ base_url: "../"
 </ul>
 {% endhighlight %}
 
-    <h3 id="dropdowns-disabled">Disabled menu options</h3>
+    <h3 id="dropdowns-disabled">Disabled menu items</h3>
     <p>Add <code>.disabled</code> to a <code>&lt;li&gt;</code> in the dropdown to disable the link.</p>
     <div class="bs-example">
       <div class="dropdown clearfix">
-        <a id="dropdownMenu3" href="#" role="button" class="sr-only dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+        <button class="btn dropdown-toggle sr-only" type="button" id="dropdownMenu3" data-toggle="dropdown">
+          Dropdown
+          <span class="caret"></span>
+        </button>
         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu3">
           <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Regular link</a></li>
           <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">Disabled link</a></li>
@@ -112,7 +786,7 @@ base_url: "../"
       <p>When using tooltips or popovers on elements within a <code>.btn-group</code>, you'll have to specify the option <code>container: 'body'</code> to avoid unwanted side effects (such as the element growing wider and/or losing its rounded corners when the tooltip or popover is triggered).</p>
     </div>
 
-    <h3 id="btn-groups-single">Basic button group</h3>
+    <h3 id="btn-groups-single">Basic example</h3>
     <p>Wrap a series of buttons with <code>.btn</code> in <code>.btn-group</code>.</p>
     <div class="bs-example">
       <div class="btn-group" style="margin: 9px 0 5px;">
@@ -129,10 +803,10 @@ base_url: "../"
 </div>
 {% endhighlight %}
 
-    <h3 id="btn-groups-toolbar">Multiple button groups</h3>
+    <h3 id="btn-groups-toolbar">Button toolbar</h3>
     <p>Combine sets of <code>&lt;div class="btn-group"&gt;</code> into a <code>&lt;div class="btn-toolbar"&gt;</code> for more complex components.</p>
     <div class="bs-example">
-      <div class="btn-toolbar" style="margin: 0;">
+      <div class="btn-toolbar" role="toolbar" style="margin: 0;">
         <div class="btn-group">
           <button type="button" class="btn btn-default">1</button>
           <button type="button" class="btn btn-default">2</button>
@@ -150,47 +824,53 @@ base_url: "../"
       </div>
     </div>
 {% highlight html %}
-<div class="btn-toolbar">
+<div class="btn-toolbar" role="toolbar">
   <div class="btn-group">...</div>
   <div class="btn-group">...</div>
   <div class="btn-group">...</div>
 </div>
 {% endhighlight %}
 
-    <h3 id="btn-groups-sizing">Button group sizing</h3>
+    <h3 id="btn-groups-sizing">Sizing</h3>
     <p>Instead of applying button sizing classes to every button in a group, just add <code>.btn-group-*</code> to the <code>.btn-group</code>.</p>
     <div class="bs-example">
-      <div class="btn-group btn-group-lg">
-        <button type="button" class="btn btn-default">Left</button>
-        <button type="button" class="btn btn-default">Middle</button>
-        <button type="button" class="btn btn-default">Right</button>
+      <div class="btn-toolbar" role="toolbar">
+        <div class="btn-group btn-group-lg">
+          <button type="button" class="btn btn-default">Left</button>
+          <button type="button" class="btn btn-default">Middle</button>
+          <button type="button" class="btn btn-default">Right</button>
+        </div>
       </div>
-      <div class="btn-group">
-        <button type="button" class="btn btn-default">Left</button>
-        <button type="button" class="btn btn-default">Middle</button>
-        <button type="button" class="btn btn-default">Right</button>
+      <div class="btn-toolbar" role="toolbar">
+        <div class="btn-group">
+          <button type="button" class="btn btn-default">Left</button>
+          <button type="button" class="btn btn-default">Middle</button>
+          <button type="button" class="btn btn-default">Right</button>
+        </div>
       </div>
-      <div class="btn-group btn-group-sm">
-        <button type="button" class="btn btn-default">Left</button>
-        <button type="button" class="btn btn-default">Middle</button>
-        <button type="button" class="btn btn-default">Right</button>
+      <div class="btn-toolbar" role="toolbar">
+        <div class="btn-group btn-group-sm">
+          <button type="button" class="btn btn-default">Left</button>
+          <button type="button" class="btn btn-default">Middle</button>
+          <button type="button" class="btn btn-default">Right</button>
+        </div>
       </div>
-      <div class="btn-group btn-group-xs">
-        <button type="button" class="btn btn-default">Left</button>
-        <button type="button" class="btn btn-default">Middle</button>
-        <button type="button" class="btn btn-default">Right</button>
+      <div class="btn-toolbar" role="toolbar">
+        <div class="btn-group btn-group-xs">
+          <button type="button" class="btn btn-default">Left</button>
+          <button type="button" class="btn btn-default">Middle</button>
+          <button type="button" class="btn btn-default">Right</button>
+        </div>
       </div>
     </div>
 {% highlight html %}
-<div class="btn-toolbar">
-  <div class="btn-group btn-group-lg">...</div>
-  <div class="btn-group">...</div>
-  <div class="btn-group btn-group-sm">...</div>
-  <div class="btn-group btn-group-xs">...</div>
-</div>
+<div class="btn-group btn-group-lg">...</div>
+<div class="btn-group">...</div>
+<div class="btn-group btn-group-sm">...</div>
+<div class="btn-group btn-group-xs">...</div>
 {% endhighlight %}
 
-    <h3 id="btn-groups-nested">Nested button groups</h3>
+    <h3 id="btn-groups-nested">Nesting</h3>
     <p>Place a <code>.btn-group</code> within another <code>.btn-group</code> when you want dropdown menus mixed with a series of buttons.</p>
     <div class="bs-example">
       <div class="btn-group">
@@ -199,11 +879,11 @@ base_url: "../"
         <button type="button" class="btn btn-default">3</button>
 
         <div class="btn-group">
-          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          <button id="btnGroupDrop1" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
             Dropdown
             <span class="caret"></span>
           </button>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupDrop1">
             <li><a href="#">Dropdown link</a></li>
             <li><a href="#">Dropdown link</a></li>
           </ul>
@@ -228,18 +908,18 @@ base_url: "../"
 </div>
 {% endhighlight %}
 
-    <h3 id="btn-groups-vertical">Vertical button groups</h3>
+    <h3 id="btn-groups-vertical">Vertical variation</h3>
     <p>Make a set of buttons appear vertically stacked rather than horizontally.</p>
     <div class="bs-example">
       <div class="btn-group-vertical">
         <button type="button" class="btn btn-default">Button</button>
         <button type="button" class="btn btn-default">Button</button>
         <div class="btn-group">
-          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          <button id="btnGroupVerticalDrop1" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
             Dropdown
             <span class="caret"></span>
           </button>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop1">
             <li><a href="#">Dropdown link</a></li>
             <li><a href="#">Dropdown link</a></li>
           </ul>
@@ -247,31 +927,31 @@ base_url: "../"
         <button type="button" class="btn btn-default">Button</button>
         <button type="button" class="btn btn-default">Button</button>
         <div class="btn-group">
-          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          <button id="btnGroupVerticalDrop2" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
             Dropdown
             <span class="caret"></span>
           </button>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop2">
             <li><a href="#">Dropdown link</a></li>
             <li><a href="#">Dropdown link</a></li>
           </ul>
         </div>
         <div class="btn-group">
-          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          <button id="btnGroupVerticalDrop3" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
             Dropdown
             <span class="caret"></span>
           </button>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop3">
             <li><a href="#">Dropdown link</a></li>
             <li><a href="#">Dropdown link</a></li>
           </ul>
         </div>
         <div class="btn-group">
-          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          <button id="btnGroupVerticalDrop4" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
             Dropdown
             <span class="caret"></span>
           </button>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop4">
             <li><a href="#">Dropdown link</a></li>
             <li><a href="#">Dropdown link</a></li>
           </ul>
@@ -284,7 +964,7 @@ base_url: "../"
 </div>
 {% endhighlight %}
 
-    <h3 id="btn-groups-justified">Justified button groups</h3>
+    <h3 id="btn-groups-justified">Justified link variation</h3>
     <p>Make a group of buttons stretch at the same size to span the entire width of its parent.</p>
 
     <div class="bs-callout bs-callout-warning">
@@ -294,9 +974,9 @@ base_url: "../"
 
     <div class="bs-example">
       <div class="btn-group btn-group-justified">
-        <a href="#" class="btn btn-default">Left</a>
-        <a href="#" class="btn btn-default">Middle</a>
-        <a href="#" class="btn btn-default">Right</a>
+        <button type="button" class="btn btn-default">Left</button>
+        <button type="button" class="btn btn-default">Middle</button>
+        <button type="button" class="btn btn-default">Right</button>
       </div>
     </div>
 {% highlight html %}
@@ -313,7 +993,7 @@ base_url: "../"
   ================================================== -->
   <div class="bs-docs-section">
     <div class="page-header">
-      <h1 id="btn-dropdowns">Button dropdown menus</h1>
+      <h1 id="btn-dropdowns">Button dropdowns</h1>
     </div>
     <p class="lead">Use any button to trigger a dropdown menu by placing it within a <code>.btn-group</code> and providing the proper menu markup.</p>
 
@@ -325,58 +1005,66 @@ base_url: "../"
     <h3 id="btn-dropdowns-single">Single button dropdowns</h3>
     <p>Turn a button into a dropdown toggle with some basic markup changes.</p>
     <div class="bs-example">
-      <div class="btn-toolbar" style="margin-bottom: 10px;">
-        <div class="btn-group">
-          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </div><!-- /btn-group -->
-        <div class="btn-group">
-          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </div><!-- /btn-group -->
-        <div class="btn-group">
-          <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">Danger <span class="caret"></span></button>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </div><!-- /btn-group -->
-        <div class="btn-group">
-          <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">Warning <span class="caret"></span></button>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </div><!-- /btn-group -->
-        <div class="btn-group">
-          <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">Success <span class="caret"></span></button>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </div><!-- /btn-group -->
-      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Default <span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div><!-- /btn-group -->
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Primary <span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div><!-- /btn-group -->
+      <div class="btn-group">
+        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">Success <span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div><!-- /btn-group -->
+      <div class="btn-group">
+        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">Info <span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div><!-- /btn-group -->
+      <div class="btn-group">
+        <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">Warning <span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div><!-- /btn-group -->
+      <div class="btn-group">
+        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">Danger <span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div><!-- /btn-group -->
     </div>
 {% highlight html %}
 <!-- Single button -->
@@ -384,7 +1072,7 @@ base_url: "../"
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
     Action <span class="caret"></span>
   </button>
-  <ul class="dropdown-menu">
+  <ul class="dropdown-menu" role="menu">
     <li><a href="#">Action</a></li>
     <li><a href="#">Another action</a></li>
     <li><a href="#">Something else here</a></li>
@@ -397,72 +1085,81 @@ base_url: "../"
     <h3 id="btn-dropdowns-split">Split button dropdowns</h3>
     <p>Similarly, create split button dropdowns with the same markup changes, only with a separate button.</p>
     <div class="bs-example">
-      <div class="btn-toolbar" style="margin: 0;">
-        <div class="btn-group">
-          <button type="button" class="btn btn-default">Action</button>
-          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </div><!-- /btn-group -->
-        <div class="btn-group">
-          <button type="button" class="btn btn-primary">Action</button>
-          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </div><!-- /btn-group -->
-        <div class="btn-group">
-          <button type="button" class="btn btn-danger">Danger</button>
-          <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </div><!-- /btn-group -->
-        <div class="btn-group">
-          <button type="button" class="btn btn-warning">Warning</button>
-          <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </div><!-- /btn-group -->
-        <div class="btn-group">
-          <button type="button" class="btn btn-success">Success</button>
-          <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </div><!-- /btn-group -->
-      </div><!-- /btn-toolbar -->
+      <div class="btn-group">
+        <button type="button" class="btn btn-default">Default</button>
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div><!-- /btn-group -->
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div><!-- /btn-group -->
+      <div class="btn-group">
+        <button type="button" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div><!-- /btn-group -->
+      <div class="btn-group">
+        <button type="button" class="btn btn-info">Info</button>
+        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div><!-- /btn-group -->
+      <div class="btn-group">
+        <button type="button" class="btn btn-warning">Warning</button>
+        <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div><!-- /btn-group -->
+      <div class="btn-group">
+        <button type="button" class="btn btn-danger">Danger</button>
+        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div><!-- /btn-group -->
     </div>
 {% highlight html %}
 <!-- Split button -->
 <div class="btn-group">
-  <button type="button" class="btn btn-default">Action</button>
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+  <button type="button" class="btn btn-danger">Action</button>
+  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
     <span class="caret"></span>
   </button>
-  <ul class="dropdown-menu">
+  <ul class="dropdown-menu" role="menu">
     <li><a href="#">Action</a></li>
     <li><a href="#">Another action</a></li>
     <li><a href="#">Something else here</a></li>
@@ -472,15 +1169,15 @@ base_url: "../"
 </div>
 {% endhighlight %}
 
-    <h3 id="btn-dropdowns-sizes">Works with all button sizes</h3>
+    <h3 id="btn-dropdowns-sizing">Sizing</h3>
     <p>Button dropdowns work with buttons of all sizes.</p>
     <div class="bs-example">
-      <div class="btn-toolbar" style="margin: 0;">
+      <div class="btn-toolbar" role="toolbar">
         <div class="btn-group">
           <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
             Large button <span class="caret"></span>
           </button>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu" role="menu">
             <li><a href="#">Action</a></li>
             <li><a href="#">Another action</a></li>
             <li><a href="#">Something else here</a></li>
@@ -488,11 +1185,13 @@ base_url: "../"
             <li><a href="#">Separated link</a></li>
           </ul>
         </div><!-- /btn-group -->
+      </div><!-- /btn-toolbar -->
+      <div class="btn-toolbar" role="toolbar">
         <div class="btn-group">
           <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
             Small button <span class="caret"></span>
           </button>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu" role="menu">
             <li><a href="#">Action</a></li>
             <li><a href="#">Another action</a></li>
             <li><a href="#">Something else here</a></li>
@@ -500,11 +1199,13 @@ base_url: "../"
             <li><a href="#">Separated link</a></li>
           </ul>
         </div><!-- /btn-group -->
+      </div><!-- /btn-toolbar -->
+      <div class="btn-toolbar" role="toolbar">
         <div class="btn-group">
           <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
             Extra small button <span class="caret"></span>
           </button>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu" role="menu">
             <li><a href="#">Action</a></li>
             <li><a href="#">Another action</a></li>
             <li><a href="#">Something else here</a></li>
@@ -546,14 +1247,14 @@ base_url: "../"
 </div>
 {% endhighlight %}
 
-    <h3 id="btn-dropdowns-dropup">Dropup buttons</h3>
+    <h3 id="btn-dropdowns-dropup">Dropup variation</h3>
     <p>Trigger dropdown menus above elements by adding <code>.dropup</code> to the parent.</p>
     <div class="bs-example">
-      <div class="btn-toolbar">
+      <div class="btn-toolbar" role="toolbar">
         <div class="btn-group dropup">
           <button type="button" class="btn btn-default">Dropup</button>
           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu" role="menu">
             <li><a href="#">Action</a></li>
             <li><a href="#">Another action</a></li>
             <li><a href="#">Something else here</a></li>
@@ -564,7 +1265,7 @@ base_url: "../"
         <div class="btn-group dropup">
           <button type="button" class="btn btn-primary">Right dropup</button>
           <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
-          <ul class="dropdown-menu pull-right">
+          <ul class="dropdown-menu pull-right" role="menu">
             <li><a href="#">Action</a></li>
             <li><a href="#">Another action</a></li>
             <li><a href="#">Something else here</a></li>
@@ -608,7 +1309,7 @@ base_url: "../"
       <p>When using tooltips or popovers on elements within an <code>.input-group</code>, you'll have to specify the option <code>container: 'body'</code> to avoid unwanted side effects (such as the element growing wider and/or losing its rounded corners when the tooltip or popover is triggered).</p>
     </div>
 
-    <h2 id="input-groups-basic">Basic input group</h2>
+    <h2 id="input-groups-basic">Basic example</h2>
     <form class="bs-example bs-example-form" role="form">
       <div class="input-group">
         <span class="input-group-addon">@</span>
@@ -644,7 +1345,8 @@ base_url: "../"
 </div>
 {% endhighlight %}
 
-    <h2 id="input-groups-sizes">Optional sizes</h2>
+
+    <h2 id="input-groups-sizing">Sizing</h2>
     <p>Add the relative form sizing classes to the <code>.input-group</code> itself and contents within will automatically resize—no need for repeating the form control size classes on each element.</p>
     <form class="bs-example bs-example-form" role="form">
       <div class="input-group input-group-lg">
@@ -680,7 +1382,7 @@ base_url: "../"
 {% endhighlight %}
 
 
-    <h2 id="input-groups-checkboxes-radios">Checkboxes and radio buttons</h2>
+    <h2 id="input-groups-checkboxes-radios">Checkboxes and radio addons</h2>
     <p>Place any checkbox or radio option within an input group's addon instead of text.</p>
     <form class="bs-example bs-example-form">
       <div class="row">
@@ -724,7 +1426,7 @@ base_url: "../"
 {% endhighlight %}
 
 
-    <h2 id="input-groups-buttons">Buttons instead of text</h2>
+    <h2 id="input-groups-buttons">Button addons</h2>
     <p>Buttons in input groups are a bit different and require one extra level of nesting. Instead of <code>.input-group-addon</code>, you'll need to use <code>.input-group-btn</code> to wrap the buttons. This is required due to default browser styles that cannot be overridden.</p>
     <form class="bs-example bs-example-form">
       <div class="row">
@@ -775,7 +1477,7 @@ base_url: "../"
           <div class="input-group">
             <div class="input-group-btn">
               <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
-              <ul class="dropdown-menu">
+              <ul class="dropdown-menu" role="menu">
                 <li><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
                 <li><a href="#">Something else here</a></li>
@@ -791,7 +1493,7 @@ base_url: "../"
             <input type="text" class="form-control">
             <div class="input-group-btn">
               <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
-              <ul class="dropdown-menu pull-right">
+              <ul class="dropdown-menu pull-right" role="menu">
                 <li><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
                 <li><a href="#">Something else here</a></li>
@@ -838,7 +1540,7 @@ base_url: "../"
 </div><!-- /.row -->
 {% endhighlight %}
 
-    <h2 id="input-groups-buttons-segmented">Segmented dropdown groups</h2>
+    <h2 id="input-groups-buttons-segmented">Segmented buttons</h2>
     <form class="bs-example bs-example-form" role="form">
       <div class="row">
         <div class="col-lg-6">
@@ -848,7 +1550,7 @@ base_url: "../"
               <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" tabindex="-1">
                 <span class="caret"></span>
               </button>
-              <ul class="dropdown-menu">
+              <ul class="dropdown-menu" role="menu">
                 <li><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
                 <li><a href="#">Something else here</a></li>
@@ -867,7 +1569,7 @@ base_url: "../"
               <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" tabindex="-1">
                 <span class="caret"></span>
               </button>
-              <ul class="dropdown-menu pull-right">
+              <ul class="dropdown-menu pull-right" role="menu">
                 <li><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
                 <li><a href="#">Something else here</a></li>
@@ -889,7 +1591,7 @@ base_url: "../"
 
 <div class="input-group">
   <input type="text" class="form-control">
-  <div class="input-group-btn btn-group">
+  <div class="input-group-btn">
     <!-- Button and dropdown menu -->
   </div>
 </div>
@@ -955,10 +1657,13 @@ base_url: "../"
 </ul>
 {% endhighlight %}
 
-    <h2>Options</h2>
 
-    <h3 id="nav-justified">Justified links</h3>
-    <p>Easily make tabs or pills equal widths of their parent with <code>.nav-justified</code>.</p>
+    <h2 id="nav-justified">Justified</h2>
+    <p>Easily make tabs or pills equal widths of their parent at screens wider than 768px with <code>.nav-justified</code>. On smaller screens, the nav links are stacked.</p>
+    <div class="bs-callout bs-callout-warning">
+      <h4>WebKit and responsive justified navs</h4>
+      <p>Chrome and Safari both exhibit a bug in which resizing your browser horizontally causes rendering errors in the justified nav that are cleared upon refreshing. This bug is also shown in the <a href="../examples/justified-nav/">justified nav example</a>.</p>
+    </div>
     <div class="bs-example">
       <ul class="nav nav-tabs nav-justified">
         <li class="active"><a href="#">Home</a></li>
@@ -981,7 +1686,8 @@ base_url: "../"
 </ul>
 {% endhighlight %}
 
-    <h3 id="nav-disabled-links">Disabled state</h3>
+
+    <h2 id="nav-disabled-links">Disabled links</h2>
     <p>For any nav component (tabs, pills, or list), add <code>.disabled</code> for <strong>gray links and no hover effects</strong>.</p>
 
     <div class="bs-callout bs-callout-warning">
@@ -1005,36 +1711,27 @@ base_url: "../"
 {% endhighlight %}
 
 
-    <h3 id="nav-alignment">Component alignment</h3>
-    <p>To align nav links, use the <code>.pull-left</code> or <code>.pull-right</code> utility classes. Both classes will add a CSS float in the specified direction.</p>
-
-
-    <hr class="bs-docs-separator">
-
-
-    <h2 id="nav-dropdowns">Dropdowns</h2>
+    <h2 id="nav-dropdowns">Using dropdowns</h2>
     <p>Add dropdown menus with a little extra HTML and the <a href="../javascript/#dropdowns">dropdowns JavaScript plugin</a>.</p>
 
     <h3>Tabs with dropdowns</h3>
     <div class="bs-example">
-      <nav class="navbar" role="navigation">
-        <ul class="nav nav-tabs">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">Help</a></li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-              Dropdown <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#">Home</a></li>
+    <li><a href="#">Help</a></li>
+    <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        Dropdown <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Another action</a></li>
+        <li><a href="#">Something else here</a></li>
+        <li class="divider"></li>
+        <li><a href="#">Separated link</a></li>
+      </ul>
+    </li>
+  </ul>
     </div>
 {% highlight html %}
 <ul class="nav nav-tabs">
@@ -1060,7 +1757,7 @@ base_url: "../"
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">
             Dropdown <span class="caret"></span>
           </a>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu" role="menu">
             <li><a href="#">Action</a></li>
             <li><a href="#">Another action</a></li>
             <li><a href="#">Something else here</a></li>
@@ -1099,8 +1796,13 @@ base_url: "../"
     <h2 id="navbar-default">Default navbar</h2>
     <p>Navbars are responsive meta components that serve as navigation headers for your application or site. They begin collapsed (and are toggleable) in mobile views and become horizontal as the available viewport width increases.</p>
 
+    <div class="bs-callout bs-callout-info">
+      <h4>Customize the collapsing point</h4>
+      <p>Depending on the content in your navbar, you might need to change the point at which your navbar switches between collapsed and horizontal mode. Customize the <code>@grid-float-breakpoint</code> variable or add your own media query.</p>
+    </div>
+
     <div class="bs-example">
-      <nav class="navbar" role="navigation">
+      <nav class="navbar navbar-default" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -1109,18 +1811,17 @@ base_url: "../"
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Title</a>
+          <a class="navbar-brand" href="#">Brand</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Link</a></li>
+            <li class="active"><a href="#">Link</a></li>
             <li><a href="#">Link</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-              <ul class="dropdown-menu">
+              <ul class="dropdown-menu" role="menu">
                 <li><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
                 <li><a href="#">Something else here</a></li>
@@ -1139,7 +1840,7 @@ base_url: "../"
             <li><a href="#">Link</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-              <ul class="dropdown-menu">
+              <ul class="dropdown-menu" role="menu">
                 <li><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
                 <li><a href="#">Something else here</a></li>
@@ -1151,7 +1852,7 @@ base_url: "../"
       </nav>
     </div>
 {% highlight html %}
-<nav class="navbar" role="navigation">
+<nav class="navbar navbar-default" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -1160,14 +1861,13 @@ base_url: "../"
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="#">Title</a>
+    <a class="navbar-brand" href="#">Brand</a>
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Link</a></li>
+      <li class="active"><a href="#">Link</a></li>
       <li><a href="#">Link</a></li>
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
@@ -1213,13 +1913,10 @@ base_url: "../"
 </div>
 
 
-    <h2 id="navbar-optional-content">Optional navbar content</h2>
-    <p>Quickly add other types of content, beyond links or forms, to a navbar with a few classes.</p>
-
-    <h3 id="navbar-buttons">Buttons</h3>
+    <h2 id="navbar-buttons">Buttons</h2>
     <p>For buttons not residing in a <code>&lt;form&gt;</code>, add this class to vertically center buttons within a navbar.</p>
     <div class="bs-example">
-      <nav class="navbar" role="navigation">
+      <nav class="navbar navbar-default" role="navigation">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex2-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -1227,7 +1924,7 @@ base_url: "../"
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Title</a>
+          <a class="navbar-brand" href="#">Brand</a>
         </div>
         <div class="collapse navbar-collapse navbar-ex2-collapse">
           <button type="button" class="btn btn-default navbar-btn">Sign in</button>
@@ -1238,10 +1935,11 @@ base_url: "../"
 <button type="button" class="btn btn-default navbar-btn">Sign in</button>
 {% endhighlight %}
 
-    <h3 id="navbar-text">Text in navbars</h3>
+
+    <h2 id="navbar-text">Text</h2>
     <p>Wrap strings of text in an element with <code>.navbar-text</code>, usually on a <code>&lt;p&gt;</code> tag for proper leading and color.</p>
     <div class="bs-example">
-      <nav class="navbar" role="navigation">
+      <nav class="navbar navbar-default" role="navigation">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex3-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -1249,7 +1947,7 @@ base_url: "../"
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Title</a>
+          <a class="navbar-brand" href="#">Brand</a>
         </div>
         <div class="collapse navbar-collapse navbar-ex3-collapse">
           <p class="navbar-text">Signed in as Mark Otto</p>
@@ -1260,10 +1958,11 @@ base_url: "../"
 <p class="navbar-text">Signed in as Mark Otto</p>
 {% endhighlight %}
 
-    <h3 id="navbar-links">Non-nav links</h3>
+
+    <h2 id="navbar-links">Non-nav links</h2>
     <p>For folks using standard links that are not within the regular navbar navigation component, use the <code>.navbar-link</code> class to add the proper colors for the default and inverse navbar options.</p>
     <div class="bs-example">
-      <nav class="navbar" role="navigation">
+      <nav class="navbar navbar-default" role="navigation">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex4-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -1271,7 +1970,7 @@ base_url: "../"
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Title</a>
+          <a class="navbar-brand" href="#">Brand</a>
         </div>
         <div class="collapse navbar-collapse navbar-ex4-collapse">
           <p class="navbar-text pull-right">Signed in as <a href="#" class="navbar-link">Mark Otto</a></p>
@@ -1282,18 +1981,16 @@ base_url: "../"
 <p class="navbar-text pull-right">Signed in as <a href="#" class="navbar-link">Mark Otto</a></p>
 {% endhighlight %}
 
-    <h3 id="navbar-component-alignment">Component alignment</h3>
+
+    <h2 id="navbar-component-alignment">Component alignment</h2>
     <p>Align nav links, forms, buttons, or text, using the <code>.navbar-left</code> or <code>.navbar-right</code> utility classes. Both classes will add a CSS float in the specified direction. For example, to align nav links, put them in a separate <code>&lt;ul&gt;</code> with the respective utility class applied.</p>
     <p>These classes are mixin-ed versions of <code>.pull-left</code> and <code>.pull-right</code>, but they're scoped to media queries for easier handling of navbar components across device sizes.</p>
 
 
-    <h2>Optional display variations</h2>
-    <p>Fix the navbar to the top or bottom of the viewport with an additional class on the outermost div, <code>.navbar</code>. These will also remove rounded corners.</p>
-
-    <h3 id="navbar-fixed-top">Fixed to top</h3>
+    <h2 id="navbar-fixed-top">Fixed to top</h2>
     <p>Add <code>.navbar-fixed-top</code>.</p>
     <div class="bs-example bs-navbar-top-example">
-      <nav class="navbar navbar-fixed-top" role="navigation">
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex5-collapse">
@@ -1302,7 +1999,7 @@ base_url: "../"
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Title</a>
+          <a class="navbar-brand" href="#">Brand</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -1316,7 +2013,7 @@ base_url: "../"
       </nav>
     </div><!-- /example -->
 {% highlight html %}
-<nav class="navbar navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   ...
 </nav>
 {% endhighlight %}
@@ -1330,10 +2027,11 @@ body { padding-top: 70px; }
       <p>Make sure to include this <strong>after</strong> the core Bootstrap CSS.</p>
     </div>
 
-    <h3 id="navbar-fixed-bottom">Fixed to bottom</h3>
+
+    <h2 id="navbar-fixed-bottom">Fixed to bottom</h2>
     <p>Add <code>.navbar-fixed-bottom</code> instead.</p>
     <div class="bs-example bs-navbar-bottom-example">
-      <nav class="navbar navbar-fixed-bottom" role="navigation">
+      <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex6-collapse">
@@ -1342,7 +2040,7 @@ body { padding-top: 70px; }
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Title</a>
+          <a class="navbar-brand" href="#">Brand</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -1356,7 +2054,7 @@ body { padding-top: 70px; }
       </nav>
     </div><!-- /example -->
 {% highlight html %}
-<nav class="navbar navbar-fixed-bottom" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
   ...
 </nav>
 {% endhighlight %}
@@ -1370,10 +2068,11 @@ body { padding-bottom: 70px; }
       <p>Make sure to include this <strong>after</strong> the core Bootstrap CSS.</p>
     </div>
 
-    <h3 id="navbar-static-top">Static top navbar</h3>
+
+    <h2 id="navbar-static-top">Static top</h2>
     <p>Create a full-width navbar that scrolls away with the page by adding <code>.navbar-static-top</code>. Unlike the <code>.navbar-fixed-*</code> classes, you do not need to change any padding on the <code>body</code>.</p>
     <div class="bs-example bs-navbar-top-example">
-      <nav class="navbar navbar-static-top" role="navigation">
+      <nav class="navbar navbar-default navbar-static-top" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex7-collapse">
@@ -1382,7 +2081,7 @@ body { padding-bottom: 70px; }
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Title</a>
+          <a class="navbar-brand" href="#">Brand</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -1396,13 +2095,13 @@ body { padding-bottom: 70px; }
       </nav>
     </div><!-- /example -->
 {% highlight html %}
-<nav class="navbar navbar-static-top" role="navigation">
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
   ...
 </nav>
 {% endhighlight %}
 
 
-    <h2 id="navbar-inverted">Inverted variation</h2>
+    <h2 id="navbar-inverted">Inverted navbar</h2>
     <p>Modify the look of the navbar by adding <code>.navbar-inverse</code>.</p>
     <div class="bs-example">
       <nav class="navbar navbar-inverse" role="navigation">
@@ -1414,7 +2113,7 @@ body { padding-bottom: 70px; }
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Title</a>
+          <a class="navbar-brand" href="#">Brand</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -1533,7 +2232,7 @@ body { padding-bottom: 70px; }
 {% endhighlight %}
 
 
-    <h3>Sizes</h3>
+    <h3>Sizing</h3>
     <p>Fancy larger or smaller pagination? Add <code>.pagination-lg</code> or <code>.pagination-sm</code> for additional sizes.</p>
     <div class="bs-example">
       <div>
@@ -1654,17 +2353,19 @@ body { padding-bottom: 70px; }
     <p>Add any of the below mentioned modifier classes to change the appearance of a label.</p>
     <div class="bs-example">
       <span class="label label-default">Default</span>
+      <span class="label label-primary">Primary</span>
       <span class="label label-success">Success</span>
+      <span class="label label-info">Info</span>
       <span class="label label-warning">Warning</span>
       <span class="label label-danger">Danger</span>
-      <span class="label label-info">Info</span>
     </div>
 {% highlight html %}
 <span class="label label-default">Default</span>
+<span class="label label-primary">Primary</span>
 <span class="label label-success">Success</span>
+<span class="label label-info">Info</span>
 <span class="label label-warning">Warning</span>
 <span class="label label-danger">Danger</span>
-<span class="label label-info">Info</span>
 {% endhighlight %}
 
   </div>
@@ -1734,31 +2435,41 @@ body { padding-bottom: 70px; }
 
 
 
-  <!-- Typographic components
+  <!-- Jumbotron
   ================================================== -->
   <div class="bs-docs-section">
     <div class="page-header">
-      <h1 id="type-components">Typographic components</h1>
+      <h1 id="jumbotron">Jumbotron</h1>
     </div>
-
-    <h2 id="type-components-jumbotron">Jumbotron</h2>
-    <p>A lightweight, flexible component to showcase key content on your site. It works well on marketing and content-heavy sites.</p>
+    <p>A lightweight, flexible component that can optional extend the entire viewport to showcase key content on your site. To make the jumbotron full width, don't include it within a <code>.container</code>. Placing it within a container will keep it at the width of the rest of your content and provide rounded corners.</p>
     <div class="bs-example">
       <div class="jumbotron">
-        <h1>Hello, world!</h1>
-        <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-        <p><a class="btn btn-primary btn-lg">Learn more</a></p>
+        <div class="container">
+          <h1>Hello, world!</h1>
+          <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+          <p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
+        </div>
       </div>
     </div>
 {% highlight html %}
 <div class="jumbotron">
-  <h1>Hello, world!</h1>
-  <p>...</p>
-  <p><a class="btn btn-primary btn-lg">Learn more</a></p>
+  <div class="container">
+    <h1>Hello, world!</h1>
+    <p>...</p>
+    <p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
+  </div>
 </div>
 {% endhighlight %}
+  </div>
 
-    <h2 id="type-components-page-header">Page header</h2>
+
+
+  <!-- Page header
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="page-header">Page header</h1>
+    </div>
     <p>A simple shell for an <code>h1</code> to appropriately space out and segment sections of content on a page. It can utilize the <code>h1</code>'s default <code>small</code> element, as well as most other components (with additional styles).</p>
     <div class="bs-example">
       <div class="page-header">
@@ -1782,26 +2493,26 @@ body { padding-bottom: 70px; }
     </div>
     <p class="lead">Extend Bootstrap's <a href="../css/#grid">grid system</a> with the thumbnail component to easily display grids of images, videos, text, and more.</p>
 
-    <h3 id="thumbnails-default">Default thumbnails</h3>
+    <h3 id="thumbnails-default">Default example</h3>
     <p>By default, Bootstrap's thumbnails are designed to showcase linked images with minimal required markup.</p>
     <div class="bs-example">
       <div class="row">
-        <div class="col-lg-3">
+        <div class="col-sm-6 col-md-3">
           <a href="#" class="thumbnail">
             <img data-src="holder.js/100%x180" alt="Generic placeholder thumbnail" src="data:image/png;base64,">
           </a>
         </div>
-        <div class="col-lg-3">
+        <div class="col-sm-6 col-md-3">
           <a href="#" class="thumbnail">
             <img data-src="holder.js/100%x180" alt="Generic placeholder thumbnail" src="data:image/png;base64,">
           </a>
         </div>
-        <div class="col-lg-3">
+        <div class="col-sm-6 col-md-3">
           <a href="#" class="thumbnail">
             <img data-src="holder.js/100%x180" alt="Generic placeholder thumbnail" src="data:image/png;base64,">
           </a>
         </div>
-        <div class="col-lg-3">
+        <div class="col-sm-6 col-md-3">
           <a href="#" class="thumbnail">
             <img data-src="holder.js/100%x180" alt="Generic placeholder thumbnail" src="data:image/png;base64,">
           </a>
@@ -1810,7 +2521,7 @@ body { padding-bottom: 70px; }
     </div><!-- /.bs-example -->
 {% highlight html %}
 <div class="row">
-  <div class="col-lg-3">
+  <div class="col-sm-6 col-md-3">
     <a href="#" class="thumbnail">
       <img data-src="holder.js/100%x180" alt="...">
     </a>
@@ -1819,37 +2530,37 @@ body { padding-bottom: 70px; }
 </div>
 {% endhighlight %}
 
-    <h3 id="thumbnails-custom-content">Custom content thumbnails</h3>
+    <h3 id="thumbnails-custom-content">Custom content</h3>
     <p>With a bit of extra markup, it's possible to add any kind of HTML content like headings, paragraphs, or buttons into thumbnails.</p>
     <div class="bs-example">
       <div class="row">
-        <div class="col-lg-4">
+        <div class="col-sm-6 col-md-4">
           <div class="thumbnail">
             <img data-src="holder.js/300x200" alt="Generic placeholder thumbnail" src="data:image/png;base64,">
             <div class="caption">
               <h3>Thumbnail label</h3>
               <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a href="#" class="btn btn-primary">Action</a> <a href="#" class="btn btn-default">Action</a></p>
+              <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
             </div>
           </div>
         </div>
-        <div class="col-lg-4">
+        <div class="col-sm-6 col-md-4">
           <div class="thumbnail">
             <img data-src="holder.js/300x200" alt="Generic placeholder thumbnail" src="data:image/png;base64,">
             <div class="caption">
               <h3>Thumbnail label</h3>
               <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a href="#" class="btn btn-primary">Action</a> <a href="#" class="btn btn-default">Action</a></p>
+              <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
             </div>
           </div>
         </div>
-        <div class="col-lg-4">
+        <div class="col-sm-6 col-md-4">
           <div class="thumbnail">
             <img data-src="holder.js/300x200" alt="Generic placeholder thumbnail" src="data:image/png;base64,">
             <div class="caption">
               <h3>Thumbnail label</h3>
               <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a href="#" class="btn btn-primary">Action</a> <a href="#" class="btn btn-default">Action</a></p>
+              <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
             </div>
           </div>
         </div>
@@ -1857,13 +2568,13 @@ body { padding-bottom: 70px; }
     </div><!-- /.bs-example -->
 {% highlight html %}
 <div class="row">
-  <div class="col-lg-4">
+  <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
       <img data-src="holder.js/300x200" alt="...">
       <div class="caption">
         <h3>Thumbnail label</h3>
         <p>...</p>
-        <p><a href="#" class="btn btn-primary">Action</a> <a href="#" class="btn btn-default">Action</a></p>
+        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
       </div>
     </div>
   </div>
@@ -1882,37 +2593,33 @@ body { padding-bottom: 70px; }
     </div>
     <p class="lead">Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages. For inline dismissal, use the <a href="../javascript/#js-alerts">alerts jQuery plugin</a>.</p>
 
-    <h2 id="alerts-default">Default alert</h2>
-    <p>Wrap any text and an optional dismiss button in <code>.alert</code> for a basic warning alert message.</p>
+    <h2 id="alerts-examples">Examples</h2>
+    <p>Wrap any text and an optional dismiss button in <code>.alert</code> and one of the four contextual classes (e.g., <code>.alert-success</code>) for basic alert messages.</p>
 
-    <div class="bs-example">
-      <div class="alert">
-        <strong>Warning!</strong> Best check yo self, you're not looking too good.
-      </div>
+    <div class="bs-callout bs-callout-info">
+      <h4>No default class</h4>
+      <p>Alerts don't have default classes, only base and modifier classes. A default gray alert doesn't make too much sense, so you're required to specify a type via contextual class. Choose from success, info, warning, or danger.</p>
     </div>
-{% highlight html %}
-<div class="alert">
-  <strong>Warning!</strong> Best check yo self, you're not looking too good.
-</div>
-{% endhighlight %}
 
-    <h2 id="alerts-alternatives">Contextual alternatives</h2>
-    <p>Add optional classes to change an alert's connotation.</p>
     <div class="bs-example">
-      <div class="alert alert-danger">
-        <strong>Oh snap!</strong> Change a few things up and try submitting again.
-      </div>
       <div class="alert alert-success">
         <strong>Well done!</strong> You successfully read this important alert message.
       </div>
       <div class="alert alert-info">
         <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
       </div>
+      <div class="alert alert-warning">
+        <strong>Warning!</strong> Best check yo self, you're not looking too good.
+      </div>
+      <div class="alert alert-danger">
+        <strong>Oh snap!</strong> Change a few things up and try submitting again.
+      </div>
     </div>
 {% highlight html %}
-<div class="alert alert-danger">...</div>
 <div class="alert alert-success">...</div>
 <div class="alert alert-info">...</div>
+<div class="alert alert-warning">...</div>
+<div class="alert alert-danger">...</div>
 {% endhighlight %}
 
     <h2 id="alerts-dismissable">Dismissable alerts</h2>
@@ -1938,24 +2645,30 @@ body { padding-bottom: 70px; }
     <h2 id="alerts-links">Links in alerts</h2>
     <p>Use the <code>.alert-link</code> utility class to quickly provide matching colored links within any alert.</p>
     <div class="bs-example">
-      <div class="alert alert-danger">
-        <strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> and try submitting again.
-      </div>
       <div class="alert alert-success">
         <strong>Well done!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
       </div>
       <div class="alert alert-info">
         <strong>Heads up!</strong> This <a href="#" class="alert-link">alert needs your attention</a>, but it's not super important.
       </div>
+      <div class="alert alert-warning">
+        <strong>Warning!</strong> Best check yo self, you're <a href="#" class="alert-link">not looking too good</a>.
+      </div>
+      <div class="alert alert-danger">
+        <strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> and try submitting again.
+      </div>
     </div>
 {% highlight html %}
-<div class="alert alert-danger">
-  <a href="#" class="alert-link">...</a>
-</div>
 <div class="alert alert-success">
   <a href="#" class="alert-link">...</a>
 </div>
 <div class="alert alert-info">
+  <a href="#" class="alert-link">...</a>
+</div>
+<div class="alert alert-warning">
+  <a href="#" class="alert-link">...</a>
+</div>
+<div class="alert alert-danger">
   <a href="#" class="alert-link">...</a>
 </div>
 {% endhighlight %}
@@ -1977,44 +2690,56 @@ body { padding-bottom: 70px; }
       <p>Progress bars use CSS3 transitions and animations to achieve some of their effects. These features are not supported in Internet Explorer 9 and below or older versions of Firefox. Opera 12 does not support animations.</p>
     </div>
 
-    <h3 id="progress-basic">Basic</h3>
-    <p>Default progress bar with a vertical gradient.</p>
+    <h3 id="progress-basic">Basic example</h3>
+    <p>Default progress bar.</p>
     <div class="bs-example">
       <div class="progress">
-        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><span class="sr-only">60% Complete</span></div>
+        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+          <span class="sr-only">60% Complete</span>
+        </div>
       </div>
     </div>
 {% highlight html %}
 <div class="progress">
-  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><span class="sr-only">60% Complete</span></div>
+  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+    <span class="sr-only">60% Complete</span>
+  </div>
 </div>
 {% endhighlight %}
 
     <h3 id="progress-alternatives">Contextual alternatives</h3>
     <p>Progress bars use some of the same button and alert classes for consistent styles.</p>
     <div class="bs-example">
-      <div class="progress" style="margin-bottom: 9px;">
-        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"><span class="sr-only">20% Complete</span></div>
-      </div>
-      <div class="progress" style="margin-bottom: 9px;">
-        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%"><span class="sr-only">40% Complete (success)</span></div>
-      </div>
-      <div class="progress" style="margin-bottom: 9px;">
-        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% Complete (warning)</span></div>
+      <div class="progress">
+        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+          <span class="sr-only">40% Complete (success)</span>
+        </div>
       </div>
       <div class="progress">
-        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"><span class="sr-only">80% Complete (danger)</span></div>
+        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+          <span class="sr-only">20% Complete</span>
+        </div>
+      </div>
+      <div class="progress">
+        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+          <span class="sr-only">60% Complete (warning)</span>
+        </div>
+      </div>
+      <div class="progress">
+        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+          <span class="sr-only">80% Complete (danger)</span>
+        </div>
       </div>
     </div>
 {% highlight html %}
 <div class="progress">
-  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-    <span class="sr-only">20% Complete</span>
+  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+    <span class="sr-only">40% Complete (success)</span>
   </div>
 </div>
 <div class="progress">
-  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-    <span class="sr-only">40% Complete (success)</span>
+  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+    <span class="sr-only">20% Complete</span>
   </div>
 </div>
 <div class="progress">
@@ -2032,28 +2757,36 @@ body { padding-bottom: 70px; }
     <h3 id="progress-striped">Striped</h3>
     <p>Uses a gradient to create a striped effect. Not available in IE8.</p>
     <div class="bs-example">
-      <div class="progress progress-striped" style="margin-bottom: 9px;">
-        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"><span class="sr-only">20% Complete</span></div>
-      </div>
-      <div class="progress progress-striped" style="margin-bottom: 9px;">
-        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%"><span class="sr-only">40% Complete (success)</span></div>
-      </div>
-      <div class="progress progress-striped" style="margin-bottom: 9px;">
-        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% Complete (warning)</span></div>
+      <div class="progress progress-striped" >
+        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+          <span class="sr-only">40% Complete (success)</span>
+        </div>
       </div>
       <div class="progress progress-striped">
-        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"><span class="sr-only">80% Complete (danger)</span></div>
+        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+          <span class="sr-only">20% Complete</span>
+        </div>
+      </div>
+      <div class="progress progress-striped">
+        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+          <span class="sr-only">60% Complete (warning)</span>
+        </div>
+      </div>
+      <div class="progress progress-striped">
+        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+          <span class="sr-only">80% Complete (danger)</span>
+        </div>
       </div>
     </div>
 {% highlight html %}
 <div class="progress progress-striped">
-  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-    <span class="sr-only">20% Complete</span>
+  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+    <span class="sr-only">40% Complete (success)</span>
   </div>
 </div>
 <div class="progress progress-striped">
-  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-    <span class="sr-only">40% Complete (success)</span>
+  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+    <span class="sr-only">20% Complete</span>
   </div>
 </div>
 <div class="progress progress-striped">
@@ -2078,7 +2811,7 @@ body { padding-bottom: 70px; }
 {% highlight html %}
 <div class="progress progress-striped active">
   <div class="progress-bar"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
-    <span class='sr-only'>45% Complete</span>
+    <span class="sr-only">45% Complete</span>
   </div>
 </div>
 {% endhighlight %}
@@ -2087,16 +2820,28 @@ body { padding-bottom: 70px; }
     <p>Place multiple bars into the same <code>.progress</code> to stack them.</p>
     <div class="bs-example">
       <div class="progress">
-        <div class="progress-bar progress-bar-success" style="width: 35%"><span class="sr-only">35% Complete (success)</span></div>
-        <div class="progress-bar progress-bar-warning" style="width: 20%"><span class="sr-only">20% Complete (warning)</span></div>
-        <div class="progress-bar progress-bar-danger" style="width: 10%"><span class='sr-only'>10% Complete (danger)</span></div>
+        <div class="progress-bar progress-bar-success" style="width: 35%">
+          <span class="sr-only">35% Complete (success)</span>
+        </div>
+        <div class="progress-bar progress-bar-warning" style="width: 20%">
+          <span class="sr-only">20% Complete (warning)</span>
+        </div>
+        <div class="progress-bar progress-bar-danger" style="width: 10%">
+          <span class="sr-only">10% Complete (danger)</span>
+        </div>
       </div>
     </div>
 {% highlight html %}
 <div class="progress">
-  <div class="progress-bar progress-bar-success" style="width: 35%"><span class="sr-only">35% Complete (success)</span></div>
-  <div class="progress-bar progress-bar-warning" style="width: 20%"><span class="sr-only">20% Complete (warning)</span></div>
-  <div class="progress-bar progress-bar-danger" style="width: 10%"><span class="sr-only">10% Complete (danger)</span></div>
+  <div class="progress-bar progress-bar-success" style="width: 35%">
+    <span class="sr-only">35% Complete (success)</span>
+  </div>
+  <div class="progress-bar progress-bar-warning" style="width: 20%">
+    <span class="sr-only">20% Complete (warning)</span>
+  </div>
+  <div class="progress-bar progress-bar-danger" style="width: 10%">
+    <span class="sr-only">10% Complete (danger)</span>
+  </div>
 </div>
 {% endhighlight %}
   </div>
@@ -2226,8 +2971,6 @@ body { padding-bottom: 70px; }
 
 
 
-
-
   <!-- List group
   ================================================== -->
   <div class="bs-docs-section">
@@ -2236,7 +2979,7 @@ body { padding-bottom: 70px; }
     </div>
     <p class="lead">List groups are a flexible and powerful component for displaying not only simple lists of elements, but complex ones with custom content.</p>
 
-    <h3 id="list-group-basic">Basic list group</h3>
+    <h3 id="list-group-basic">Basic example</h3>
     <p>The most basic list group is simply an unordered list with list items, and the proper classes. Build upon it with the options that follow, or your own CSS as needed.</p>
     <div class="bs-example">
       <ul class="list-group">
@@ -2257,7 +3000,7 @@ body { padding-bottom: 70px; }
 </ul>
 {% endhighlight %}
 
-    <h3 id="list-group-badges">With badges</h3>
+    <h3 id="list-group-badges">Badges</h3>
     <p>Add the badges component to any list group item and it will automatically be positioned on the right.</p>
     <div class="bs-example">
       <ul class="list-group">
@@ -2284,7 +3027,7 @@ body { padding-bottom: 70px; }
 </ul>
 {% endhighlight %}
 
-    <h3 id="list-group-linked">Linked list group</h3>
+    <h3 id="list-group-linked">Linked items</h3>
     <p>Linkify list group items by using anchor tags instead of list items (that also means a parent <code>&lt;div&gt;</code> instead of an <code>&lt;ul&gt;</code>). No need for individual parents around each element.</p>
     <div class="bs-example">
       <div class="list-group">
@@ -2348,17 +3091,17 @@ body { padding-bottom: 70px; }
     </div>
     <p class="lead">While not always necessary, sometimes you need to put your DOM in a box. For those situations, try the panel component.</p>
 
-    <h3 id="panels-basic">Basic panel</h3>
+    <h3 id="panels-basic">Basic example</h3>
     <p>By default, all the <code>.panel</code> does is apply some basic border and padding to contain some content.</p>
     <div class="bs-example">
-      <div class="panel">
+      <div class="panel panel-default">
         <div class="panel-body">
           Basic panel example
         </div>
       </div>
     </div>
 {% highlight html %}
-<div class="panel">
+<div class="panel panel-default">
   <div class="panel-body">
     Basic panel example
   </div>
@@ -2368,13 +3111,13 @@ body { padding-bottom: 70px; }
     <h3 id="panels-heading">Panel with heading</h3>
     <p>Easily add a heading container to your panel with <code>.panel-heading</code>. You may also include any <code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code> with a <code>.panel-title</code> class to add a pre-styled heading.</p>
     <div class="bs-example">
-      <div class="panel">
-        <div class="panel-heading">Panel heading</div>
+      <div class="panel panel-default">
+        <div class="panel-heading">Panel heading without title</div>
         <div class="panel-body">
           Panel content
         </div>
       </div>
-      <div class="panel">
+      <div class="panel panel-default">
         <div class="panel-heading">
           <h3 class="panel-title">Panel title</h3>
         </div>
@@ -2384,14 +3127,14 @@ body { padding-bottom: 70px; }
       </div>
     </div>
 {% highlight html %}
-<div class="panel">
-  <div class="panel-heading">Panel heading</div>
+<div class="panel panel-default">
+  <div class="panel-heading">Panel heading without title</div>
   <div class="panel-body">
     Panel content
   </div>
 </div>
 
-<div class="panel">
+<div class="panel panel-default">
   <div class="panel-heading">
     <h3 class="panel-title">Panel title</h3>
   </div>
@@ -2402,9 +3145,9 @@ body { padding-bottom: 70px; }
 {% endhighlight %}
 
     <h3 id="panels-footer">Panel with footer</h3>
-    <p>Wrap buttons or secondary text in <code>.panel-footer</code>.</p>
+    <p>Wrap buttons or secondary text in <code>.panel-footer</code>. Note that panel footers <strong>do not</strong> inherit colors and borders when using contextual variations as they are not meant to be in the foreground.</p>
     <div class="bs-example">
-      <div class="panel">
+      <div class="panel panel-default">
         <div class="panel-body">
           Panel content
         </div>
@@ -2412,7 +3155,7 @@ body { padding-bottom: 70px; }
       </div>
     </div>
 {% highlight html %}
-<div class="panel">
+<div class="panel panel-default">
   <div class="panel-body">
     Panel content
   </div>
@@ -2439,6 +3182,14 @@ body { padding-bottom: 70px; }
           Panel content
         </div>
       </div>
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">Panel title</h3>
+        </div>
+        <div class="panel-body">
+          Panel content
+        </div>
+      </div>
       <div class="panel panel-warning">
         <div class="panel-heading">
           <h3 class="panel-title">Panel title</h3>
@@ -2455,27 +3206,130 @@ body { padding-bottom: 70px; }
           Panel content
         </div>
       </div>
-      <div class="panel panel-info">
-        <div class="panel-heading">
-          <h3 class="panel-title">Panel title</h3>
-        </div>
-        <div class="panel-body">
-          Panel content
-        </div>
-      </div>
     </div>
 {% highlight html %}
 <div class="panel panel-primary">...</div>
 <div class="panel panel-success">...</div>
+<div class="panel panel-info">...</div>
 <div class="panel panel-warning">...</div>
 <div class="panel panel-danger">...</div>
-<div class="panel panel-info">...</div>
 {% endhighlight %}
+
+    <h3 id="panels-tables">With tables</h3>
+    <p>Add any non-bordered <code>.table</code> within a panel for a seamless design. If there is a <code>.panel-body</code>, we add an extra border to the top of the table for separation.</p>
+    <div class="bs-example">
+      <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">Panel heading</div>
+        <div class="panel-body">
+          <p>Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+        </div>
+
+        <!-- Table -->
+        <table class="table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Username</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Larry</td>
+              <td>the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+{% highlight html %}
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Panel heading</div>
+  <div class="panel-body">
+    <p>...</p>
+  </div>
+
+  <!-- Table -->
+  <table class="table">
+    ...
+  </table>
+</div>
+{% endhighlight %}
+
+    <p>If there is no panel body, the component moves from panel header to table without interruption.</p>
+    <div class="bs-example">
+      <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">Panel heading</div>
+
+        <!-- Table -->
+        <table class="table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Username</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Larry</td>
+              <td>the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+{% highlight html %}
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Panel heading</div>
+
+  <!-- Table -->
+  <table class="table">
+    ...
+  </table>
+</div>
+{% endhighlight %}
+
+
 
     <h3 id="panels-list-group">With list groups</h3>
     <p>Easily include full-width <a href="#list-group">list groups</a> within any panel.</p>
     <div class="bs-example">
-      <div class="panel">
+      <div class="panel panel-default">
         <!-- Default panel contents -->
         <div class="panel-heading">Panel heading</div>
         <div class="panel-body">
@@ -2493,7 +3347,7 @@ body { padding-bottom: 70px; }
       </div>
     </div>
 {% highlight html %}
-<div class="panel">
+<div class="panel panel-default">
   <!-- Default panel contents -->
   <div class="panel-heading">Panel heading</div>
   <div class="panel-body">
@@ -2538,7 +3392,7 @@ body { padding-bottom: 70px; }
     <p>Control padding and rounded corners with two optional modifier classes.</p>
     <div class="bs-example">
       <div class="well well-lg">
-        Look, I'm in a well!
+        Look, I'm in a large well!
       </div>
     </div>
 {% highlight html %}
@@ -2547,10 +3401,195 @@ body { padding-bottom: 70px; }
 
     <div class="bs-example">
       <div class="well well-sm">
-        Look, I'm in a well!
+        Look, I'm in a small well!
       </div>
     </div>
 {% highlight html %}
 <div class="well well-sm">...</div>
 {% endhighlight %}
   </div>
+
+
+
+  <!-- PRELOADERS
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="preloaders">PRELOADERS</h1>
+    </div>
+
+    <h2 id="preloaders-spinning">Spinning preloader</h2>
+    <p>Spinning preloader</p>
+    <div class="bs-example">
+      <div class="preloader-spin">
+      </div>
+    </div>
+{% highlight html %}
+<div class="preloader-spin"></div>
+{% endhighlight %}
+    <h2 id="preloaders-spinning-sizes">Spinning preloader sizes</h2>
+    <p>Spinning preloader sizes</p>
+    <div class="bs-example">
+      <div class="preloader-spin preloader-sm"></div>
+    </div>
+{% highlight html %}
+<div class="preloader-spin preloader-sm"></div>
+{% endhighlight %}
+
+    <h2 id="preloaders-linear">Linear preloader</h2>
+    <p>Linear preloader</p>
+    <div class="bs-example">
+      <div class="preloader-linear">
+      </div>
+    </div>
+{% highlight html %}
+<div class="preloader-linear"></div>
+{% endhighlight %}
+    <h2 id="preloaders-linear-sizes">Linear preloader sizes</h2>
+    <p>Linear preloader sizes</p>
+    <div class="bs-example">
+      <div class="preloader-linear preloader-sm"></div>
+    </div>
+{% highlight html %}
+<div class="preloader-linear preloader-sm"></div>
+{% endhighlight %}
+
+  </div>
+
+
+
+  <!-- TOGGLES
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="toggles">TOGGLES</h1>
+    </div>
+
+    <h2 id="toggles-btn-group">Button groups</h2>
+    <p>Toggles based on button group</p>
+    <h3 id="toggle-btn-group-text">Text</h3>
+    <div class="bs-example">
+      <div class="toggle-btn-group toggle-btn-group-text">
+        <a href="#" class="btn btn-default">Left</a>
+        <a href="#" class="btn btn-default active">Middle</a>
+        <a href="#" class="btn btn-default">Right</a>
+      </div>
+    </div>
+{% highlight html %}
+<div class="toggle-btn-group toggle-btn-group-text">
+  <a href="#" class="btn btn-default">Left</a>
+  <a href="#" class="btn btn-default active">Middle</a>
+  <a href="#" class="btn btn-default">Right</a>
+</div>
+{% endhighlight %}
+    <h3 id="toggle-btn-group-icons">Icons</h3>
+    <div class="bs-example">
+      <div class="toggle-btn-group toggle-btn-group-icons">
+        <a href="#" class="btn btn-default"><i class="icon-">&#xf087;</i></a>
+        <a href="#" class="btn btn-default active"><i class="icon-">&#xf088;</i></a>
+      </div>
+    </div>
+{% highlight html %}
+<div class="toggle-btn-group toggle-btn-group-icons">
+  <a href="#" class="btn btn-default"><i class="icon-">&#xf087;</i></a>
+  <a href="#" class="btn btn-default active"><i class="icon-">&#xf088;</i></a>
+</div>
+{% endhighlight %}
+    <h3 id="toggle-btn-group-multiple-icons">Multiple icons</h3>
+    <div class="bs-example">
+      <div class="toggle-btn-group toggle-btn-group-icons">
+        <a href="#" class="btn btn-default active"><i class="icon-">&#xf036;</i></a>
+        <a href="#" class="btn btn-default"><i class="icon-">&#xf037;</i></a>
+        <a href="#" class="btn btn-default"><i class="icon-">&#xf038;</i></a>
+      </div>
+    </div>
+{% highlight html %}
+<div class="toggle-btn-group toggle-btn-group-icons">
+  <a href="#" class="btn btn-default active"><i class="icon-">&#xf036;</i></a>
+  <a href="#" class="btn btn-default"><i class="icon-">&#xf037;</i></a>
+  <a href="#" class="btn btn-default"><i class="icon-">&#xf038;</i></a>
+</div>
+{% endhighlight %}
+
+  </div>
+  <!-- TEXT INPUT VARIANTS
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="textinputvariants">Text input variants</h1>
+    </div>
+
+    <h2 id="stepper">Stepper</h2>
+
+    <div class="bs-example">
+      <span class="stepper">
+        <input class="form-control" type="number" />
+        <span class="arrows">
+          <button type="button" class="btn btn-up">
+            <span class="caret"></span>
+          </button>
+          <button type="button" class="btn btn-down">
+            <span class="caret"></span>
+          </button>
+        </span>
+      </span>
+      <span class="stepper">
+        <input class="form-control" type="number" disabled="disabled" />
+        <span class="arrows">
+          <button type="button" class="btn btn-up">
+            <span class="caret"></span>
+          </button>
+          <button type="button" class="btn btn-down">
+            <span class="caret"></span>
+          </button>
+        </span>
+      </span>
+      <span class="stepper">
+        <input class="form-control" type="number"  data-stepper-min="999" data-stepper-max="1001" data-stepper-step="2" />
+        <span class="arrows">
+          <button type="button" class="btn btn-up">
+            <span class="caret"></span>
+          </button>
+          <button type="button" class="btn btn-down">
+            <span class="caret"></span>
+          </button>
+        </span>
+      </span>
+    </div>
+    {% highlight html %}
+    <span class="stepper">
+      <input class="form-control" type="number" />
+      <span class="arrows">
+        <button type="button" class="btn btn-up">
+          <span class="caret"></span>
+        </button>
+        <button type="button" class="btn btn-down">
+          <span class="caret"></span>
+        </button>
+      </span>
+    </span>
+    <span class="stepper">
+      <input class="form-control" type="number" disabled="disabled" />
+      <span class="arrows">
+        <button type="button" class="btn btn-up">
+          <span class="caret"></span>
+        </button>
+        <button type="button" class="btn btn-down">
+          <span class="caret"></span>
+        </button>
+      </span>
+    </span>
+    <span class="stepper">
+      <input class="form-control" type="number"  data-stepper-min="999" data-stepper-max="1001" data-stepper-step="2" />
+      <span class="arrows">
+        <button type="button" class="btn btn-up">
+          <span class="caret"></span>
+        </button>
+        <button type="button" class="btn btn-down">
+          <span class="caret"></span>
+        </button>
+      </span>
+    </span>
+    {% endhighlight %}
+  </div>
+

@@ -16,17 +16,20 @@
 
     <footer class="container" role="contentinfo">
       <ul class="bs-masthead-links">
-        <li>
-          <a href="{{ site.repo }}" onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Jumbotron links', 'GitHub project']);">GitHub project</a>
+        <li class="current-version">
+          Currently v{{ site.current_version }}
         </li>
         <li>
-          <a href="{{ site.examples }}" onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Jumbotron links', 'Examples']);">Examples</a>
+          <a href="{{ site.repo }}">GitHub project</a>
         </li>
         <li>
-          <a href="{{ site.glyphicons }}" onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Jumbotron links', 'Glyphicons']);">Glyphicons</a>
+          <a href="{{ page.base_url }}getting-started/#examples">Examples</a>
         </li>
         <li>
-          <a href="{{ site.expo }}" onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Jumbotron links', 'Expo']);">Bootstrap Expo</a>
+          <a href="{{ page.base_url }}components/#glyphicons">Glyphicons</a>
+        </li>
+        <li>
+          <a href="{{ site.blog }}" onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Jumbotron links', 'Blog']);">Blog</a>
         </li>
       </ul>
     </footer>

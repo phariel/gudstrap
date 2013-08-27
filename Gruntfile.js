@@ -9,9 +9,11 @@ module.exports = function(grunt) {
     // Metadata.
     pkg: grunt.file.readJSON('package.json'),
     banner: '/**\n' +
-              '* <%= pkg.name %>.js v<%= pkg.version %> by @fat and @mdo\n' +
+              '* Bootstrap v<%= pkg.version %> by @fat and @mdo\n' +
               '* Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
-              '* <%= _.pluck(pkg.licenses, "url").join(", ") %>\n' +
+              '* Licensed under <%= _.pluck(pkg.licenses, "url").join(", ") %>.\n' +
+              '*\n' +
+              '* Designed and built with all the love in the world by @mdo and @fat.\n' +
               '*/\n',
     jqueryCheck: 'if (!jQuery) { throw new Error(\"Bootstrap requires jQuery\") }\n\n',
 
@@ -34,16 +36,7 @@ module.exports = function(grunt) {
         src: ['js/tests/unit/*.js']
       }
     },
-    copy: {
-      dist: {
-        files: [{
-          expand: true,
-          flatten: true,
-          src: [ "font/*", "bower_components/fontawesome/font/*" ],
-          dest: 'dist/font/'
-        }]
-      }
-    },
+
     concat: {
       options: {
         banner: '<%= banner %><%= jqueryCheck %>',
@@ -66,7 +59,7 @@ module.exports = function(grunt) {
           'js/toggle-btn-group-ef.js',
           'js/stepper-ef.js'
         ],
-        dest: 'dist/js/bootstrap.js'
+        dest: 'dist/js/<%= pkg.name %>.js'
       }
     },
 
@@ -75,9 +68,8 @@ module.exports = function(grunt) {
         banner: '<%= banner %>'
       },
       bootstrap: {
-        files: {
-          'dist/js/bootstrap.min.js': ['<%= concat.bootstrap.dest %>']
-        }
+        src: ['<%= concat.bootstrap.dest %>'],
+        dest: 'dist/js/<%= pkg.name %>.min.js'
       }
     },
 
@@ -86,19 +78,35 @@ module.exports = function(grunt) {
         compile: true
       },
       bootstrap: {
-        files: {
-          'dist/css/bootstrap.css': ['less/bootstrap.less'],
-          'dist/css/bootstrap-ef.css': ['less/bootstrap-ef.less']
-        }
+        src: ['less/bootstrap-ef.less'],
+        dest: 'dist/css/<%= pkg.name %>.css'
       },
       min: {
         options: {
           compress: true
         },
-        files: {
-          'dist/css/bootstrap.min.css': ['less/bootstrap.less'],
-          'dist/css/bootstrap-ef.min.css': ['less/bootstrap-ef.less']
-        }
+        src: ['less/bootstrap-ef.less'],
+        dest: 'dist/css/<%= pkg.name %>.min.css'
+      },
+      theme: {
+        src: ['less/theme.less'],
+        dest: 'dist/css/<%= pkg.name %>-theme.css'
+      },
+      theme_min: {
+        options: {
+          compress: true
+        },
+        src: ['less/theme.less'],
+        dest: 'dist/css/<%= pkg.name %>-theme.min.css'
+      }
+    },
+
+    copy: {
+      fonts: {
+        expand: true,
+        flatten: true,
+        src: [ "fonts/*", "bower_components/fontawesome/font/*" ],
+        dest: 'dist/fonts'
       }
     },
 
@@ -124,10 +132,14 @@ module.exports = function(grunt) {
 
     validation: {
       options: {
-        reset: true,
+        reset: true
       },
       files: {
-        src: ["_gh_pages/**/*.html"]
+        src: [
+          "_gh_pages/**/*.html",
+          "!_gh_pages/2.3.2/**/*",
+          "!_gh_pages/bower_components/**/*"
+        ]
       }
     },
 
@@ -152,10 +164,10 @@ module.exports = function(grunt) {
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
   // Docs HTML validation task
-  grunt.registerTask('validate-docs', ['jekyll', 'validation']);
+  grunt.registerTask('validate-html', ['jekyll', 'validation']);
 
   // Test task.
-  var testSubtasks = ['jshint', 'qunit', 'validate-docs'];
+  var testSubtasks = ['dist-css', 'jshint', 'qunit', 'validate-html'];
   // Only run BrowserStack tests under Travis
   if (process.env.TRAVIS) {
     // Only run BrowserStack tests if this is a mainline commit in twbs/bootstrap, or you have your own BrowserStack key
@@ -171,11 +183,11 @@ module.exports = function(grunt) {
   // CSS distribution task.
   grunt.registerTask('dist-css', ['recess']);
 
-  // Font distribution task.
-  grunt.registerTask('dist-font', ['copy']);
+  // Fonts distribution task.
+  grunt.registerTask('dist-fonts', ['copy']);
 
   // Full distribution task.
-  grunt.registerTask('dist', ['clean', 'dist-font', 'dist-css', 'dist-js']);
+  grunt.registerTask('dist', ['clean', 'dist-css', 'dist-fonts', 'dist-js']);
 
   // Default task.
   grunt.registerTask('default', ['test', 'dist']);
@@ -188,7 +200,7 @@ module.exports = function(grunt) {
       var files = {}
       fs.readdirSync(type)
         .filter(function (path) {
-          return new RegExp('\\.' + type + '$').test(path)
+          return type == 'fonts' ? true : new RegExp('\\.' + type + '$').test(path)
         })
         .forEach(function (path) {
           return files[path] = fs.readFileSync(type + '/' + path, 'utf8')
@@ -197,7 +209,7 @@ module.exports = function(grunt) {
     }
 
     var customize = fs.readFileSync('customize.html', 'utf-8')
-    var files = '<!-- generated -->\n<script id="files">\n' + getFiles('js') + getFiles('less') + '<\/script>\n<!-- /generated -->'
-    fs.writeFileSync('customize.html', customize.replace(/<!-- generated -->(.|[\n\r])*<!-- \/generated -->/, files))
+    var files = getFiles('js') + getFiles('less') + getFiles('fonts')
+    fs.writeFileSync('assets/js/raw-files.js', files)
   });
 };

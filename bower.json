@@ -1,7 +1,7 @@
 {
-  "name": "bootstrap-ef",
+  "name": "gudstrap",
   "version": "3.0.0",
-  "main": ["./dist/js/bootstrap.js", "./dist/css/bootstrap.css"],
+  "main": ["./dist/js/gudstrap.js", "./dist/css/gudstrap.css", "./dist/fonts/*"],
   "ignore": [
       "**/.*"
   ],
