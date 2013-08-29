@@ -136,7 +136,6 @@ module.exports = function(grunt) {
       files: {
         src: [
           "_gh_pages/**/*.html",
-          "!_gh_pages/2.3.2/**/*",
           "!_gh_pages/bower_components/**/*"
         ]
       }
@@ -189,7 +188,7 @@ module.exports = function(grunt) {
   grunt.registerTask('dist', ['clean', 'dist-css', 'dist-fonts', 'dist-js']);
 
   // Default task.
-  grunt.registerTask('default', ['test', 'dist']);
+  grunt.registerTask('default', ['test', 'dist', 'build-customizer']);
 
   // task for building customizer
   grunt.registerTask('build-customizer', 'Add scripts/less files to customizer.', function () {
