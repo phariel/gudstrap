@@ -4,7 +4,7 @@
   , "version": "3.0.0"
   , "keywords": ["bootstrap", "css"]
   , "homepage": "http://englishtown.github.io/gudstrap/"
-  , "author": "Twitter Inc."
+  , "author": "EF Inc."
   , "scripts": {
        "test": "grunt test"
      , "postinstall": "bower install"
