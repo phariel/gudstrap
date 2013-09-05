@@ -416,20 +416,40 @@ cite {
   color: #ec008c;
 }
 
+.text-primary:hover {
+  color: #b9006e;
+}
+
 .text-warning {
   color: #ffffff;
+}
+
+.text-warning:hover {
+  color: #e6e6e6;
 }
 
 .text-danger {
   color: #ffffff;
 }
 
+.text-danger:hover {
+  color: #e6e6e6;
+}
+
 .text-success {
   color: #ffffff;
 }
 
+.text-success:hover {
+  color: #e6e6e6;
+}
+
 .text-info {
   color: #ffffff;
+}
+
+.text-info:hover {
+  color: #e6e6e6;
 }
 
 .text-left {
@@ -989,7 +1009,7 @@ pre code {
 
 @media (min-width: 768px) {
   .container {
-    max-width: 728px;
+    width: 728px;
   }
   .col-sm-1,
   .col-sm-2,
@@ -1143,7 +1163,7 @@ pre code {
 
 @media (min-width: 992px) {
   .container {
-    max-width: 940px;
+    width: 940px;
   }
   .col-md-1,
   .col-md-2,
@@ -1306,7 +1326,7 @@ pre code {
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 1170px;
+    width: 1170px;
   }
   .col-lg-1,
   .col-lg-2,
@@ -5669,6 +5689,7 @@ a.thumbnail:focus {
   width: 0;
   height: 100%;
   font-size: 12px;
+  line-height: 20px;
   color: #ffffff;
   text-align: center;
   background-color: #00c3ed;
