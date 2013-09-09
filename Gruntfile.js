@@ -137,7 +137,6 @@ module.exports = function(grunt) {
       files: {
         src: [
           "_gh_pages/**/*.html",
-          "!_gh_pages/2.3.2/**/*",
           "!_gh_pages/bower_components/**/*"
         ]
       }

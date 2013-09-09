@@ -53,16 +53,6 @@
     setVal($input, val, this.options)
   }
 
-  var keydownEvent = function(e) {
-    var keyCode = e.keyCode
-    // Enter, delete, Left arrow and Right arrow keys allowed
-    if (keyCode === 13) {
-      $(this).trigger(stepperBlur)
-    } else if (keyCode !== 8 && keyCode !== 37 && keyCode !== 39 && keyCode !== 189) {
-      if (keyCode < 48 || keyCode > 57) return false
-    }
-  }
-
   var execStep = function($input, action, options, step) {
     if ($input.is(disableAttr)) return
     var val
@@ -142,7 +132,9 @@
     .on(stepperBlur, stepperInputDelegateClass, function(e){
       $(this).parents(stepperClass).stepper('set')
     })
-    .on(stepperKeydown, stepperInputDelegateClass, keydownEvent)
+    .on(stepperKeydown, stepperInputDelegateClass, function(e){
+      if (e.keyCode === 13) $(this).trigger(stepperBlur)
+    })
 
 
   $(window).on('load', function() {

@@ -573,7 +573,7 @@ $('#myDropdown').on('show.bs.dropdown', function () {
     <h2 id="scrollspy-usage">Usage</h2>
 
     <h3>Via data attributes</h3>
-    <p>To easily add scrollspy behavior to your topbar navigation, add <code>data-spy="scroll"</code> to the element you want to spy on (most typically this would be the <code>&lt;body&gt;</code>. Then add the <code>data-target</code> attribute with the ID or class of the parent element of any Bootstrap <code>.nav</code> component.</p>
+    <p>To easily add scrollspy behavior to your topbar navigation, add <code>data-spy="scroll"</code> to the element you want to spy on (most typically this would be the <code>&lt;body&gt;</code>). Then add the <code>data-target</code> attribute with the ID or class of the parent element of any Bootstrap <code>.nav</code> component.</p>
 {% highlight html %}
 <body data-spy="scroll" data-target="#navbar-example">
   ...
@@ -687,6 +687,11 @@ $('#myScrollspy').on('activate.bs.scrollspy', function () {
       </div>
     </div><!-- /example -->
 
+    <div class="bs-callout bs-callout-info">
+      <h4>Extends tabbed navigation</h4>
+      <p>This plugin extends the <a href="../components/#nav-tabs">tabbed navigation component</a> to add tabbable areas.</p>
+    </div>
+
 
     <h2 id="tabs-usage">Usage</h2>
     <p>Enable tabbable tabs via JavaScript (each tab needs to be activated individually):</p>
@@ -708,15 +713,33 @@ $('#myTab li:eq(2) a').tab('show') // Select third tab (0-indexed)
     <h3>Markup</h3>
     <p>You can activate a tab or pill navigation without writing any JavaScript by simply specifying <code>data-toggle="tab"</code> or <code>data-toggle="pill"</code> on an element. Adding the <code>nav</code> and <code>nav-tabs</code> classes to the tab <code>ul</code> will apply the Bootstrap tab styling.</p>
 {% highlight html %}
+<!-- Nav tabs -->
 <ul class="nav nav-tabs">
   <li><a href="#home" data-toggle="tab">Home</a></li>
   <li><a href="#profile" data-toggle="tab">Profile</a></li>
   <li><a href="#messages" data-toggle="tab">Messages</a></li>
   <li><a href="#settings" data-toggle="tab">Settings</a></li>
 </ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active" id="home">...</div>
+  <div class="tab-pane" id="profile">...</div>
+  <div class="tab-pane" id="messages">...</div>
+  <div class="tab-pane" id="settings">...</div>
+</div>
 {% endhighlight %}
 
-    <p>To make tabs fade in, add <code>.fade</code> to each <code>.tab-pane</code>.</p>
+    <h3>Fade effect</h3>
+    <p>To make tabs fade in, add <code>.fade</code> to each <code>.tab-pane</code>. The first tab pane must also have <code>.in</code> to properly fade in initial content.</p>
+{% highlight html %}
+<div class="tab-content">
+  <div class="tab-pane fade in active" id="home">...</div>
+  <div class="tab-pane fade" id="profile">...</div>
+  <div class="tab-pane fade" id="messages">...</div>
+  <div class="tab-pane fade" id="settings">...</div>
+</div>
+{% endhighlight %}
 
     <h3>Methods</h3>
     <h4>$().tab</h4>
@@ -1354,7 +1377,7 @@ $('#my-alert').bind('closed.bs.alert', function () {
     <h2 id="buttons-usage">Usage</h2>
     <p>Enable buttons via JavaScript:</p>
 {% highlight js %}
-$('.nav-tabs').button()
+$('.btn-group').button()
 {% endhighlight %}
 
     <h3>Markup</h3>
@@ -1652,10 +1675,10 @@ $('#myCollapsible').on('hidden.bs.collapse', function () {
           </div>
         </div>
         <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-          <span class="icon-prev"></span>
+          <span class="glyphicon glyphicon-chevron-left"></span>
         </a>
         <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-          <span class="icon-next"></span>
+          <span class="glyphicon glyphicon-chevron-right"></span>
         </a>
       </div>
     </div><!-- /example -->
@@ -1681,16 +1704,16 @@ $('#myCollapsible').on('hidden.bs.collapse', function () {
 
   <!-- Controls -->
   <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-    <span class="icon-prev"></span>
+    <span class="glyphicon glyphicon-chevron-left"></span>
   </a>
   <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-    <span class="icon-next"></span>
+    <span class="glyphicon glyphicon-chevron-right"></span>
   </a>
 </div>
 {% endhighlight %}
-<div class="bs-callout bs-callout-info">
-  <h4>Glyphicon Alternative</h4>
-  <p>With <a href="{{ page.base_url }}components/#glyphicons">Glyphicons</a> available, you may choose to style the left and right toggle buttons with <code>.glyphicon .glyphicon-chevron-left</code> and <code>.glyphicon .glyphicon-chevron-right</code>.</p>
+<div class="bs-callout bs-callout-warning" id="callout-carousel-transitions">
+  <h4>Transition animations not supported in Internet Explorer 8 &amp; 9</h4>
+  <p>Bootstrap exclusively uses CSS3 for its animations, but Internet Explorer 8 &amp; 9 don't support the necessary CSS properties. Thus, there are no slide transition animations when using these browsers. We have intentionally decided not to include jQuery-based fallbacks for the transitions.</p>
 </div>
 
     <h3>Optional captions</h3>
@@ -1726,10 +1749,10 @@ $('#myCollapsible').on('hidden.bs.collapse', function () {
           </div>
         </div>
         <a class="left carousel-control" href="#carousel-example-captions" data-slide="prev">
-          <span class="icon-prev"></span>
+          <span class="glyphicon glyphicon-chevron-left"></span>
         </a>
         <a class="right carousel-control" href="#carousel-example-captions" data-slide="next">
-          <span class="icon-next"></span>
+          <span class="glyphicon glyphicon-chevron-right"></span>
         </a>
       </div>
     </div><!-- /example -->
@@ -1876,8 +1899,8 @@ $('#myCarousel').on('slide.bs.carousel', function () {
     <div class="bs-callout bs-callout-warning">
       <h4>Requires independent styling ;)</h4>
       <p>
-        Affix toggles between three states/classes: <code>affix</code>, <code>affix-top</code>, and <code>affix-bottom</code>. You must provide the styles for these classes yourself (independent of this plugin).
-        The <code>affix-top</code> class should be in the regular flow of the document. The <code>affix</code> class should be fixed to the page. And <code>affix-bottom</code> should be positioned absolute. Note, <code>affix-bottom</code> is special in that the plugin will place the element with JS relative to the <code>offset: { bottom: number }</code> option you've provided.
+        Affix toggles between three states/classes: <code>.affix</code>, <code>.affix-top</code>, and <code>.affix-bottom</code>. You must provide the styles for these classes yourself (independent of this plugin).
+        The <code>.affix-top</code> class should be in the regular flow of the document. The <code>.affix</code> class should be <code>position: fixed</code>. And <code>.affix-bottom</code> should be <code>position: absolute</code>. Note: <code>.affix-bottom</code> is special in that the plugin will place the element with JS relative to the <code>offset: { bottom: number }</code> option you've provided.
       </p>
     </div>
 
