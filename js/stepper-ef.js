@@ -3,15 +3,11 @@
  * For numeric stepper of EF project only
  * ======================================================================== */
 
-+ function($) {
++function($) {
   "use strict";
 
   // NUMERIC STEPPER CLASS DEFINITION
   // =========================
-
-  var stepperMin = 0
-  var stepperMax = 99999
-  var stepperStep = 1
 
   var stepperClass = '.stepper'
   var stepperBtnUpClass = stepperClass + ' .btn-up'
@@ -20,55 +16,41 @@
   var stepperInputDelegateClass = stepperClass + ' ' + stepperInputClass
 
   var dataStepper = 'stepper'
-  var dataStepperMin = 'stepper-min'
-  var dataStepperMax = 'stepper-max'
-  var dataStepperStep = 'stepper-step'
   var dataLastVal = 'stepper-lastval'
 
-  var stepperClick = 'click.bs.stepper.data-api'
-  var stepperKeydown = 'keydown.bs.stepper.data-api'
-  var stepperFocus = 'focus.bs.stepper.data-api'
-  var stepperBlur = 'blur.bs.stepper.data-api'
+  var stepperClick = 'click.gud.stepper.data-api'
+  var stepperKeydown = 'keydown.gud.stepper.data-api'
+  var stepperFocus = 'focus.gud.stepper.data-api'
+  var stepperBlur = 'blur.gud.stepper.data-api'
 
   var disableAttr = '.disabled, :disabled'
 
-  var Stepper = function(element, option) {
+  var Stepper = function(element, options) {
     var $el = $(element)
-    var $input = $el.find(stepperInputClass)
+    this.inputEl = $el.find(stepperInputClass)
+    this.options = options
 
-    if (!$input.data(dataStepperMin)) $input.data(dataStepperMin, stepperMin)
-    if (!$input.data(dataStepperMax)) $input.data(dataStepperMax, stepperMax)
-    if (!$input.data(dataStepperStep)) $input.data(dataStepperStep, stepperStep)
+    this.set()
+  }
 
-    if (typeof(option) == 'object') {
-      $.each(option, function(key, value) {
-        $input.data(key, value)
-      })
-    }
-
-    setVal($input, $input.val())
+  Stepper.DEFAULTS = {
+    'min': 0,
+    'max': 99999,
+    'step': 1
   }
 
   Stepper.prototype.increase = function(step) {
-    execStep($(this), 'increase', step)
+    execStep(this.inputEl, 'increase', this.options, step)
   }
 
   Stepper.prototype.decrease = function(step) {
-    execStep($(this), 'decrease', step)
+    execStep(this.inputEl, 'decrease', this.options, step)
   }
 
-  var increaseEvent = function(e) {
-    var $this = $(this).parents(stepperClass)
-    var $input = $this.find(stepperInputClass)
-    if ($input.is(disableAttr)) return
-    $this.stepper('increase')
-  }
-
-  var decreaseEvent = function(e) {
-    var $this = $(this).parents(stepperClass)
-    var $input = $this.find(stepperInputClass)
-    if ($input.is(disableAttr)) return
-    $this.stepper('decrease')
+  Stepper.prototype.set = function(val) {
+    var $input = this.inputEl
+    if (val === undefined) val = $input.val()
+    setVal($input, val, this.options)
   }
 
   var keydownEvent = function(e) {
@@ -76,55 +58,40 @@
     // Enter, delete, Left arrow and Right arrow keys allowed
     if (keyCode === 13) {
       $(this).trigger(stepperBlur)
-    } else if (keyCode !== 8 && keyCode !== 37 && keyCode !== 39) {
+    } else if (keyCode !== 8 && keyCode !== 37 && keyCode !== 39 && keyCode !== 189) {
       if (keyCode < 48 || keyCode > 57) return false
     }
   }
 
-  var focusEvent = function(e) {
-    var $this = $(this)
-    $this.val('')
-  }
-
-  var blurEvent = function(e) {
-    var $this = $(this)
-    setVal($this, $this.val())
-  }
-
-  var execStep = function($this, action, step) {
-    var $input = $this.find(stepperInputClass)
-    var val = parseInt($input.val(), 10)
-
+  var execStep = function($input, action, options, step) {
+    if ($input.is(disableAttr)) return
+    var val
+    if (step === undefined) step = options['step']
+    if (isNaN(val = parseInt($input.val(), 10))) val = 0
     step = parseInt(step, 10)
 
-    if (!step) step = $input.data(dataStepperStep)
-
-    switch (action) {
-      case 'increase':
-        val += step
-        break
-      case 'decrease':
-        val -= step
-        break
+    if (action == 'decrease') {
+      step *= -1;
     }
+    val += step;
 
-    setVal($input, val)
+    setVal($input, val, options)
 
   }
 
-  var setVal = function($input, val) {
-    var maxValue = $input.data(dataStepperMax)
-    var minValue = $input.data(dataStepperMin)
+  var setVal = function($input, val, options) {
+    var maxValue = parseInt(options['max'], 10)
+    var minValue = parseInt(options['min'], 10)
+
     var lastVal = $input.data(dataLastVal)
 
-    val = parseInt(val, 10)
+    if (val.length === 0) {
+      val = lastVal != null ? lastVal : minValue;
+    }
 
-    if (!val && val !== 0) {
-      if (!lastVal) {
-        lastVal = minValue
-      }
-      val = lastVal
-    } else if (val < minValue) {
+    if (isNaN(val = parseInt(val, 10))) val = 0
+
+    if (val < minValue) {
       val = minValue
     } else if (val > maxValue) {
       val = maxValue
@@ -139,12 +106,13 @@
 
   var old = $.fn.stepper
 
-  $.fn.stepper = function(option) {
+  $.fn.stepper = function(option, val) {
     return this.each(function() {
       var $this = $(this)
       var data = $this.data(dataStepper)
-      if (!data) $this.data(dataStepper, (data = new Stepper(this, option)))
-      if (typeof option == 'string') data[option].call($this)
+      var options = $.extend({}, Stepper.DEFAULTS, $this.data(), typeof option == 'object' && option)
+      if (!data) $this.data(dataStepper, (data = new Stepper(this, options)))
+      if (typeof option == 'string') data[option](val)
     })
   }
 
@@ -162,11 +130,20 @@
   // ===================================
 
   $(document)
-    .on(stepperClick, stepperBtnUpClass, increaseEvent)
-    .on(stepperClick, stepperBtnDownClass, decreaseEvent)
+    .on(stepperClick, stepperBtnUpClass, function(e) {
+      $(this).parents(stepperClass).stepper('increase')
+    })
+    .on(stepperClick, stepperBtnDownClass, function(e) {
+      $(this).parents(stepperClass).stepper('decrease')
+    })
+    .on(stepperFocus, stepperInputDelegateClass, function(e){
+      $(this).val('')
+    })
+    .on(stepperBlur, stepperInputDelegateClass, function(e){
+      $(this).parents(stepperClass).stepper('set')
+    })
     .on(stepperKeydown, stepperInputDelegateClass, keydownEvent)
-    .on(stepperBlur, stepperInputDelegateClass, blurEvent)
-    .on(stepperFocus, stepperInputDelegateClass, focusEvent)
+
 
   $(window).on('load', function() {
     $(stepperClass).stepper()
