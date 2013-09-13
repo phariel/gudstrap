@@ -256,8 +256,8 @@ table {
   p,
   h2,
   h3 {
-    orphans: 3;
     widows: 3;
+    orphans: 3;
   }
   h2,
   h3 {
@@ -1662,8 +1662,8 @@ table th[class*="col-"] {
     overflow-x: scroll;
     overflow-y: hidden;
     border: 1px solid #d9d9d9;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
     -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
   }
   .table-responsive > .table {
     margin-bottom: 0;
@@ -5493,8 +5493,8 @@ a.list-group-item.active > .badge,
 }
 
 .thumbnail {
-  display: inline-block;
   display: block;
+  display: inline-block;
   height: auto;
   max-width: 100%;
   padding: 4px;
@@ -8183,6 +8183,47 @@ fieldset[disabled] .btn-default:active,
 .btn-default[disabled].active,
 fieldset[disabled] .btn-default.active {
   background-color: #4a4a4a;
+}
+
+.btn-secondary {
+  padding: 9px 19px;
+  color: #4a4a4a;
+  background: #fff;
+  background-color: #ffffff;
+  border: 1px solid #4a4a4a;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active,
+.btn-secondary.active {
+  background-color: #ffffff;
+}
+
+.btn-secondary.disabled,
+.btn-secondary[disabled],
+fieldset[disabled] .btn-secondary,
+.btn-secondary.disabled:hover,
+.btn-secondary[disabled]:hover,
+fieldset[disabled] .btn-secondary:hover,
+.btn-secondary.disabled:focus,
+.btn-secondary[disabled]:focus,
+fieldset[disabled] .btn-secondary:focus,
+.btn-secondary.disabled:active,
+.btn-secondary[disabled]:active,
+fieldset[disabled] .btn-secondary:active,
+.btn-secondary.disabled.active,
+.btn-secondary[disabled].active,
+fieldset[disabled] .btn-secondary.active {
+  background-color: #ffffff;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active,
+.btn-secondary.active {
+  color: #6a6a6a;
+  border-color: #6a6a6a;
 }
 
 .btn-primary {
