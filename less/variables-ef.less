@@ -2,12 +2,6 @@
 // Variables
 // --------------------------------------------------
 
-// Typography font
-// --------------------------------------------------
-
-@typography-font-path: @icon-font-path;
-@typography-font-name: "HelveticaNeueLTPro-BdCn";
-
 // Global values
 // --------------------------------------------------
 
@@ -23,9 +17,9 @@
 // Brand colors
 // -------------------------
 
-@brand-default: 		#4a4a4a;
+@brand-default:         #4a4a4a;
 @brand-primary:         #ec008c;
-@brand-trivia:       	#cccccc;
+@brand-trivia:          #cccccc;
 @brand-active:          #00c3ed;
 @brand-success:         #8aca01;
 @brand-warning:         #ff9000;
@@ -36,17 +30,17 @@
 // Brand Colors States
 // -------------------------
 
-@brand-variant-disable:   			40%;
-@brand-variant-disable-computed:	.4;
+@brand-variant-disable:             40%;
+@brand-variant-disable-computed:    .4;
 
-@brand-default-hover: 	#6a6a6a;
-@brand-primary-hover:	#fe089a;
-@brand-trivia-hover:   	@gray-light;
-@brand-active-hover:   	#00d2ff;
-@brand-success-hover:	#9ce500;
-@brand-warning-hover:	#ffae00;
-@brand-danger-hover:   	#ff426a;
-@brand-info-hover:   	@brand-active-hover;
+@brand-default-hover:   #6a6a6a;
+@brand-primary-hover:   #fe089a;
+@brand-trivia-hover:    @gray-light;
+@brand-active-hover:    #00d2ff;
+@brand-success-hover:   #9ce500;
+@brand-warning-hover:   #ffae00;
+@brand-danger-hover:    #ff426a;
+@brand-info-hover:      @brand-active-hover;
 
 @brand-default-disable:   fadeout(@brand-default, @brand-variant-disable);
 @brand-primary-disable:   fadeout(@brand-primary, @brand-variant-disable);
@@ -74,7 +68,6 @@
 // Typography
 // -------------------------
 
-@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 @font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
 @font-family-base:        Arial, Helvetica, sans-serif;
@@ -87,11 +80,12 @@
 @line-height-base:        1.428571429; // 20/14
 @line-height-computed:    floor(@font-size-base * @line-height-base); // ~20px
 
+
 @headings-font-family:    @font-family-base;
 @headings-font-weight:    bold;
 @headings-line-height:    1.1;
 
-@headings-h1h4-font-family:		 "Helvetica Neue Bold Condensed";
+@headings-h1h4-font-family:      "bebas_neueregular";
 @headings-h1h4-font-weight:      500;
 @headings-h1h4-line-height:      1.1;
 
@@ -123,7 +117,7 @@
 // Tables
 // -------------------------
 
-@table-cell-padding-horizontal:		 8px;
+@table-cell-padding-horizontal:      8px;
 @table-cell-padding-vertical:        11px;
 @table-condensed-cell-padding:       5px;
 
