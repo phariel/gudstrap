@@ -30,6 +30,20 @@
 .btn-default {
   .btn-pseudo-states(@btn-default-color, @btn-default-bg, @btn-default-bg-hover);
 }
+.btn-secondary {
+  .btn-pseudo-states(@btn-default-bg, #fff, #fff);
+  border: 1px solid @btn-default-bg;
+  background: #fff;
+  padding: (@padding-base-vertical - 1) (@padding-base-horizontal - 1);
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    color: @btn-default-bg-hover;
+    border-color: @btn-default-bg-hover;
+  }
+}
 .btn-primary {
   .btn-pseudo-states(@btn-primary-color, @btn-primary-bg, @btn-primary-bg-hover);
 }

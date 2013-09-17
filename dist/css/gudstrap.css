@@ -1776,7 +1776,8 @@ input[type="checkbox"]:focus {
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
-  height: auto;
+  margin: 0;
+  -webkit-appearance: none;
 }
 
 output {
@@ -7426,11 +7427,11 @@ body {
 }
 
 @font-face {
-  font-family: 'Helvetica Neue Bold Condensed';
+  font-family: 'bebas_neueregular';
   font-style: normal;
   font-weight: normal;
-  src: url('../fonts/HelveticaNeueLTPro-BdCn.eot');
-  src: local('☺'), url('../fonts/HelveticaNeueLTPro-BdCn.eot?#iefix') format('embedded-opentype'), url('../fonts/HelveticaNeueLTPro-BdCn.woff') format('woff'), url('../fonts/HelveticaNeueLTPro-BdCn.otf') format('opentype'), url('../fonts/HelveticaNeueLTPro-BdCn.ttf') format('truetype'), url('../fonts/HelveticaNeueLTPro-BdCn.svg#HelveticaNeueLTPro-BdCn') format('svg');
+  src: url('../fonts//BebasNeue-webfont.eot');
+  src: url('../fonts//BebasNeue-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts//BebasNeue-webfont.woff') format('woff'), url('../fonts//BebasNeue-webfont.ttf') format('truetype'), url('../fonts//BebasNeue-webfont.svg#bebas_neueregular') format('svg');
 }
 
 .lead {
@@ -7476,7 +7477,7 @@ h4,
 .h2,
 .h3,
 .h4 {
-  font-family: "Helvetica Neue Bold Condensed";
+  font-family: "bebas_neueregular";
   font-weight: 500;
   line-height: 1.1;
   text-transform: uppercase;
@@ -8164,6 +8165,47 @@ fieldset[disabled] .btn-default:active,
 .btn-default[disabled].active,
 fieldset[disabled] .btn-default.active {
   background-color: #4a4a4a;
+}
+
+.btn-secondary {
+  padding: 9px 19px;
+  color: #4a4a4a;
+  background: #fff;
+  background-color: #ffffff;
+  border: 1px solid #4a4a4a;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active,
+.btn-secondary.active {
+  background-color: #ffffff;
+}
+
+.btn-secondary.disabled,
+.btn-secondary[disabled],
+fieldset[disabled] .btn-secondary,
+.btn-secondary.disabled:hover,
+.btn-secondary[disabled]:hover,
+fieldset[disabled] .btn-secondary:hover,
+.btn-secondary.disabled:focus,
+.btn-secondary[disabled]:focus,
+fieldset[disabled] .btn-secondary:focus,
+.btn-secondary.disabled:active,
+.btn-secondary[disabled]:active,
+fieldset[disabled] .btn-secondary:active,
+.btn-secondary.disabled.active,
+.btn-secondary[disabled].active,
+fieldset[disabled] .btn-secondary.active {
+  background-color: #ffffff;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active,
+.btn-secondary.active {
+  color: #6a6a6a;
+  border-color: #6a6a6a;
 }
 
 .btn-primary {
@@ -10327,6 +10369,160 @@ a .icon-flip-vertical:before {
 
 .progress-striped .progress-bar {
   background-size: 12px 12px;
+}
+
+.arrows {
+  display: inline-block;
+}
+
+.arrows .btn {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  background-color: #4a4a4a;
+  -webkit-transition: background-color ease-in-out 0.15s;
+          transition: background-color ease-in-out 0.15s;
+}
+
+.arrows .btn:hover {
+  background-color: #6a6a6a;
+}
+
+.arrows .btn:active {
+  background-color: #00c3ed;
+}
+
+.arrows .btn .caret {
+  border-top: 4px solid #ffffff;
+}
+
+.arrows .btn-up {
+  border-bottom: 1px solid #ffffff;
+}
+
+.arrows .btn-up .caret {
+  border-top: 0;
+  border-bottom: 4px solid #ffffff;
+}
+
+.stepper {
+  display: inline-block;
+}
+
+.stepper .form-control {
+  float: left;
+  width: 65px;
+  text-align: center;
+  border-right: 0;
+}
+
+.stepper .arrows {
+  float: left;
+}
+
+.stepper .arrows .btn {
+  display: block;
+}
+
+.stepper .form-control.disabled + .arrows .btn,
+.stepper .form-control[disabled] + .arrows .btn,
+fieldset[disabled] .stepper .form-control + .arrows .btn {
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+}
+
+.stepper .form-control.disabled + .arrows .btn:hover,
+.stepper .form-control[disabled] + .arrows .btn:hover,
+fieldset[disabled] .stepper .form-control + .arrows .btn:hover,
+.stepper .form-control.disabled + .arrows .btn:focus,
+.stepper .form-control[disabled] + .arrows .btn:focus,
+fieldset[disabled] .stepper .form-control + .arrows .btn:focus,
+.stepper .form-control.disabled + .arrows .btn:active,
+.stepper .form-control[disabled] + .arrows .btn:active,
+fieldset[disabled] .stepper .form-control + .arrows .btn:active {
+  cursor: not-allowed;
+  background-color: #4a4a4a;
+}
+
+@-webkit-keyframes anim-rotate8 {
+  0% {
+    -webkit-transform: rotate(0);
+  }
+  12.4999% {
+    -webkit-transform: rotate(0);
+  }
+  12.5% {
+    -webkit-transform: rotate(45deg);
+  }
+  24.9999% {
+    -webkit-transform: rotate(45deg);
+  }
+  25% {
+    -webkit-transform: rotate(90deg);
+  }
+  37.4999% {
+    -webkit-transform: rotate(90deg);
+  }
+  37.5% {
+    -webkit-transform: rotate(135deg);
+  }
+  49.9999% {
+    -webkit-transform: rotate(135deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+  }
+  62.4999% {
+    -webkit-transform: rotate(180deg);
+  }
+  62.5% {
+    -webkit-transform: rotate(225deg);
+  }
+  74.9999% {
+    -webkit-transform: rotate(225deg);
+  }
+  75% {
+    -webkit-transform: rotate(270deg);
+  }
+  87.4999% {
+    -webkit-transform: rotate(270deg);
+  }
+  87.5% {
+    -webkit-transform: rotate(315deg);
+  }
+  99.9999% {
+    -webkit-transform: rotate(315deg);
+  }
+}
+
+.preloader-spin {
+  width: 40px;
+  height: 40px;
+  border: 6px dotted #4a4a4a;
+  border-radius: 100px;
+  -webkit-animation: anim-rotate8 1s linear infinite;
+  -webkit-transition: opacity .6s;
+     -moz-transition: opacity .6s;
+      -ms-transition: opacity .6s;
+       -o-transition: opacity .6s;
+          transition: opacity .6s;
+}
+
+.preloader-spin.preloader-sm {
+  width: 20px;
+  height: 20px;
+  border-width: 4px;
+}
+
+.preloader-linear {
+  width: 88px;
+  height: 0;
+  border-top: 8px dotted #00c3ed;
+}
+
+.preloader-linear.preloader-sm {
+  width: 44px;
+  border-top-width: 4px;
 }
 
 .toggle-btn-group {
