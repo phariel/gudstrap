@@ -15,7 +15,7 @@ current_version:  3.0.0
 repo:             https://github.com/englishtown/gudstrap
 
 download_source:  https://github.com/englishtown/gudstrap/archive/develop.zip
-download_dist:    https://github.com/twbs/bootstrap/releases/download/v3.0.0/bootstrap-3.0.0-dist.zip
+download_dist:    https://github.com/englishtown/gudstrap/releases/
 
 blog:             http://blog.getbootstrap.com
 expo:             http://expo.getbootstrap.com
