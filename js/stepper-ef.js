@@ -56,7 +56,7 @@
   var execStep = function($input, action, options, step) {
     if ($input.is(disableAttr)) return
     var val
-    if (step === undefined) step = options['step']
+    if (step === undefined) step = options.step
     if (isNaN(val = parseInt($input.val(), 10))) val = 0
     step = parseInt(step, 10)
 
@@ -70,8 +70,8 @@
   }
 
   var setVal = function($input, val, options) {
-    var maxValue = parseInt(options['max'], 10)
-    var minValue = parseInt(options['min'], 10)
+    var maxValue = parseInt(options.max, 10)
+    var minValue = parseInt(options.min, 10)
 
     var lastVal = $input.data(dataLastVal)
 
