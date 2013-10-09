@@ -253,7 +253,7 @@ $('#myModal').on('show.bs.modal', function (e) {
         <tbody>
          <tr>
            <td>backdrop</td>
-           <td>boolean</td>
+           <td>boolean or the string <code>'static'</code></td>
            <td>true</td>
            <td>Includes a modal-backdrop element. Alternatively, specify <code>static</code> for a backdrop which doesn't close the modal on click.</td>
          </tr>
@@ -713,7 +713,7 @@ $('#myTab li:eq(2) a').tab('show') // Select third tab (0-indexed)
 {% endhighlight %}
 
     <h3>Markup</h3>
-    <p>You can activate a tab or pill navigation without writing any JavaScript by simply specifying <code>data-toggle="tab"</code> or <code>data-toggle="pill"</code> on an element. Adding the <code>nav</code> and <code>nav-tabs</code> classes to the tab <code>ul</code> will apply the Bootstrap tab styling.</p>
+    <p>You can activate a tab or pill navigation without writing any JavaScript by simply specifying <code>data-toggle="tab"</code> or <code>data-toggle="pill"</code> on an element. Adding the <code>nav</code> and <code>nav-tabs</code> classes to the tab <code>ul</code> will apply the Bootstrap <a href="{{ page.base_url }}components#nav-tabs">tab styling</a>, while adding the <code>nav</code> and <code>nav-pills</code> classes will apply <a href="{{ page.base_url }}components#nav-pills">pill styling</a>.</p>
 {% highlight html %}
 <!-- Nav tabs -->
 <ul class="nav nav-tabs">
@@ -750,10 +750,10 @@ $('#myTab li:eq(2) a').tab('show') // Select third tab (0-indexed)
     </p>
 {% highlight html %}
 <ul class="nav nav-tabs" id="myTab">
-  <li class="active"><a href="#home">Home</a></li>
-  <li><a href="#profile">Profile</a></li>
-  <li><a href="#messages">Messages</a></li>
-  <li><a href="#settings">Settings</a></li>
+  <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+  <li><a href="#profile" data-toggle="tab">Profile</a></li>
+  <li><a href="#messages" data-toggle="tab">Messages</a></li>
+  <li><a href="#settings" data-toggle="tab">Settings</a></li>
 </ul>
 
 <div class="tab-content">
@@ -1456,7 +1456,7 @@ $('.btn-group').button()
         <div class="panel panel-default">
           <div class="panel-heading">
             <h4 class="panel-title">
-              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
                 Collapsible Group Item #1
               </a>
             </h4>
@@ -1470,7 +1470,7 @@ $('.btn-group').button()
         <div class="panel panel-default">
           <div class="panel-heading">
             <h4 class="panel-title">
-              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
                 Collapsible Group Item #2
               </a>
             </h4>
@@ -1484,7 +1484,7 @@ $('.btn-group').button()
         <div class="panel panel-default">
           <div class="panel-heading">
             <h4 class="panel-title">
-              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
                 Collapsible Group Item #3
               </a>
             </h4>
@@ -1502,7 +1502,7 @@ $('.btn-group').button()
   <div class="panel panel-default">
     <div class="panel-heading">
       <h4 class="panel-title">
-        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
           Collapsible Group Item #1
         </a>
       </h4>
@@ -1516,7 +1516,7 @@ $('.btn-group').button()
   <div class="panel panel-default">
     <div class="panel-heading">
       <h4 class="panel-title">
-        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
           Collapsible Group Item #2
         </a>
       </h4>
@@ -1530,7 +1530,7 @@ $('.btn-group').button()
   <div class="panel panel-default">
     <div class="panel-heading">
       <h4 class="panel-title">
-        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
           Collapsible Group Item #3
         </a>
       </h4>
