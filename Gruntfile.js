@@ -3,6 +3,7 @@
 module.exports = function(grunt) {
   "use strict";
 
+  var btoa = require('btoa')
   // Project configuration.
   grunt.initConfig({
 
@@ -204,7 +205,8 @@ module.exports = function(grunt) {
           return type == 'fonts' ? true : new RegExp('\\.' + type + '$').test(path)
         })
         .forEach(function (path) {
-          return files[path] = fs.readFileSync(type + '/' + path, 'utf8')
+          var fullPath = type + '/' + path
+          return files[path] = (type == 'fonts' ? btoa(fs.readFileSync(fullPath)) : fs.readFileSync(fullPath, 'utf8'))
         })
       return 'var __' + type + ' = ' + JSON.stringify(files) + '\n'
     }
