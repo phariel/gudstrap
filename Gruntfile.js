@@ -101,6 +101,10 @@ module.exports = function(grunt) {
         },
         src: ['less/theme.less'],
         dest: 'dist/css/<%= pkg.name %>-theme.min.css'
+      },
+      docs: {
+        src: ['docs-assets/less/docs-ef.less'],
+        dest: 'docs-assets/css/docs-ef.css'
       }
     },
 
