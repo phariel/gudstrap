@@ -2001,7 +2001,7 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
 }(window.jQuery);
 
 /* ========================================================================
-* Bootstrap-ef: sdtoogle.js v1.0
+* Bootstrap-ef: sdtoggle.js v1.0
 * For button group toggle of EF project only
 * ======================================================================== */
 
@@ -2016,15 +2016,11 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
     //
   }
 
-  ToggleBtnGroup.prototype.select = function() {
-    var $this   = this.element
-    var $group  = $this.closest('toogle-btn-group')
+  ToggleBtnGroup.prototype.select = function($button) {
+    if ($button.hasClass('active')) return
 
-    if ($this.hasClass('active')) return
-
-    $this
-      .addClass('active')
-        .siblings().removeClass('active')
+    this.$element.find('.active').removeClass('active')
+    $button.addClass('active')
   }
 
   var old = $.fn.toggleBtnGroup
@@ -2048,9 +2044,10 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
     return this
   }
 
-  $(document).on('click.bs.toogle-btn-group.data-api', '[data-toogle="toogle-btn-group"]', function (e) {
+  $(document).on('click.bs.toggle-btn-group.data-api', '.toggle-btn-group > *, [data-toggle="toggle-btn-group"] > *', function (e) {
     e.preventDefault()
-    $(this).toggleBtnGroup('select')
+    var $button = $(this)
+    $button.parent().toggleBtnGroup().data('bs.toggle-btn-group').select($button)
   })
 
 })(window.jQuery)
