@@ -526,7 +526,19 @@
 .gud .h3 small,
 .gud .h4 small,
 .gud .h5 small,
-.gud .h6 small {
+.gud .h6 small,
+.gud h1 .small,
+.gud h2 .small,
+.gud h3 .small,
+.gud h4 .small,
+.gud h5 .small,
+.gud h6 .small,
+.gud .h1 .small,
+.gud .h2 .small,
+.gud .h3 .small,
+.gud .h4 .small,
+.gud .h5 .small,
+.gud .h6 .small {
   font-weight: normal;
   line-height: 1;
   color: #999999;
@@ -541,7 +553,10 @@
 
 .gud h1 small,
 .gud h2 small,
-.gud h3 small {
+.gud h3 small,
+.gud h1 .small,
+.gud h2 .small,
+.gud h3 .small {
   font-size: 65%;
 }
 
@@ -554,7 +569,10 @@
 
 .gud h4 small,
 .gud h5 small,
-.gud h6 small {
+.gud h6 small,
+.gud h4 .small,
+.gud h5 .small,
+.gud h6 .small {
   font-size: 75%;
 }
 
@@ -740,15 +758,18 @@
 }
 
 .gud blockquote.pull-right p,
-.gud blockquote.pull-right small {
+.gud blockquote.pull-right small,
+.gud blockquote.pull-right .small {
   text-align: right;
 }
 
-.gud blockquote.pull-right small:before {
+.gud blockquote.pull-right small:before,
+.gud blockquote.pull-right .small:before {
   content: '';
 }
 
-.gud blockquote.pull-right small:after {
+.gud blockquote.pull-right small:after,
+.gud blockquote.pull-right .small:after {
   content: '\00A0 \2014';
 }
 
@@ -799,7 +820,7 @@
   color: inherit;
   white-space: pre-wrap;
   background-color: transparent;
-  border: 0;
+  border-radius: 0;
 }
 
 .gud .pre-scrollable {
@@ -4465,13 +4486,11 @@ textarea.gud .input-group-sm > .input-group-btn > .btn {
   clear: both;
 }
 
-.gud .tab-content > .tab-pane,
-.gud .pill-content > .pill-pane {
+.gud .tab-content > .tab-pane {
   display: none;
 }
 
-.gud .tab-content > .active,
-.gud .pill-content > .active {
+.gud .tab-content > .active {
   display: block;
 }
 
