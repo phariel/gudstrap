@@ -2557,8 +2557,8 @@ fieldset[disabled] .gud .btn-success.active {
 
 .gud .btn-info {
   color: #ffffff;
-  background-color: #00c3ed;
-  border-color: #00c3ed;
+  background-color: #ffcc33;
+  border-color: #ffcc33;
 }
 
 .gud .btn-info:hover,
@@ -2567,8 +2567,8 @@ fieldset[disabled] .gud .btn-success.active {
 .gud .btn-info.active,
 .open .dropdown-toggle.gud .btn-info {
   color: #ffffff;
-  background-color: #00a1c4;
-  border-color: #0091b0;
+  background-color: #ffc20a;
+  border-color: #f5b800;
 }
 
 .gud .btn-info:active,
@@ -2592,8 +2592,8 @@ fieldset[disabled] .gud .btn-info:active,
 .gud .btn-info.disabled.active,
 .gud .btn-info[disabled].active,
 fieldset[disabled] .gud .btn-info.active {
-  background-color: #00c3ed;
-  border-color: #00c3ed;
+  background-color: #ffcc33;
+  border-color: #ffcc33;
 }
 
 .gud .btn-link {
@@ -5472,12 +5472,12 @@ textarea.gud .input-group-sm > .input-group-btn > .btn {
 }
 
 .gud .label-info {
-  background-color: #00c3ed;
+  background-color: #ffcc33;
 }
 
 .gud .label-info[href]:hover,
 .gud .label-info[href]:focus {
-  background-color: #0099ba;
+  background-color: #ffbf00;
 }
 
 .gud .label-warning {
@@ -5664,12 +5664,12 @@ textarea.gud .input-group-sm > .input-group-btn > .btn {
 
 .gud .alert-info {
   color: #ffffff;
-  background-color: #00c3ed;
-  border-color: #00c3ed;
+  background-color: #ffcc33;
+  border-color: #ffcc33;
 }
 
 .gud .alert-info hr {
-  border-top-color: #00aed4;
+  border-top-color: #ffc619;
 }
 
 .gud .alert-info .alert-link {
@@ -5803,7 +5803,7 @@ textarea.gud .input-group-sm > .input-group-btn > .btn {
 }
 
 .gud .progress-bar-info {
-  background-color: #00c3ed;
+  background-color: #ffcc33;
 }
 
 .progress-striped .gud .progress-bar-info {
@@ -6250,21 +6250,21 @@ a.gud .list-group-item:focus {
 }
 
 .gud .panel-info {
-  border-color: #00c3ed;
+  border-color: #ffcc33;
 }
 
 .gud .panel-info > .panel-heading {
   color: #ffffff;
-  background-color: #00c3ed;
-  border-color: #00c3ed;
+  background-color: #ffcc33;
+  border-color: #ffcc33;
 }
 
 .gud .panel-info > .panel-heading + .panel-collapse .panel-body {
-  border-top-color: #00c3ed;
+  border-top-color: #ffcc33;
 }
 
 .gud .panel-info > .panel-footer + .panel-collapse .panel-body {
-  border-bottom-color: #00c3ed;
+  border-bottom-color: #ffcc33;
 }
 
 .gud .well {
@@ -7526,7 +7526,7 @@ td.gud .visible-print {
 }
 
 .gud .text-info {
-  color: #00c3ed;
+  color: #ffcc33;
 }
 
 .gud h1,
@@ -7807,8 +7807,8 @@ select.gud .form-control {
 
 select.gud .form-control:hover {
   color: #ffffff;
-  background-color: #6a6a6a;
-  border-color: #6a6a6a;
+  background-color: #606060;
+  border-color: #606060;
 }
 
 select.gud .form-control:focus {
@@ -8206,7 +8206,7 @@ fieldset[disabled] .gud .btn {
 .gud .btn-default:focus,
 .gud .btn-default:active,
 .gud .btn-default.active {
-  background-color: #6a6a6a;
+  background-color: #606060;
 }
 
 .gud .btn-default.disabled,
@@ -8264,8 +8264,24 @@ fieldset[disabled] .gud .btn-secondary.active {
 .gud .btn-secondary:focus,
 .gud .btn-secondary:active,
 .gud .btn-secondary.active {
-  color: #6a6a6a;
-  border-color: #6a6a6a;
+  color: #606060;
+  border-color: #606060;
+}
+
+.gud .btn-secondary.btn-xl {
+  padding: 19px 39px;
+}
+
+.gud .btn-secondary.btn-lg {
+  padding: 14px 29px;
+}
+
+.gud .btn-secondary.btn-sm {
+  padding: 4px 9px;
+}
+
+.gud .btn-secondary.btn-xs {
+  line-height: 18px;
 }
 
 .gud .btn-primary {
@@ -8277,7 +8293,7 @@ fieldset[disabled] .gud .btn-secondary.active {
 .gud .btn-primary:focus,
 .gud .btn-primary:active,
 .gud .btn-primary.active {
-  background-color: #fe089a;
+  background-color: #ee1f9a;
 }
 
 .gud .btn-primary.disabled,
@@ -8307,7 +8323,7 @@ fieldset[disabled] .gud .btn-primary.active {
 .gud .btn-warning:focus,
 .gud .btn-warning:active,
 .gud .btn-warning.active {
-  background-color: #ffae00;
+  background-color: #ff9d1f;
 }
 
 .gud .btn-warning.disabled,
@@ -8337,7 +8353,7 @@ fieldset[disabled] .gud .btn-warning.active {
 .gud .btn-danger:focus,
 .gud .btn-danger:active,
 .gud .btn-danger.active {
-  background-color: #ff426a;
+  background-color: #ff1f69;
 }
 
 .gud .btn-danger.disabled,
@@ -8367,7 +8383,7 @@ fieldset[disabled] .gud .btn-danger.active {
 .gud .btn-success:focus,
 .gud .btn-success:active,
 .gud .btn-success.active {
-  background-color: #9ce500;
+  background-color: #98d020;
 }
 
 .gud .btn-success.disabled,
@@ -8390,14 +8406,14 @@ fieldset[disabled] .gud .btn-success.active {
 
 .gud .btn-info {
   color: #ffffff;
-  background-color: #00c3ed;
+  background-color: #ffcc33;
 }
 
 .gud .btn-info:hover,
 .gud .btn-info:focus,
 .gud .btn-info:active,
 .gud .btn-info.active {
-  background-color: #00d2ff;
+  background-color: #1fcaef;
 }
 
 .gud .btn-info.disabled,
@@ -8415,7 +8431,7 @@ fieldset[disabled] .gud .btn-info:active,
 .gud .btn-info.disabled.active,
 .gud .btn-info[disabled].active,
 fieldset[disabled] .gud .btn-info.active {
-  background-color: #00c3ed;
+  background-color: #ffcc33;
 }
 
 .gud .btn-xl {
@@ -10417,7 +10433,7 @@ fieldset[disabled] .gud .btn-info.active {
 }
 
 .gud .arrows .btn:hover {
-  background-color: #6a6a6a;
+  background-color: #606060;
 }
 
 .gud .arrows .btn:active {
