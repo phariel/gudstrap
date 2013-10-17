@@ -43,6 +43,19 @@
     color: @btn-default-bg-hover;
     border-color: @btn-default-bg-hover;
   }
+
+  &.btn-xl{
+    padding: (@padding-xlarge-vertical - 1) (@padding-xlarge-horizontal - 1);
+  }
+  &.btn-lg{
+    padding: (@padding-large-vertical - 1) (@padding-large-horizontal - 1);
+  }
+  &.btn-sm{
+    padding: (@padding-small-vertical - 1) (@padding-small-horizontal - 1);
+  }
+  &.btn-xs{
+    line-height: @line-height-computed - 2;
+  }
 }
 .btn-primary {
   .btn-pseudo-states(@btn-primary-color, @btn-primary-bg, @btn-primary-bg-hover);
