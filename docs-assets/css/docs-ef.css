@@ -6,6 +6,13 @@
  * Designed and built with all the love in the world by @mdo and @fat.
  */
 .gud {
+  /*!
+ * Copyright 2013 Twitter, Inc.
+ *
+ * Licensed under the Creative Commons Attribution 3.0 Unported License. For
+ * details, see http://creativecommons.org/licenses/by/3.0/.
+ */
+
   /*
  * Bootstrap Documentation
  * Special styles for presenting Bootstrap's documentation and code examples.
@@ -143,6 +150,12 @@
   /* Variations */
 
   /*
+ * Team members
+ *
+ * Avatars, names, and usernames for core team.
+ */
+
+  /*
  * Grid examples
  *
  * Highlight the grid columns within the docs so folks can see their padding,
@@ -243,6 +256,8 @@
  *
  * Odds and ends for optimum docs display.
  */
+
+  /* About page */
 
   /* Examples gallery: space out content better */
 
@@ -401,7 +416,7 @@
   border: 0;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .gud .bs-social {
     text-align: left;
   }
@@ -454,7 +469,7 @@
   color: #fff;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .gud .bs-masthead {
     padding-top: 140px;
     padding-bottom: 140px;
@@ -501,7 +516,7 @@
   position: relative;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .gud .bs-header {
     font-size: 21px;
     text-align: left;
@@ -512,7 +527,7 @@
   }
 }
 
-@media screen and (min-width: 992px) {
+@media (min-width: 992px) {
   .gud .bs-header h1,
   .gud .bs-header p {
     margin-right: 380px;
@@ -567,7 +582,7 @@
 
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .gud .carbonad {
     margin: 0 !important;
     border-radius: 4px;
@@ -575,11 +590,11 @@
   }
 }
 
-@media screen and (min-width: 992px) {
+@media (min-width: 992px) {
   .gud .carbonad {
     position: absolute;
     top: 20px;
-    right: 0;
+    right: 15px;
     width: 330px !important;
     padding: 15px !important;
   }
@@ -589,7 +604,7 @@
   margin: 0 -15px 40px !important;
 }
 
-@media screen and (min-width: 480px) {
+@media (min-width: 480px) {
   .gud .bs-docs-home .carbonad {
     width: 330px !important;
     margin: 0 auto 40px !important;
@@ -597,7 +612,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .gud .bs-docs-home .carbonad {
     float: left;
     width: 330px !important;
@@ -607,15 +622,21 @@
   .gud .bs-docs-home .bs-masthead-links {
     margin-left: 350px;
   }
+  .gud .bs-docs-home .bs-social {
+    margin-bottom: 10px;
+  }
+  .gud .bs-docs-home .bs-masthead-links {
+    margin-top: 10px;
+  }
 }
 
-@media screen and (min-width: 992px) {
+@media (min-width: 992px) {
   .gud .bs-docs-home .carbonad {
     position: static;
   }
 }
 
-@media screen and (min-width: 1170px) {
+@media (min-width: 1170px) {
   .gud .bs-docs-home .carbonad {
     margin-top: -25px !important;
   }
@@ -683,7 +704,7 @@
   font-size: 90%;
 }
 
-@media screen and (min-width: 992px) {
+@media (min-width: 992px) {
   .gud {
     /* Widen the fixed sidebar */
   
@@ -713,7 +734,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media (min-width: 1200px) {
   .gud {
     /* Widen the fixed sidebar again */
   
@@ -734,37 +755,69 @@
 }
 
 .gud .bs-callout {
-  padding: 15px 30px 15px 15px;
+  padding: 20px;
   margin: 20px 0;
-  border-left: 5px solid #eee;
+  border-left: 3px solid #eee;
 }
 
 .gud .bs-callout h4 {
   margin-top: 0;
+  margin-bottom: 5px;
 }
 
 .gud .bs-callout p:last-child {
   margin-bottom: 0;
 }
 
-.gud .bs-callout code,
-.gud .bs-callout .highlight {
-  background-color: #fff;
+.gud .bs-callout-danger {
+  background-color: #fdf7f7;
+  border-color: #eed3d7;
 }
 
-.gud .bs-callout-danger {
-  background-color: #fcf2f2;
-  border-color: #dFb5b4;
+.gud .bs-callout-danger h4 {
+  color: #b94a48;
 }
 
 .gud .bs-callout-warning {
-  background-color: #fefbed;
-  border-color: #f1e7bc;
+  background-color: #faf8f0;
+  border-color: #faebcc;
+}
+
+.gud .bs-callout-warning h4 {
+  color: #c09853;
 }
 
 .gud .bs-callout-info {
-  background-color: #f0f7fd;
-  border-color: #d0e3f0;
+  background-color: #f4f8fa;
+  border-color: #bce8f1;
+}
+
+.gud .bs-callout-info h4 {
+  color: #3a87ad;
+}
+
+.gud .bs-team .team-member {
+  line-height: 32px;
+  color: #555;
+}
+
+.gud .bs-team .team-member:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.gud .bs-team .github-btn {
+  float: right;
+  width: 120px;
+  height: 20px;
+  margin-top: 6px;
+}
+
+.gud .bs-team img {
+  float: left;
+  width: 32px;
+  margin-right: 10px;
+  border-radius: 4px;
 }
 
 .gud .show-grid {
@@ -809,7 +862,7 @@
   border-radius: 0;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .gud .bs-example {
     margin-right: 0;
     margin-left: 0;
@@ -1081,7 +1134,7 @@
   text-align: right;
 }
 
-@media screen and (min-width: 481px) {
+@media (min-width: 481px) {
   .gud .highlight {
     display: block;
   }
@@ -1179,9 +1232,14 @@
 }
 
 .gud .bs-glyphicons .glyphicon {
-  display: block;
-  margin: 5px auto 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
   font-size: 24px;
+}
+
+.gud .bs-glyphicons .glyphicon-class {
+  display: block;
+  text-align: center;
 }
 
 .gud .bs-glyphicons li:hover {
@@ -1279,6 +1337,10 @@
   background-color: #a83c3a;
   border-color: #973634;
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.gud .bs-about {
+  font-size: 16px;
 }
 
 .gud .bs-examples h4 {
