@@ -263,7 +263,6 @@
   .gud abbr[title]:after {
     content: " (" attr(title) ")";
   }
-  .gud .ir a:after,
   .gud a[href^="javascript:"]:after,
   .gud a[href^="#"]:after {
     content: "";
@@ -4020,6 +4019,11 @@ fieldset[disabled] .gud .btn-link:focus {
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 
+.gud .btn-group.open .dropdown-toggle.btn-link {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .gud .btn .caret {
   margin-left: 0;
 }
@@ -7014,6 +7018,8 @@ button.gud .close {
   margin: 1px;
   text-indent: -999px;
   cursor: pointer;
+  background-color: #000 \9;
+  background-color: rgba(0, 0, 0, 0);
   border: 1px solid #ffffff;
   border-radius: 10px;
 }
