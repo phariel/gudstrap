@@ -2150,7 +2150,11 @@ textarea.gud .input-lg {
 }
 
 .gud .has-warning .help-block,
-.gud .has-warning .control-label {
+.gud .has-warning .control-label,
+.gud .has-warning .radio,
+.gud .has-warning .checkbox,
+.gud .has-warning .radio-inline,
+.gud .has-warning .checkbox-inline {
   color: #ffffff;
 }
 
@@ -2215,7 +2219,11 @@ textarea.gud .input-lg {
 }
 
 .gud .has-error .help-block,
-.gud .has-error .control-label {
+.gud .has-error .control-label,
+.gud .has-error .radio,
+.gud .has-error .checkbox,
+.gud .has-error .radio-inline,
+.gud .has-error .checkbox-inline {
   color: #ffffff;
 }
 
@@ -2280,7 +2288,11 @@ textarea.gud .input-lg {
 }
 
 .gud .has-success .help-block,
-.gud .has-success .control-label {
+.gud .has-success .control-label,
+.gud .has-success .radio,
+.gud .has-success .checkbox,
+.gud .has-success .radio-inline,
+.gud .has-success .checkbox-inline {
   color: #ffffff;
 }
 
@@ -4622,7 +4634,6 @@ textarea.gud .input-group-sm > .input-group-btn > .btn {
 
 .gud .navbar {
   position: relative;
-  z-index: 1000;
   min-height: 50px;
   margin-bottom: 20px;
   border: 1px solid transparent;
@@ -4845,6 +4856,7 @@ textarea.gud .input-group-sm > .input-group-btn > .btn {
 }
 
 .gud .navbar-static-top {
+  z-index: 1000;
   border-width: 0 0 1px;
 }
 
@@ -4859,7 +4871,7 @@ textarea.gud .input-group-sm > .input-group-btn > .btn {
   position: fixed;
   right: 0;
   left: 0;
-  border-width: 0 0 1px;
+  z-index: 1030;
 }
 
 @media (min-width: 768px) {
@@ -4871,12 +4883,13 @@ textarea.gud .input-group-sm > .input-group-btn > .btn {
 
 .gud .navbar-fixed-top {
   top: 0;
-  z-index: 1030;
+  border-width: 0 0 1px;
 }
 
 .gud .navbar-fixed-bottom {
   bottom: 0;
   margin-bottom: 0;
+  border-width: 1px 0 0;
 }
 
 .gud .navbar-brand {
@@ -6465,6 +6478,7 @@ button.gud .close {
 }
 
 .gud .modal-dialog {
+  position: relative;
   z-index: 1050;
   width: auto;
   padding: 10px;
@@ -8085,7 +8099,11 @@ select.gud .form-control.input-sm {
 }
 
 .gud .has-warning .help-block,
-.gud .has-warning .control-label {
+.gud .has-warning .control-label,
+.gud .has-warning .radio,
+.gud .has-warning .checkbox,
+.gud .has-warning .radio-inline,
+.gud .has-warning .checkbox-inline {
   color: #ff9000;
 }
 
@@ -8150,7 +8168,11 @@ select.gud .form-control.input-sm {
 }
 
 .gud .has-error .help-block,
-.gud .has-error .control-label {
+.gud .has-error .control-label,
+.gud .has-error .radio,
+.gud .has-error .checkbox,
+.gud .has-error .radio-inline,
+.gud .has-error .checkbox-inline {
   color: #ff0054;
 }
 
@@ -8215,7 +8237,11 @@ select.gud .form-control.input-sm {
 }
 
 .gud .has-success .help-block,
-.gud .has-success .control-label {
+.gud .has-success .control-label,
+.gud .has-success .radio,
+.gud .has-success .checkbox,
+.gud .has-success .radio-inline,
+.gud .has-success .checkbox-inline {
   color: #8aca01;
 }
 
