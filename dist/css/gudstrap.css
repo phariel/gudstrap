@@ -4828,7 +4828,7 @@ textarea.gud .input-group-sm > .input-group-btn > .btn {
     overflow: visible !important;
   }
   .gud .navbar-collapse.in {
-    overflow-y: visible;
+    overflow-y: auto;
   }
   .gud .navbar-collapse .navbar-nav.navbar-left:first-child {
     margin-left: -15px;
@@ -6239,6 +6239,10 @@ textarea.gud .input-group-sm > .input-group-btn > .btn {
   border-top-left-radius: -1;
 }
 
+.gud .panel-heading > .dropdown .dropdown-toggle {
+  color: inherit;
+}
+
 .gud .panel-title {
   margin-top: 0;
   margin-bottom: 0;
@@ -6297,6 +6301,10 @@ textarea.gud .input-group-sm > .input-group-btn > .btn {
   border-top-color: #dddddd;
 }
 
+.gud .panel-default > .panel-heading > .dropdown .caret {
+  border-color: #333333 transparent;
+}
+
 .gud .panel-default > .panel-footer + .panel-collapse .panel-body {
   border-bottom-color: #dddddd;
 }
@@ -6313,6 +6321,10 @@ textarea.gud .input-group-sm > .input-group-btn > .btn {
 
 .gud .panel-primary > .panel-heading + .panel-collapse .panel-body {
   border-top-color: #ec008c;
+}
+
+.gud .panel-primary > .panel-heading > .dropdown .caret {
+  border-color: #ffffff transparent;
 }
 
 .gud .panel-primary > .panel-footer + .panel-collapse .panel-body {
@@ -6333,6 +6345,10 @@ textarea.gud .input-group-sm > .input-group-btn > .btn {
   border-top-color: #8aca01;
 }
 
+.gud .panel-success > .panel-heading > .dropdown .caret {
+  border-color: #ffffff transparent;
+}
+
 .gud .panel-success > .panel-footer + .panel-collapse .panel-body {
   border-bottom-color: #8aca01;
 }
@@ -6349,6 +6365,10 @@ textarea.gud .input-group-sm > .input-group-btn > .btn {
 
 .gud .panel-warning > .panel-heading + .panel-collapse .panel-body {
   border-top-color: #ff9000;
+}
+
+.gud .panel-warning > .panel-heading > .dropdown .caret {
+  border-color: #ffffff transparent;
 }
 
 .gud .panel-warning > .panel-footer + .panel-collapse .panel-body {
@@ -6369,6 +6389,10 @@ textarea.gud .input-group-sm > .input-group-btn > .btn {
   border-top-color: #ff0054;
 }
 
+.gud .panel-danger > .panel-heading > .dropdown .caret {
+  border-color: #ffffff transparent;
+}
+
 .gud .panel-danger > .panel-footer + .panel-collapse .panel-body {
   border-bottom-color: #ff0054;
 }
@@ -6385,6 +6409,10 @@ textarea.gud .input-group-sm > .input-group-btn > .btn {
 
 .gud .panel-info > .panel-heading + .panel-collapse .panel-body {
   border-top-color: #ffcc33;
+}
+
+.gud .panel-info > .panel-heading > .dropdown .caret {
+  border-color: #ffffff transparent;
 }
 
 .gud .panel-info > .panel-footer + .panel-collapse .panel-body {
