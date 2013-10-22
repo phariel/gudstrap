@@ -6,7 +6,6 @@
       "**/.*"
   ],
   "dependencies": {
-    "jquery": ">= 1.9.0",
     "fontawesome": "https://github.com/FortAwesome/Font-Awesome.git#2bf42834763cee2606df32cc32fcee2b1b45230e"
   }
 }
