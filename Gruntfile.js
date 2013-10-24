@@ -139,7 +139,10 @@ module.exports = function(grunt) {
 
     validation: {
       options: {
-        reset: true
+        reset: true,
+        relaxerror: [
+            "Bad value X-UA-Compatible for attribute http-equiv on element meta."
+        ]
       },
       files: {
         src: [
