@@ -15,7 +15,7 @@ module.exports = function(grunt) {
               ' * Licensed under <%= _.pluck(pkg.licenses, "url").join(", ") %>\n' +
               ' *\n' +
               ' * Designed and built with all the love in the world by @mdo and @fat.\n' +
-              ' */\n',
+              ' */\n\n',
     jqueryCheck: 'if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery") }\n\n',
 
     // Task configuration.
@@ -114,6 +114,13 @@ module.exports = function(grunt) {
         flatten: true,
         src: [ "fonts/*", "bower_components/fontawesome/font/*" ],
         dest: 'dist/fonts'
+      },
+      docscss: {
+        expand: true,
+        flatten: true,
+        src: [ 'docs-assets/css/docs.css' ],
+        dest: 'docs-assets/less/',
+        ext: '.less'
       }
     },
 
@@ -141,7 +148,8 @@ module.exports = function(grunt) {
       options: {
         reset: true,
         relaxerror: [
-            "Bad value X-UA-Compatible for attribute http-equiv on element meta."
+            "Bad value X-UA-Compatible for attribute http-equiv on element meta.",
+            "Element img is missing required attribute src."
         ]
       },
       files: {
@@ -190,10 +198,10 @@ module.exports = function(grunt) {
   grunt.registerTask('dist-js', ['concat', 'uglify']);
 
   // CSS distribution task.
-  grunt.registerTask('dist-css', ['recess']);
+  grunt.registerTask('dist-css', ['copy:docscss', 'recess']);
 
   // Fonts distribution task.
-  grunt.registerTask('dist-fonts', ['copy']);
+  grunt.registerTask('dist-fonts', ['copy:fonts']);
 
   // Full distribution task.
   grunt.registerTask('dist', ['clean', 'dist-css', 'dist-fonts', 'dist-js']);
