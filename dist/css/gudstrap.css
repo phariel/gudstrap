@@ -5,6 +5,7 @@
  *
  * Designed and built with all the love in the world by @mdo and @fat.
  */
+
 .gud {
   /*! normalize.css v2.1.3 | MIT License | git.io/normalize */
 
@@ -294,6 +295,9 @@
   .gud h2,
   .gud h3 {
     page-break-after: avoid;
+  }
+  .gud select {
+    background: #fff !important;
   }
   .gud .navbar {
     display: none;
@@ -638,6 +642,10 @@
   display: inline-block;
   padding-right: 5px;
   padding-left: 5px;
+}
+
+.gud .list-inline > li:first-child {
+  padding-left: 0;
 }
 
 .gud dl {
@@ -5904,9 +5912,6 @@ textarea.gud .input-group-sm > .input-group-btn > .btn {
 
 .gud .progress.active .progress-bar {
   -webkit-animation: progress-bar-stripes 2s linear infinite;
-     -moz-animation: progress-bar-stripes 2s linear infinite;
-      -ms-animation: progress-bar-stripes 2s linear infinite;
-       -o-animation: progress-bar-stripes 2s linear infinite;
           animation: progress-bar-stripes 2s linear infinite;
 }
 
