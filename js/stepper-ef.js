@@ -141,4 +141,4 @@
     $(stepperClass).stepper()
   })
 
-}(window.jQuery);
+}(jQuery);

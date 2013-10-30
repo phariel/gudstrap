@@ -16,7 +16,12 @@ module.exports = function(grunt) {
               ' *\n' +
               ' * Designed and built with all the love in the world by @mdo and @fat.\n' +
               ' */\n\n',
-    jqueryCheck: 'if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery") }\n\n',
+    jqueryCheckBefore: '(function (factory) {\n\n' +
+                        'if (typeof define === "function" && define.amd) {\n\n' +
+                        'define(["jquery"], factory);\n\n' +
+                        '} else { factory(window.jQuery); }\n\n' +
+                        '}(function (jQuery) {\n\n',
+    jqueryCheckAfter: '}));',
 
     // Task configuration.
     clean: {
@@ -40,7 +45,8 @@ module.exports = function(grunt) {
 
     concat: {
       options: {
-        banner: '<%= banner %><%= jqueryCheck %>',
+        banner: '<%= banner %><%= jqueryCheckBefore %>',
+        footer: '<%= jqueryCheckAfter%>',
         stripBanners: false
       },
       bootstrap: {
@@ -63,7 +69,7 @@ module.exports = function(grunt) {
         dest: 'dist/js/<%= pkg.name %>.js'
       }
     },
-
+    
     uglify: {
       options: {
         banner: '<%= banner %>',
