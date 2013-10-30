@@ -1820,7 +1820,6 @@
 .gud .table > tbody > tr.success > th,
 .gud .table > tfoot > tr.success > th {
   background-color: #8aca01;
-  border-color: #8aca01;
 }
 
 .gud .table-hover > tbody > tr > td.success:hover,
@@ -1828,7 +1827,6 @@
 .gud .table-hover > tbody > tr.success:hover > td,
 .gud .table-hover > tbody > tr.success:hover > th {
   background-color: #79b101;
-  border-color: #79b101;
 }
 
 .gud .table > thead > tr > td.danger,
@@ -1844,7 +1842,6 @@
 .gud .table > tbody > tr.danger > th,
 .gud .table > tfoot > tr.danger > th {
   background-color: #ff0054;
-  border-color: #ff0054;
 }
 
 .gud .table-hover > tbody > tr > td.danger:hover,
@@ -1852,7 +1849,6 @@
 .gud .table-hover > tbody > tr.danger:hover > td,
 .gud .table-hover > tbody > tr.danger:hover > th {
   background-color: #e6004c;
-  border-color: #e6004c;
 }
 
 .gud .table > thead > tr > td.warning,
@@ -1868,7 +1864,6 @@
 .gud .table > tbody > tr.warning > th,
 .gud .table > tfoot > tr.warning > th {
   background-color: #ff9000;
-  border-color: #ff9000;
 }
 
 .gud .table-hover > tbody > tr > td.warning:hover,
@@ -1876,7 +1871,6 @@
 .gud .table-hover > tbody > tr.warning:hover > td,
 .gud .table-hover > tbody > tr.warning:hover > th {
   background-color: #e68200;
-  border-color: #e68200;
 }
 
 @media (max-width: 767px) {
@@ -2886,6 +2880,7 @@ fieldset[disabled] .gud .btn-link:focus {
   font-style: normal;
   font-weight: normal;
   line-height: 1;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .gud .glyphicon:empty {
@@ -4493,6 +4488,11 @@ textarea.gud .input-group-sm > .input-group-btn > .btn {
   text-align: center;
 }
 
+.gud .nav-tabs.nav-justified > .dropdown .dropdown-menu {
+  top: auto;
+  left: auto;
+}
+
 @media (min-width: 768px) {
   .gud .nav-tabs.nav-justified > li {
     display: table-cell;
@@ -4577,6 +4577,11 @@ textarea.gud .input-group-sm > .input-group-btn > .btn {
 .gud .nav-justified > li > a {
   margin-bottom: 5px;
   text-align: center;
+}
+
+.gud .nav-justified > .dropdown .dropdown-menu {
+  top: auto;
+  left: auto;
 }
 
 @media (min-width: 768px) {
