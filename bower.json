@@ -1,9 +1,14 @@
 {
   "name": "gudstrap",
   "version": "3.0.0",
-  "main": ["./dist/js/gudstrap.js", "./dist/css/gudstrap.css", "./dist/fonts/*"],
+  "version-gudstrap": "3.0.9",
+  "main": [
+    "./dist/js/gudstrap.js",
+    "./dist/css/gudstrap.css",
+    "./dist/fonts/*"
+  ],
   "ignore": [
-      "**/.*"
+    "**/.*"
   ],
   "dependencies": {
     "fontawesome": "https://github.com/FortAwesome/Font-Awesome.git#2bf42834763cee2606df32cc32fcee2b1b45230e"

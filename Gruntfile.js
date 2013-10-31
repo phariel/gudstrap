@@ -3,7 +3,9 @@
 module.exports = function(grunt) {
   "use strict";
 
-  var btoa = require('btoa')
+  var semver = require("semver");
+  var btoa = require('btoa');
+
   // Project configuration.
   grunt.initConfig({
 
@@ -25,7 +27,8 @@ module.exports = function(grunt) {
 
     // Task configuration.
     clean: {
-      dist: ['dist']
+      dist: ['dist'],
+      gudstrap: ['gudstrap']
     },
 
     jshint: {
@@ -127,6 +130,12 @@ module.exports = function(grunt) {
         src: [ 'docs-assets/css/docs.css' ],
         dest: 'docs-assets/less/',
         ext: '.less'
+      },
+      gudstrap: {
+        expand: true,
+        cwd: 'dist/',
+        src: [ '**/*' ],
+        dest: 'gudstrap/<%= pkg["version-gudstrap"] %>/'
       }
     },
 
@@ -179,7 +188,30 @@ module.exports = function(grunt) {
         files: 'less/*.less',
         tasks: ['recess']
       }
+    },
+
+    bumpup: {
+        options: {
+          updateProps: {
+            pkg: 'package.json'
+          }
+        },
+        setters: {
+          "version": function (oldVersion, releaseType, options) {
+            return oldVersion;
+          },
+          "version-gudstrap": function (oldVersion, releaseType, options) {
+            return semver.inc(oldVersion, releaseType);
+          }
+        },
+        files: ['package.json', 'bower.json']
+    },
+
+    tagrelease: {
+      version: '<%= pkg["version-gudstrap"] %>',
+      prefix: 'gudstrap'
     }
+
   });
 
 
@@ -210,10 +242,26 @@ module.exports = function(grunt) {
   grunt.registerTask('dist-fonts', ['copy:fonts']);
 
   // Full distribution task.
-  grunt.registerTask('dist', ['clean', 'dist-css', 'dist-fonts', 'dist-js']);
+  grunt.registerTask('dist', ['clean:dist', 'dist-css', 'dist-fonts', 'dist-js']);
 
   // Default task.
   grunt.registerTask('default', ['test', 'dist']);
+
+  // Copy for GudStrap with version.
+  grunt.registerTask('dist-gudstrap', ['clean:gudstrap', 'copy:gudstrap']);
+
+  // Default task.
+  grunt.registerTask('gudstrap', function (type) {
+    if (type !== null && type !== false){
+      // Bumpup version, depends on "semver"
+      grunt.task.run('bumpup:' + type);
+      // Tag release
+      grunt.task.run('tagrelease');
+    }
+    grunt.task.run('default');
+    // Create version control for gudstrap
+    grunt.task.run('dist-gudstrap');
+  });
 
   // task for building customizer
   grunt.registerTask('build-customizer', 'Add scripts/less files to customizer.', function () {
