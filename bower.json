@@ -1,7 +1,7 @@
 {
   "name": "gudstrap",
   "version": "3.0.0",
-  "version-gudstrap": "3.0.12",
+  "version-gudstrap": "1.0.0",
   "main": [
     "./dist/js/gudstrap.js",
     "./dist/css/gudstrap.css",

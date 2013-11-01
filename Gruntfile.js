@@ -205,11 +205,6 @@ module.exports = function(grunt) {
           }
         },
         files: ['package.json', 'bower.json']
-    },
-
-    tagrelease: {
-      version: '<%= pkg["version-gudstrap"] %>',
-      prefix: 'gudstrap'
     }
 
   });
@@ -255,8 +250,6 @@ module.exports = function(grunt) {
     if (type !== null && type !== false){
       // Bumpup version, depends on "semver"
       grunt.task.run('bumpup:' + type);
-      // Tag release
-      grunt.task.run('tagrelease');
     }
     grunt.task.run('default');
     // Create version control for gudstrap
