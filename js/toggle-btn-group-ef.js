@@ -3,7 +3,7 @@
 * For button group toggle of EF project only
 * ======================================================================== */
 
-(function($) { 'use strict';
++function($) { 'use strict';
 
   var ToggleBtnGroup = function(element, options) {
     this.$element = $(element)
@@ -48,4 +48,4 @@
     $button.parent().toggleBtnGroup().data('bs.toggle-btn-group').select($button)
   })
 
-})(window.jQuery)
+}(jQuery);

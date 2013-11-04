@@ -1,20 +1,21 @@
 {
     "name": "gudstrap"
   , "description": "Sleek, intuitive, and powerful front-end framework for faster and easier web development."
-  , "version": "3.0.0"
+  , "version": "3.0.1"
+  , "version-gudstrap": "1.0.0"
   , "keywords": ["bootstrap", "css"]
   , "homepage": "http://englishtown.github.io/gudstrap/"
-  , "author": "EF Inc."
+  , "author": "EF, Inc."
   , "scripts": {
-       "test": "grunt test"
-     , "postinstall": "bower install"
+      "test": "grunt test"
+    , "postinstall": "bower install"
   }
   , "repository": {
       "type": "git"
-    , "url": "https://github.com/twbs/bootstrap.git"
+    , "url": "https://github.com/englishtown/gudstrap.git"
   }
   , "bugs": {
-      "url": "https://github.com/twbs/bootstrap/issues"
+      "url": "https://github.com/englishtown/gudstrap/issues"
   }
   , "licenses": [
     {
@@ -37,7 +38,10 @@
     , "grunt-html-validation": "~0.1.6"
     , "grunt-jekyll": "~0.4.0"
     , "grunt-recess": "~0.4.0"
+    , "semver": "~2.2.1"
     , "bower": "~1"
     , "matchdep": "~0.1.2"
+    , "grunt-bumpup": "~0.4.2"
+    , "grunt-tagrelease": "~0.2.1"
   }
 }
