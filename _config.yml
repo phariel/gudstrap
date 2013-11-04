@@ -1,6 +1,6 @@
 # Dependencies
 markdown:         rdiscount
-pygments:         false
+pygments:         true
 
 # Permalinks
 permalink:        pretty
@@ -11,7 +11,7 @@ exclude:          [".editorconfig", ".gitignore", "bower.json", "composer.json",
 port:             9001
 
 # Custom vars
-current_version:  3.0.0
+current_version:  3.0.1
 repo:             https://github.com/englishtown/gudstrap
 
 download_source:  https://github.com/englishtown/gudstrap/archive/develop.zip
