@@ -11,7 +11,7 @@ exclude:          [".editorconfig", ".gitignore", "bower.json", "composer.json",
 port:             9001
 
 # Custom vars
-current_version:  3.0.1
+current_version:  3.0.2
 repo:             https://github.com/englishtown/gudstrap
 
 download_source:  https://github.com/englishtown/gudstrap/archive/develop.zip
@@ -20,6 +20,6 @@ download_dist:    https://github.com/englishtown/gudstrap/releases/
 blog:             http://blog.getbootstrap.com
 expo:             http://expo.getbootstrap.com
 
-cdn_css:          //netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css
-cdn_theme_css:    //netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css
-cdn_js:           //netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js
+cdn_css:          //netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css
+cdn_theme_css:    //netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css
+cdn_js:           //netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js

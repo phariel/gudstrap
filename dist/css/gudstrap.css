@@ -1,5 +1,5 @@
 /*!
- * Bootstrap v3.0.1 by @fat and @mdo
+ * Bootstrap v3.0.2 by @fat and @mdo
  * Copyright 2013 EF, Inc.
  * Licensed under http://www.apache.org/licenses/LICENSE-2.0
  *
@@ -1111,6 +1111,10 @@
   right: 8.333333333333332%;
 }
 
+.gud .col-xs-pull-0 {
+  right: 0;
+}
+
 .gud .col-xs-push-12 {
   left: 100%;
 }
@@ -1159,6 +1163,10 @@
   left: 8.333333333333332%;
 }
 
+.gud .col-xs-push-0 {
+  left: 0;
+}
+
 .gud .col-xs-offset-12 {
   margin-left: 100%;
 }
@@ -1205,6 +1213,10 @@
 
 .gud .col-xs-offset-1 {
   margin-left: 8.333333333333332%;
+}
+
+.gud .col-xs-offset-0 {
+  margin-left: 0;
 }
 
 @media (min-width: 768px) {
@@ -1296,6 +1308,9 @@
   .gud .col-sm-pull-1 {
     right: 8.333333333333332%;
   }
+  .gud .col-sm-pull-0 {
+    right: 0;
+  }
   .gud .col-sm-push-12 {
     left: 100%;
   }
@@ -1332,6 +1347,9 @@
   .gud .col-sm-push-1 {
     left: 8.333333333333332%;
   }
+  .gud .col-sm-push-0 {
+    left: 0;
+  }
   .gud .col-sm-offset-12 {
     margin-left: 100%;
   }
@@ -1367,6 +1385,9 @@
   }
   .gud .col-sm-offset-1 {
     margin-left: 8.333333333333332%;
+  }
+  .gud .col-sm-offset-0 {
+    margin-left: 0;
   }
 }
 
@@ -1459,6 +1480,9 @@
   .gud .col-md-pull-1 {
     right: 8.333333333333332%;
   }
+  .gud .col-md-pull-0 {
+    right: 0;
+  }
   .gud .col-md-push-12 {
     left: 100%;
   }
@@ -1495,6 +1519,9 @@
   .gud .col-md-push-1 {
     left: 8.333333333333332%;
   }
+  .gud .col-md-push-0 {
+    left: 0;
+  }
   .gud .col-md-offset-12 {
     margin-left: 100%;
   }
@@ -1530,6 +1557,9 @@
   }
   .gud .col-md-offset-1 {
     margin-left: 8.333333333333332%;
+  }
+  .gud .col-md-offset-0 {
+    margin-left: 0;
   }
 }
 
@@ -1622,6 +1652,9 @@
   .gud .col-lg-pull-1 {
     right: 8.333333333333332%;
   }
+  .gud .col-lg-pull-0 {
+    right: 0;
+  }
   .gud .col-lg-push-12 {
     left: 100%;
   }
@@ -1658,6 +1691,9 @@
   .gud .col-lg-push-1 {
     left: 8.333333333333332%;
   }
+  .gud .col-lg-push-0 {
+    left: 0;
+  }
   .gud .col-lg-offset-12 {
     margin-left: 100%;
   }
@@ -1693,6 +1729,9 @@
   }
   .gud .col-lg-offset-1 {
     margin-left: 8.333333333333332%;
+  }
+  .gud .col-lg-offset-0 {
+    margin-left: 0;
   }
 }
 
@@ -5735,9 +5774,9 @@ textarea.gud .input-group-sm > .input-group-btn > .btn {
   margin-left: auto;
 }
 
-.gud a.thumbnail:hover,
-.gud a.thumbnail:focus,
-.gud a.thumbnail.active {
+a.gud .thumbnail:hover,
+a.gud .thumbnail:focus,
+a.gud .thumbnail.active {
   border-color: #186abe;
 }
 
