@@ -1,7 +1,7 @@
 {
     "name": "gudstrap"
   , "description": "Sleek, intuitive, and powerful front-end framework for faster and easier web development."
-  , "version": "3.0.1"
+  , "version": "3.0.2"
   , "version-gudstrap": "1.0.0"
   , "keywords": ["bootstrap", "css"]
   , "homepage": "http://englishtown.github.io/gudstrap/"
@@ -38,10 +38,9 @@
     , "grunt-html-validation": "~0.1.6"
     , "grunt-jekyll": "~0.4.0"
     , "grunt-recess": "~0.4.0"
-    , "semver": "~2.2.1"
+    , "grunt-sed": "~0.1.1"
+    , "regexp-quote": "~0.0.0"
     , "bower": "~1"
     , "matchdep": "~0.1.2"
-    , "grunt-bumpup": "~0.4.2"
-    , "grunt-tagrelease": "~0.2.1"
   }
 }

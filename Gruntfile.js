@@ -3,6 +3,8 @@
 module.exports = function(grunt) {
   "use strict";
 
+  RegExp.quote = require('regexp-quote');
+
   var semver = require("semver");
   var btoa = require('btoa');
 
@@ -72,7 +74,7 @@ module.exports = function(grunt) {
         dest: 'dist/js/<%= pkg.name %>.js'
       }
     },
-    
+
     uglify: {
       options: {
         banner: '<%= banner %>',
@@ -190,23 +192,16 @@ module.exports = function(grunt) {
       }
     },
 
-    bumpup: {
-        options: {
-          updateProps: {
-            pkg: 'package.json'
-          }
-        },
-        setters: {
-          "version": function (oldVersion, releaseType, options) {
-            return oldVersion;
-          },
-          "version-gudstrap": function (oldVersion, releaseType, options) {
-            return semver.inc(oldVersion, releaseType);
-          }
-        },
-        files: ['package.json', 'bower.json']
+    sed: {
+      versionNumber: {
+        pattern: (function () {
+          var old = grunt.option('oldver')
+          return old ? RegExp.quote(old) : old
+        })(),
+        replacement: grunt.option('newver'),
+        recursive: true
+      }
     }
-
   });
 
 
@@ -242,19 +237,13 @@ module.exports = function(grunt) {
   // Default task.
   grunt.registerTask('default', ['test', 'dist']);
 
-  // Copy for GudStrap with version.
-  grunt.registerTask('dist-gudstrap', ['clean:gudstrap', 'copy:gudstrap']);
+  // Version numbering task.
+  // grunt change-version-number --oldver=A.B.C --newver=X.Y.Z
+  // This can be overzealous, so its changes should always be manually reviewed!
+  grunt.registerTask('change-version-number', ['sed']);
 
-  // Default task.
-  grunt.registerTask('gudstrap', function (type) {
-    if (type !== null && type !== false){
-      // Bumpup version, depends on "semver"
-      grunt.task.run('bumpup:' + type);
-    }
-    grunt.task.run('default');
-    // Create version control for gudstrap
-    grunt.task.run('dist-gudstrap');
-  });
+  // Copy for GudStrap with version.
+  grunt.registerTask('dist-gudstrap', ['default', 'clean:gudstrap', 'copy:gudstrap']);
 
   // task for building customizer
   grunt.registerTask('build-customizer', 'Add scripts/less files to customizer.', function () {
