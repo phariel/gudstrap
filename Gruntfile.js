@@ -22,7 +22,10 @@ module.exports = function(grunt) {
               ' */\n\n',
     jqueryCheckBefore: '(function (factory) {\n\n' +
                         'if (typeof define === "function" && define.amd) {\n\n' +
-                        'define(["jquery"], factory);\n\n' +
+                        'define(["jquery"], function(jQuery){\n\n' +
+                        '  factory(jQuery);\n\n' +
+                        '  return jQuery;\n\n' +
+                        '});\n\n' +
                         '} else { factory(window.jQuery); }\n\n' +
                         '}(function (jQuery) {\n\n',
     jqueryCheckAfter: '}));',
