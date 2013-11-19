@@ -7688,11 +7688,11 @@ td.gud .visible-print {
 }
 
 @font-face {
-  font-family: 'bebas_neueregular';
+  font-family: 'Roboto_Condensed_regular';
   font-style: normal;
   font-weight: normal;
-  src: url('../fonts//BebasNeue-webfont.eot');
-  src: url('../fonts//BebasNeue-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts//BebasNeue-webfont.woff') format('woff'), url('../fonts//BebasNeue-webfont.ttf') format('truetype'), url('../fonts//BebasNeue-webfont.svg#bebas_neueregular') format('svg');
+  src: url('../fonts//Roboto_Condensed_regular.eot');
+  src: url('../fonts//Roboto_Condensed_regular.eot?#iefix') format('embedded-opentype'), url('../fonts//Roboto_Condensed_regular.woff') format('woff'), url('../fonts//Roboto_Condensed_regular.ttf') format('truetype'), url('../fonts//Roboto_Condensed_regular.svg') format('svg');
 }
 
 .gud .lead {
@@ -7738,7 +7738,7 @@ td.gud .visible-print {
 .gud .h2,
 .gud .h3,
 .gud .h4 {
-  font-family: "bebas_neueregular";
+  font-family: "Roboto_Condensed_regular";
   font-weight: 500;
   line-height: 1.1;
   text-transform: uppercase;
