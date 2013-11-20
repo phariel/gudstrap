@@ -42,5 +42,6 @@
     , "regexp-quote": "~0.0.0"
     , "bower": "~1"
     , "matchdep": "~0.1.2"
+    , "semver": "~2.2.1"
   }
 }
