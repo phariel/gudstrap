@@ -7688,11 +7688,11 @@ td.gud .visible-print {
 }
 
 @font-face {
-  font-family: 'Roboto_Condensed_regular';
+  font-family: 'roboto_condensedbold';
   font-style: normal;
   font-weight: normal;
-  src: url('../fonts//Roboto_Condensed_regular.eot');
-  src: url('../fonts//Roboto_Condensed_regular.eot?#iefix') format('embedded-opentype'), url('../fonts//Roboto_Condensed_regular.woff') format('woff'), url('../fonts//Roboto_Condensed_regular.ttf') format('truetype'), url('../fonts//Roboto_Condensed_regular.svg') format('svg');
+  src: url('../fonts/roboto_condensedbold.eot');
+  src: url('../fonts/roboto_condensedbold.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto_condensedbold.woff') format('woff'), url('../fonts/roboto_condensedbold.ttf') format('truetype'), url('../fonts/roboto_condensedbold.svg#roboto_condensedbold') format('svg');
 }
 
 .gud .lead {
@@ -7738,9 +7738,9 @@ td.gud .visible-print {
 .gud .h2,
 .gud .h3,
 .gud .h4 {
-  font-family: "Roboto_Condensed_regular";
-  font-weight: 500;
+  font-family: "roboto_condensedbold";
   line-height: 1.1;
+  letter-spacing: -1px;
   text-transform: uppercase;
 }
 

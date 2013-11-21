@@ -2,16 +2,16 @@
 // Typography
 // --------------------------------------------------
 
-// 'Roboto_Condensed_regular' for Heading H1, H2, H3, H4
+// 'roboto_condensedbold' for Heading H1, H2, H3, H4
 // --------------------------------------------------
 
 @font-face {
-    font-family: 'Roboto_Condensed_regular';
-    src: url('@{icon-font-path}/Roboto_Condensed_regular.eot');
-    src: url('@{icon-font-path}/Roboto_Condensed_regular.eot?#iefix') format('embedded-opentype'),
-         url('@{icon-font-path}/Roboto_Condensed_regular.woff') format('woff'),
-         url('@{icon-font-path}/Roboto_Condensed_regular.ttf') format('truetype'),
-         url('@{icon-font-path}/Roboto_Condensed_regular.svg') format('svg');
+    font-family: 'roboto_condensedbold';
+    src: url('@{icon-font-path}roboto_condensedbold.eot');
+    src: url('@{icon-font-path}roboto_condensedbold.eot?#iefix') format('embedded-opentype'),
+         url('@{icon-font-path}roboto_condensedbold.woff') format('woff'),
+         url('@{icon-font-path}roboto_condensedbold.ttf') format('truetype'),
+         url('@{icon-font-path}roboto_condensedbold.svg#roboto_condensedbold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -42,9 +42,9 @@
 h1, h2, h3, h4,
 .h1, .h2, .h3, .h4 {
   font-family: @headings-h1h4-font-family;
-  font-weight: @headings-h1h4-font-weight;
   line-height: @headings-h1h4-line-height;
   text-transform: uppercase;
+  letter-spacing: -1px;
 }
 
 h1, .h1 { font-size: ceil(@font-size-base * 3.00); } // ~42px
