@@ -10452,6 +10452,7 @@ fieldset[disabled] .gud .btn-info.active {
   left: 10px;
   display: block;
   width: 0;
+  height: 0;
   font-size: 0;
   border-top: none;
   border-right: 8px solid transparent;
@@ -10459,7 +10460,6 @@ fieldset[disabled] .gud .btn-info.active {
   border-left: 8px solid transparent;
   content: "";
   box-sizing: content-box;
-  heigth: 0;
 }
 
 .gud .dropdown-menu.pull-right:before {

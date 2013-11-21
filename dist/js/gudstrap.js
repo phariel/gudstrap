@@ -10,7 +10,13 @@
 
 if (typeof define === "function" && define.amd) {
 
-define(["jquery"], factory);
+define(["jquery"], function(jQuery){
+
+  factory(jQuery);
+
+  return jQuery;
+
+});
 
 } else { factory(window.jQuery); }
 
