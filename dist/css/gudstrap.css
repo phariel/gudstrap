@@ -2069,6 +2069,7 @@
 
 .gud .form-control::-moz-placeholder {
   color: #999999;
+  opacity: 1;
 }
 
 .gud .form-control:-ms-input-placeholder {
@@ -2243,6 +2244,7 @@ textarea.gud .input-lg {
 
 .gud .has-warning .form-control::-moz-placeholder {
   color: #ffffff;
+  opacity: 1;
 }
 
 .gud .has-warning .form-control:-ms-input-placeholder {
@@ -2312,6 +2314,7 @@ textarea.gud .input-lg {
 
 .gud .has-error .form-control::-moz-placeholder {
   color: #ffffff;
+  opacity: 1;
 }
 
 .gud .has-error .form-control:-ms-input-placeholder {
@@ -2381,6 +2384,7 @@ textarea.gud .input-lg {
 
 .gud .has-success .form-control::-moz-placeholder {
   color: #ffffff;
+  opacity: 1;
 }
 
 .gud .has-success .form-control:-ms-input-placeholder {
@@ -3734,7 +3738,6 @@ fieldset[disabled] .gud .btn-link:focus {
   vertical-align: middle;
   border-top: 4px solid #000000;
   border-right: 4px solid transparent;
-  border-bottom: 0 dotted;
   border-left: 4px solid transparent;
 }
 
@@ -3852,7 +3855,7 @@ fieldset[disabled] .gud .btn-link:focus {
 
 .gud .dropup .caret,
 .gud .navbar-fixed-bottom .dropdown .caret {
-  border-top: 0 dotted;
+  border-top: 0;
   border-bottom: 4px solid #000000;
   content: "";
 }
@@ -5126,13 +5129,13 @@ textarea.gud .input-group-sm > .input-group-btn > .btn {
 }
 
 .gud .navbar-text {
-  float: left;
   margin-top: 15px;
   margin-bottom: 15px;
 }
 
 @media (min-width: 768px) {
   .gud .navbar-text {
+    float: left;
     margin-right: 15px;
     margin-left: 15px;
   }
@@ -5883,24 +5886,6 @@ a.gud .thumbnail.active {
   }
   to {
     background-position: 0 0;
-  }
-}
-
-@-moz-keyframes progress-bar-stripes {
-  from {
-    background-position: 40px 0;
-  }
-  to {
-    background-position: 0 0;
-  }
-}
-
-@-o-keyframes progress-bar-stripes {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 40px 0;
   }
 }
 
@@ -7891,6 +7876,7 @@ td.gud .visible-print {
 
 .gud .form-control::-moz-placeholder {
   color: rgba(204, 204, 204, 0.6);
+  opacity: 1;
 }
 
 .gud .form-control:-ms-input-placeholder {
@@ -7912,6 +7898,7 @@ td.gud .visible-print {
 
 .gud .form-control:hover::-moz-placeholder {
   color: #cccccc;
+  opacity: 1;
 }
 
 .gud .form-control:hover:-ms-input-placeholder {
@@ -7935,6 +7922,7 @@ td.gud .visible-print {
 
 .gud .form-control:focus::-moz-placeholder {
   color: rgba(0, 195, 237, 0.6);
+  opacity: 1;
 }
 
 .gud .form-control:focus:-ms-input-placeholder {
@@ -7960,6 +7948,7 @@ fieldset[disabled] .gud .form-control:-moz-placeholder {
 .gud .form-control[disabled]::-moz-placeholder,
 fieldset[disabled] .gud .form-control::-moz-placeholder {
   color: rgba(204, 204, 204, 0.6);
+  opacity: 1;
 }
 
 .gud .form-control[disabled]:-ms-input-placeholder,
@@ -7987,6 +7976,7 @@ fieldset[disabled] .gud .form-control:hover:-moz-placeholder {
 .gud .form-control[disabled]:hover::-moz-placeholder,
 fieldset[disabled] .gud .form-control:hover::-moz-placeholder {
   color: rgba(204, 204, 204, 0.6);
+  opacity: 1;
 }
 
 .gud .form-control[disabled]:hover:-ms-input-placeholder,
@@ -8225,6 +8215,7 @@ select.gud .form-control.input-sm {
 
 .gud .has-warning .form-control::-moz-placeholder {
   color: #ffbc66;
+  opacity: 1;
 }
 
 .gud .has-warning .form-control:-ms-input-placeholder {
@@ -8294,6 +8285,7 @@ select.gud .form-control.input-sm {
 
 .gud .has-error .form-control::-moz-placeholder {
   color: #ff6698;
+  opacity: 1;
 }
 
 .gud .has-error .form-control:-ms-input-placeholder {
@@ -8363,6 +8355,7 @@ select.gud .form-control.input-sm {
 
 .gud .has-success .form-control::-moz-placeholder {
   color: #bdfe33;
+  opacity: 1;
 }
 
 .gud .has-success .form-control:-ms-input-placeholder {
