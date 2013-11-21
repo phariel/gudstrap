@@ -1,48 +1,42 @@
-// Add css class "gud" for true environment
-// Prevent conflicts with the original css class
-.gud {
+// Extend from bootstrap
+@import "bootstrap.less";
 
-    // Extend from bootstrap
-    @import "bootstrap.less";
+// Core variables and mixins
+@import "variables-ef.less";
+@import "mixins-ef.less";
 
-    // Core variables and mixins
-    @import "variables-ef.less";
-    @import "mixins-ef.less";
+// Core CSS
+@import "scaffolding-ef.less";
+@import "type-ef.less";
+@import "tables-ef.less";
+@import "forms-ef.less";
+@import "buttons-ef.less";
 
-    // Core CSS
-    @import "scaffolding-ef.less";
-    @import "type-ef.less";
-    @import "tables-ef.less";
-    @import "forms-ef.less";
-    @import "buttons-ef.less";
+// Components: glyphs
+@import "glyphicons-ef.less";
 
-    // Components: glyphs
-    @import "glyphicons-ef.less";
+// Components: common
+@import "dropdowns-ef.less";
 
-    // Components: common
-    @import "dropdowns-ef.less";
+// Components: Nav
+@import "navs-ef.less";
+@import "navbar-ef.less";
+@import "button-groups-ef.less";
+@import "pagination-ef.less" ;
+@import "pager-ef.less";
 
-    // Components: Nav
-    @import "navs-ef.less";
-    @import "navbar-ef.less";
-    @import "button-groups-ef.less";
-    @import "pagination-ef.less" ;
-    @import "pager-ef.less";
+// Components: Misc
+@import "labels-ef.less";
+@import "progress-bars-ef.less";
+@import "arrows-ef.less";
+@import "stepper-ef.less";
 
-    // Components: Misc
-    @import "labels-ef.less";
-    @import "progress-bars-ef.less";
-    @import "arrows-ef.less";
-    @import "stepper-ef.less";
+// Components: Preloader
+@import "preloader-ef.less";
 
-    // Components: Preloader
-    @import "preloader-ef.less";
+// Components: Toggle
+@import "toggle-ef";
 
-    // Components: Toggle
-    @import "toggle-ef";
-
-    // Utility classes
-    @import "utilities.less"; // Has to be last to override when necessary
-    @import "responsive-utilities.less";
-    
-}
+// Utility classes
+@import "utilities.less"; // Has to be last to override when necessary
+@import "responsive-utilities.less";

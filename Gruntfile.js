@@ -5,7 +5,6 @@ module.exports = function(grunt) {
 
   RegExp.quote = require('regexp-quote');
 
-  var semver = require("semver");
   var btoa = require('btoa');
 
   // Project configuration.
@@ -32,8 +31,7 @@ module.exports = function(grunt) {
 
     // Task configuration.
     clean: {
-      dist: ['dist'],
-      gudstrap: ['gudstrap']
+      dist: ['dist']
     },
 
     jshint: {
@@ -57,7 +55,7 @@ module.exports = function(grunt) {
         footer: '<%= jqueryCheckAfter%>',
         stripBanners: false
       },
-      bootstrap: {
+      gudstrap: {
         src: [
           'js/transition.js',
           'js/alert.js',
@@ -74,7 +72,7 @@ module.exports = function(grunt) {
           'js/toggle-btn-group-ef.js',
           'js/stepper-ef.js'
         ],
-        dest: 'dist/js/<%= pkg.name %>.js'
+        dest: 'dist/js/gudstrap.js'
       }
     },
 
@@ -83,9 +81,9 @@ module.exports = function(grunt) {
         banner: '<%= banner %>',
         report: 'min'
       },
-      bootstrap: {
-        src: ['<%= concat.bootstrap.dest %>'],
-        dest: 'dist/js/<%= pkg.name %>.min.js'
+      gudstrap: {
+        src: ['<%= concat.gudstrap.dest %>'],
+        dest: 'dist/js/gudstrap.min.js'
       }
     },
 
@@ -96,29 +94,36 @@ module.exports = function(grunt) {
       },
       bootstrap: {
         src: ['less/bootstrap-ef.less'],
-        dest: 'dist/css/<%= pkg.name %>.css'
+        dest: 'dist/css/bootstrap.css'
       },
-      min: {
+      bootstrap_min: {
         options: {
           compress: true
         },
         src: ['less/bootstrap-ef.less'],
-        dest: 'dist/css/<%= pkg.name %>.min.css'
+        dest: 'dist/css/bootstrap.min.css'
       },
       theme: {
         src: ['less/theme.less'],
-        dest: 'dist/css/<%= pkg.name %>-theme.css'
+        dest: 'dist/css/bootstrap-theme.css'
       },
       theme_min: {
         options: {
           compress: true
         },
         src: ['less/theme.less'],
-        dest: 'dist/css/<%= pkg.name %>-theme.min.css'
+        dest: 'dist/css/bootstrap-theme.min.css'
       },
-      docs: {
-        src: ['docs-assets/less/docs-ef.less'],
-        dest: 'docs-assets/css/docs-ef.css'
+      gudstrap: {
+        src: ['less/gudstrap.less'],
+        dest: 'dist/css/gudstrap.css'
+      },
+      gudstrap_min: {
+        options: {
+          compress: true
+        },
+        src: ['less/bootstrap-ef.less'],
+        dest: 'dist/css/gudstrap.min.css'
       }
     },
 
@@ -128,19 +133,6 @@ module.exports = function(grunt) {
         flatten: true,
         src: [ "fonts/*", "bower_components/fontawesome/font/*" ],
         dest: 'dist/fonts'
-      },
-      docscss: {
-        expand: true,
-        flatten: true,
-        src: [ 'docs-assets/css/docs.css' ],
-        dest: 'docs-assets/less/',
-        ext: '.less'
-      },
-      gudstrap: {
-        expand: true,
-        cwd: 'dist/',
-        src: [ '**/*' ],
-        dest: 'gudstrap/<%= pkg["version-gudstrap"] %>/'
       }
     },
 
@@ -229,7 +221,7 @@ module.exports = function(grunt) {
   grunt.registerTask('dist-js', ['concat', 'uglify']);
 
   // CSS distribution task.
-  grunt.registerTask('dist-css', ['copy:docscss', 'recess']);
+  grunt.registerTask('dist-css', ['recess']);
 
   // Fonts distribution task.
   grunt.registerTask('dist-fonts', ['copy:fonts']);
@@ -244,9 +236,6 @@ module.exports = function(grunt) {
   // grunt change-version-number --oldver=A.B.C --newver=X.Y.Z
   // This can be overzealous, so its changes should always be manually reviewed!
   grunt.registerTask('change-version-number', ['sed']);
-
-  // Copy for GudStrap with version.
-  grunt.registerTask('dist-gudstrap', ['dist', 'clean:gudstrap', 'copy:gudstrap']);
 
   // task for building customizer
   grunt.registerTask('build-customizer', 'Add scripts/less files to customizer.', function () {
