@@ -246,7 +246,7 @@ module.exports = function(grunt) {
   grunt.registerTask('change-version-number', ['sed']);
 
   // Copy for GudStrap with version.
-  grunt.registerTask('dist-gudstrap', ['default', 'clean:gudstrap', 'copy:gudstrap']);
+  grunt.registerTask('dist-gudstrap', ['dist', 'clean:gudstrap', 'copy:gudstrap']);
 
   // task for building customizer
   grunt.registerTask('build-customizer', 'Add scripts/less files to customizer.', function () {
