@@ -2069,6 +2069,7 @@
 
 .gud .form-control::-moz-placeholder {
   color: #999999;
+  opacity: 1;
 }
 
 .gud .form-control:-ms-input-placeholder {
@@ -2243,6 +2244,7 @@ textarea.gud .input-lg {
 
 .gud .has-warning .form-control::-moz-placeholder {
   color: #ffffff;
+  opacity: 1;
 }
 
 .gud .has-warning .form-control:-ms-input-placeholder {
@@ -2312,6 +2314,7 @@ textarea.gud .input-lg {
 
 .gud .has-error .form-control::-moz-placeholder {
   color: #ffffff;
+  opacity: 1;
 }
 
 .gud .has-error .form-control:-ms-input-placeholder {
@@ -2381,6 +2384,7 @@ textarea.gud .input-lg {
 
 .gud .has-success .form-control::-moz-placeholder {
   color: #ffffff;
+  opacity: 1;
 }
 
 .gud .has-success .form-control:-ms-input-placeholder {
@@ -3734,7 +3738,6 @@ fieldset[disabled] .gud .btn-link:focus {
   vertical-align: middle;
   border-top: 4px solid #000000;
   border-right: 4px solid transparent;
-  border-bottom: 0 dotted;
   border-left: 4px solid transparent;
 }
 
@@ -3852,7 +3855,7 @@ fieldset[disabled] .gud .btn-link:focus {
 
 .gud .dropup .caret,
 .gud .navbar-fixed-bottom .dropdown .caret {
-  border-top: 0 dotted;
+  border-top: 0;
   border-bottom: 4px solid #000000;
   content: "";
 }
@@ -5126,13 +5129,13 @@ textarea.gud .input-group-sm > .input-group-btn > .btn {
 }
 
 .gud .navbar-text {
-  float: left;
   margin-top: 15px;
   margin-bottom: 15px;
 }
 
 @media (min-width: 768px) {
   .gud .navbar-text {
+    float: left;
     margin-right: 15px;
     margin-left: 15px;
   }
@@ -5883,24 +5886,6 @@ a.gud .thumbnail.active {
   }
   to {
     background-position: 0 0;
-  }
-}
-
-@-moz-keyframes progress-bar-stripes {
-  from {
-    background-position: 40px 0;
-  }
-  to {
-    background-position: 0 0;
-  }
-}
-
-@-o-keyframes progress-bar-stripes {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 40px 0;
   }
 }
 
@@ -7688,11 +7673,11 @@ td.gud .visible-print {
 }
 
 @font-face {
-  font-family: 'bebas_neueregular';
+  font-family: 'roboto_condensedbold';
   font-style: normal;
   font-weight: normal;
-  src: url('../fonts//BebasNeue-webfont.eot');
-  src: url('../fonts//BebasNeue-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts//BebasNeue-webfont.woff') format('woff'), url('../fonts//BebasNeue-webfont.ttf') format('truetype'), url('../fonts//BebasNeue-webfont.svg#bebas_neueregular') format('svg');
+  src: url('../fonts/roboto_condensedbold.eot');
+  src: url('../fonts/roboto_condensedbold.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto_condensedbold.woff') format('woff'), url('../fonts/roboto_condensedbold.ttf') format('truetype'), url('../fonts/roboto_condensedbold.svg#roboto_condensedbold') format('svg');
 }
 
 .gud .lead {
@@ -7738,9 +7723,9 @@ td.gud .visible-print {
 .gud .h2,
 .gud .h3,
 .gud .h4 {
-  font-family: "bebas_neueregular";
-  font-weight: 500;
+  font-family: "roboto_condensedbold";
   line-height: 1.1;
+  letter-spacing: -1px;
   text-transform: uppercase;
 }
 
@@ -7891,6 +7876,7 @@ td.gud .visible-print {
 
 .gud .form-control::-moz-placeholder {
   color: rgba(204, 204, 204, 0.6);
+  opacity: 1;
 }
 
 .gud .form-control:-ms-input-placeholder {
@@ -7912,6 +7898,7 @@ td.gud .visible-print {
 
 .gud .form-control:hover::-moz-placeholder {
   color: #cccccc;
+  opacity: 1;
 }
 
 .gud .form-control:hover:-ms-input-placeholder {
@@ -7935,6 +7922,7 @@ td.gud .visible-print {
 
 .gud .form-control:focus::-moz-placeholder {
   color: rgba(0, 195, 237, 0.6);
+  opacity: 1;
 }
 
 .gud .form-control:focus:-ms-input-placeholder {
@@ -7960,6 +7948,7 @@ fieldset[disabled] .gud .form-control:-moz-placeholder {
 .gud .form-control[disabled]::-moz-placeholder,
 fieldset[disabled] .gud .form-control::-moz-placeholder {
   color: rgba(204, 204, 204, 0.6);
+  opacity: 1;
 }
 
 .gud .form-control[disabled]:-ms-input-placeholder,
@@ -7987,6 +7976,7 @@ fieldset[disabled] .gud .form-control:hover:-moz-placeholder {
 .gud .form-control[disabled]:hover::-moz-placeholder,
 fieldset[disabled] .gud .form-control:hover::-moz-placeholder {
   color: rgba(204, 204, 204, 0.6);
+  opacity: 1;
 }
 
 .gud .form-control[disabled]:hover:-ms-input-placeholder,
@@ -8225,6 +8215,7 @@ select.gud .form-control.input-sm {
 
 .gud .has-warning .form-control::-moz-placeholder {
   color: #ffbc66;
+  opacity: 1;
 }
 
 .gud .has-warning .form-control:-ms-input-placeholder {
@@ -8294,6 +8285,7 @@ select.gud .form-control.input-sm {
 
 .gud .has-error .form-control::-moz-placeholder {
   color: #ff6698;
+  opacity: 1;
 }
 
 .gud .has-error .form-control:-ms-input-placeholder {
@@ -8363,6 +8355,7 @@ select.gud .form-control.input-sm {
 
 .gud .has-success .form-control::-moz-placeholder {
   color: #bdfe33;
+  opacity: 1;
 }
 
 .gud .has-success .form-control:-ms-input-placeholder {
@@ -10452,6 +10445,7 @@ fieldset[disabled] .gud .btn-info.active {
   left: 10px;
   display: block;
   width: 0;
+  height: 0;
   font-size: 0;
   border-top: none;
   border-right: 8px solid transparent;
@@ -10459,7 +10453,6 @@ fieldset[disabled] .gud .btn-info.active {
   border-left: 8px solid transparent;
   content: "";
   box-sizing: content-box;
-  heigth: 0;
 }
 
 .gud .dropdown-menu.pull-right:before {

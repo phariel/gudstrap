@@ -22,7 +22,10 @@ module.exports = function(grunt) {
               ' */\n\n',
     jqueryCheckBefore: '(function (factory) {\n\n' +
                         'if (typeof define === "function" && define.amd) {\n\n' +
-                        'define(["jquery"], factory);\n\n' +
+                        'define(["jquery"], function(jQuery){\n\n' +
+                        '  factory(jQuery);\n\n' +
+                        '  return jQuery;\n\n' +
+                        '});\n\n' +
                         '} else { factory(window.jQuery); }\n\n' +
                         '}(function (jQuery) {\n\n',
     jqueryCheckAfter: '}));',
@@ -165,8 +168,8 @@ module.exports = function(grunt) {
       options: {
         reset: true,
         relaxerror: [
-            "Bad value X-UA-Compatible for attribute http-equiv on element meta.",
-            "Element img is missing required attribute src."
+          "Bad value X-UA-Compatible for attribute http-equiv on element meta.",
+          "Element img is missing required attribute src."
         ]
       },
       files: {
@@ -243,7 +246,7 @@ module.exports = function(grunt) {
   grunt.registerTask('change-version-number', ['sed']);
 
   // Copy for GudStrap with version.
-  grunt.registerTask('dist-gudstrap', ['default', 'clean:gudstrap', 'copy:gudstrap']);
+  grunt.registerTask('dist-gudstrap', ['dist', 'clean:gudstrap', 'copy:gudstrap']);
 
   // task for building customizer
   grunt.registerTask('build-customizer', 'Add scripts/less files to customizer.', function () {

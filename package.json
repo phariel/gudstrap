@@ -2,7 +2,7 @@
     "name": "gudstrap"
   , "description": "Sleek, intuitive, and powerful front-end framework for faster and easier web development."
   , "version": "3.0.2"
-  , "version-gudstrap": "1.0.0"
+  , "version-gudstrap": "1.1.1"
   , "keywords": ["bootstrap", "css"]
   , "homepage": "http://englishtown.github.io/gudstrap/"
   , "author": "EF, Inc."
@@ -42,5 +42,6 @@
     , "regexp-quote": "~0.0.0"
     , "bower": "~1"
     , "matchdep": "~0.1.2"
+    , "semver": "~2.2.1"
   }
 }
