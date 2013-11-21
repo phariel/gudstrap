@@ -5,7 +5,6 @@ module.exports = function(grunt) {
 
   RegExp.quote = require('regexp-quote');
 
-  var semver = require("semver");
   var btoa = require('btoa');
 
   // Project configuration.
