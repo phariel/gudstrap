@@ -6,14 +6,6 @@
  * Designed and built with all the love in the world by @mdo and @fat.
  */
 
-(function (factory) {
-  if (typeof define === "function" && define.amd) {
-    define(["jquery"], factory);
-  } else {
-    factory(window.jQuery);
-  }
-}(function (jQuery) {
-
 if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery")} 
 
 /* ========================================================================
@@ -2211,4 +2203,3 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   })
 
 }(jQuery);
-}));
