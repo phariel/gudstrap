@@ -2,7 +2,13 @@
   "name": "gudstrap",
   "version": "3.0.2",
   "version-gudstrap": "1.1.1",
-  "main": ["./dist/js/gudstrap.js", "./dist/css/gudstrap.css", "./dist/fonts/*"],
+  "main": [
+    "./dist/js/bootstrap.js", 
+    "./dist/css/bootstrap.css",
+    "./dist/js/gudstrap.js",
+    "./dist/css/gudstrap.css", 
+    "./dist/fonts/*"
+  ],
   "ignore": [
     "**/.*",
     "_*",

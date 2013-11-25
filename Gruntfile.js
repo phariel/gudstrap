@@ -19,15 +19,15 @@ module.exports = function(grunt) {
               ' *\n' +
               ' * Designed and built with all the love in the world by @mdo and @fat.\n' +
               ' */\n\n',
-    jqueryCheckBefore: '(function (factory) {\n\n' +
-                        'if (typeof define === "function" && define.amd) {\n\n' +
-                        'define(["jquery"], function(jQuery){\n\n' +
-                        '  factory(jQuery);\n\n' +
-                        '  return jQuery;\n\n' +
-                        '});\n\n' +
-                        '} else { factory(window.jQuery); }\n\n' +
-                        '}(function (jQuery) {\n\n',
-    jqueryCheckAfter: '}));',
+    jqueryCheck: 'if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery")} \n\n',
+    umdBefore: '(function (factory) {\n' +
+               '  if (typeof define === "function" && define.amd) {\n' +
+               '    define(["jquery"], factory);\n' +
+               '  } else {\n' +
+               '    factory(window.jQuery);\n' +
+               '  }\n' +
+               '}(function (jQuery) {\n\n',
+    umdAfter: '}));',
 
     // Task configuration.
     clean: {
@@ -51,11 +51,12 @@ module.exports = function(grunt) {
 
     concat: {
       options: {
-        banner: '<%= banner %><%= jqueryCheckBefore %>',
-        footer: '<%= jqueryCheckAfter%>',
         stripBanners: false
       },
-      gudstrap: {
+      bootstrap: {
+        options: {
+          banner: '<%= banner %><%= jqueryCheck %>'
+        },
         src: [
           'js/transition.js',
           'js/alert.js',
@@ -72,6 +73,14 @@ module.exports = function(grunt) {
           'js/toggle-btn-group-ef.js',
           'js/stepper-ef.js'
         ],
+        dest: 'dist/js/bootstrap.js'
+      },
+      gudstrap: {
+        options: {
+          banner: '<%= banner %><%= umdBefore %><%= jqueryCheck %>',
+          footer: '<%= umdAfter %>'
+        },
+        src: ['<%= concat.bootstrap.src %>'],
         dest: 'dist/js/gudstrap.js'
       }
     },
@@ -80,6 +89,10 @@ module.exports = function(grunt) {
       options: {
         banner: '<%= banner %>',
         report: 'min'
+      },
+      bootstrap: {
+        src: ['<%= concat.bootstrap.dest %>'],
+        dest: 'dist/js/bootstrap.min.js'
       },
       gudstrap: {
         src: ['<%= concat.gudstrap.dest %>'],
