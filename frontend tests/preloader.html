@@ -1,0 +1,113 @@
+<html>
+<head>
+        <meta name="description" content="" >
+        <meta name="keywords" content="" >
+        <meta name="author" content="" >
+        <meta charset="UTF-8" >
+
+        <title>Preloader</title>
+
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <style type="text/css">
+        body
+        {
+        	background:#ffffff;
+        }
+	        .spinner {
+  position: relative;
+  overflow: hidden;
+  border-radius: 100%;
+  -webkit-transition: opacity 0.5s linear;
+  -moz-transition: opacity 0.5s linear;
+  -o-transition: opacity 0.5s linear;
+  transition: opacity 0.5s linear;
+}
+.spinner .c {
+  z-index: 3;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 100%;
+}
+.spinner .d {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.spinner .r {
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  top: -1px;
+  bottom: -1px;
+}
+
+.myspinner .spinner {
+  width: 40px;
+  height: 40px;
+  background-color: #b6b6b6;
+}
+.myspinner .spinner .c {
+  width: 75%;
+  height: 75%;
+  margin: -37.5% 0 0 -37.5%;
+  background-color: white;
+}
+.myspinner .spinner .r {
+  width: 8px;
+  margin-left: -4px;
+  background-color: white;
+}
+
+.spin {
+  -webkit-animation: spin 300ms infinite linear;
+  -moz-animation: spin 300ms infinite linear;
+  animation: spin 300ms infinite linear;
+}
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(-360deg);
+  }
+}
+
+@-moz-keyframes spin {
+  to {
+    -moz-transform: rotate(-360deg);
+  }
+}
+
+.rspin {
+  -webkit-animation: rspin 900ms infinite linear;
+  -moz-animation: rspin 900ms infinite linear;
+  animation: rspin 900ms infinite linear;
+}
+
+@-webkit-keyframes rspin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes rspin {
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+        </style>
+</head>
+<body>
+<center style="margin-top:100px">
+	<div class="myspinner">  
+		<div class="spinner rspin">
+		  <span class="c"></span>
+		  <span class="d spin"><span class="e"></span></span>
+		  <span class="r"></span>
+		</div>
+	</div>
+</center>
+</body>
+</html>
