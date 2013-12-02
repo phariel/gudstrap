@@ -1,7 +1,7 @@
 {
     "name": "gudstrap"
   , "description": "Sleek, intuitive, and powerful front-end framework for faster and easier web development."
-  , "version": "3.0.2"
+  , "version": "3.0.3"
   , "version-gudstrap": "1.1.1"
   , "keywords": ["bootstrap", "css"]
   , "homepage": "http://englishtown.github.io/gudstrap/"
@@ -42,5 +42,16 @@
     , "regexp-quote": "~0.0.0"
     , "bower": "~1"
     , "matchdep": "~0.1.2"
+  }
+  , "jspm": {
+      "main": "js/bootstrap"
+    , "directories": { "lib": "dist" }
+    , "shim": {
+        "js/bootstrap": {
+            "imports": "jquery"
+          , "exports": "$"
+        }
+    }
+    , "buildConfig": { "uglify": true }
   }
 }
