@@ -1,7 +1,7 @@
 /* jshint node: true */
 
-module.exports = function(grunt) {
-  "use strict";
+module.exports = function (grunt) {
+  'use strict';
 
   // Force use of Unix newlines
   grunt.util.linefeed = '\n';
@@ -45,7 +45,32 @@ module.exports = function(grunt) {
       },
       test: {
         src: ['js/tests/unit/*.js']
+      },
+      assets: {
+        src: ['docs-assets/js/application.js', 'docs-assets/js/customizer.js']
       }
+    },
+
+    jscs: {
+      options: {
+        config: 'js/.jscs.json'
+      },
+      gruntfile: {
+        src: ['Gruntfile.js']
+      },
+      src: {
+        src: ['js/*.js']
+      },
+      test: {
+        src: ['js/tests/unit/*.js']
+      }
+    },
+
+    csslint: {
+      options: {
+        csslintrc: '.csslintrc'
+      },
+      src: ['dist/css/gudstrap.css', 'dist/css/bootstrap.css', 'dist/css/bootstrap-theme.css']
     },
 
     concat: {
@@ -96,46 +121,72 @@ module.exports = function(grunt) {
       gudstrap: {
         src: ['<%= concat.gudstrap.dest %>'],
         dest: 'dist/js/gudstrap.min.js'
+      },
+      customize: {
+        src: [
+          'docs-assets/js/less.js',
+          'docs-assets/js/jszip.js',
+          'docs-assets/js/uglify.js',
+          'docs-assets/js/filesaver.js',
+          'docs-assets/js/customizer.js'
+        ],
+        dest: 'docs-assets/js/customize.js'
       }
     },
 
-    recess: {
-      options: {
-        compile: true,
-        banner: '<%= banner %>'
-      },
-      bootstrap: {
-        src: ['less/bootstrap-ef.less'],
-        dest: 'dist/css/bootstrap.css'
-      },
-      bootstrap_min: {
+    less: {
+      compile: {
         options: {
-          compress: true
+          strictMath: true
         },
-        src: ['less/bootstrap-ef.less'],
-        dest: 'dist/css/bootstrap.min.css'
+        files: {
+          'dist/css/gudstrap.css': 'less/gudstrap.less',
+          'dist/css/bootstrap.css': 'less/bootstrap-ef.less',
+          'dist/css/bootstrap-theme.css': 'less/theme.less'
+        }
       },
-      theme: {
-        src: ['less/theme.less'],
-        dest: 'dist/css/bootstrap-theme.css'
-      },
-      theme_min: {
+      minify: {
         options: {
-          compress: true
+          cleancss: true,
+          report: 'min'
         },
-        src: ['less/theme.less'],
-        dest: 'dist/css/bootstrap-theme.min.css'
-      },
-      gudstrap: {
-        src: ['less/gudstrap.less'],
-        dest: 'dist/css/gudstrap.css'
-      },
-      gudstrap_min: {
+        files: {
+          'dist/css/gudstrap.min.css': 'dist/css/gudstrap.css',
+          'dist/css/bootstrap.min.css': 'dist/css/bootstrap.css',
+          'dist/css/bootstrap-theme.min.css': 'dist/css/bootstrap-theme.css'
+        }
+      }
+    },
+
+    usebanner: {
+      dist: {
         options: {
-          compress: true
+          position: 'top',
+          banner: '<%= banner %>'
         },
-        src: ['less/bootstrap-ef.less'],
-        dest: 'dist/css/gudstrap.min.css'
+        files: {
+          src: [
+            'dist/css/gudstrap.css',
+            'dist/css/gudstrap.min.css',
+            'dist/css/bootstrap.css',
+            'dist/css/bootstrap.min.css',
+            'dist/css/bootstrap-theme.css',
+            'dist/css/bootstrap-theme.min.css',
+          ]
+        }
+      }
+    },
+
+    csscomb: {
+      sort: {
+        options: {
+          sortOrder: '.csscomb.json'
+        },
+        files: {
+          'dist/css/gudstrap.css': ['dist/css/gudstrap.css'],
+          'dist/css/bootstrap.css': ['dist/css/bootstrap.css'],
+          'dist/css/bootstrap-theme.css': ['dist/css/bootstrap-theme.css']
+        }
       }
     },
 
@@ -143,7 +194,7 @@ module.exports = function(grunt) {
       fonts: {
         expand: true,
         flatten: true,
-        src: [ "fonts/*", "bower_components/fontawesome/font/*" ],
+        src: [ 'fonts/*', 'bower_components/fontawesome/font/*' ],
         dest: 'dist/fonts'
       }
     },
@@ -172,14 +223,14 @@ module.exports = function(grunt) {
       options: {
         reset: true,
         relaxerror: [
-          "Bad value X-UA-Compatible for attribute http-equiv on element meta.",
-          "Element img is missing required attribute src."
+          'Bad value X-UA-Compatible for attribute http-equiv on element meta.',
+          'Element img is missing required attribute src.'
         ]
       },
       files: {
         src: [
-          "_gh_pages/**/*.html",
-          "!_gh_pages/bower_components/**/*"
+          '_gh_pages/**/*.html',
+          '!_gh_pages/bower_components/**/*'
         ]
       }
     },
@@ -193,9 +244,9 @@ module.exports = function(grunt) {
         files: '<%= jshint.test.src %>',
         tasks: ['jshint:test', 'qunit']
       },
-      recess: {
+      less: {
         files: 'less/*.less',
-        tasks: ['recess']
+        tasks: ['less']
       }
     },
 
@@ -306,14 +357,14 @@ module.exports = function(grunt) {
   });
 
 
-  // Load all grunt tasks
-  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+  // These plugins provide necessary tasks.
+  require('load-grunt-tasks')(grunt, {scope: 'devDependencies'});
 
   // Docs HTML validation task
   grunt.registerTask('validate-html', ['jekyll', 'validation']);
 
   // Test task.
-  var testSubtasks = ['dist-css', 'jshint', 'qunit', 'validate-html'];
+  var testSubtasks = ['dist-css', 'jshint', 'jscs', 'qunit', 'validate-html'];
   // Only run Sauce Labs tests if there's a Sauce access key
   if (typeof process.env.SAUCE_ACCESS_KEY !== 'undefined') {
     testSubtasks.push('connect');
@@ -325,7 +376,7 @@ module.exports = function(grunt) {
   grunt.registerTask('dist-js', ['concat', 'uglify']);
 
   // CSS distribution task.
-  grunt.registerTask('dist-css', ['recess']);
+  grunt.registerTask('dist-css', ['less', 'csscomb', 'usebanner']);
 
   // Fonts distribution task.
   grunt.registerTask('dist-fonts', ['copy']);

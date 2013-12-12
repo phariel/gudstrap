@@ -72,13 +72,13 @@
 @font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
 @font-family-base:        Arial, Helvetica, sans-serif;
 
-@font-size-small:         ceil(@font-size-base * 0.85); // ~12px
+@font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
 @font-size-base:          14px;
-@font-size-large:         ceil(@font-size-base * 1.28); // ~18px
-@font-size-xlarge:        ceil(@font-size-base * 1.428); // ~20px
+@font-size-large:         ceil((@font-size-base * 1.28)); // ~18px
+@font-size-xlarge:        ceil((@font-size-base * 1.428)); // ~20px
 
 @line-height-base:        1.428571429; // 20/14
-@line-height-computed:    floor(@font-size-base * @line-height-base); // ~20px
+@line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
 
 
 @headings-font-family:    @font-family-base;
@@ -229,7 +229,7 @@
 @navbar-height:                    50px;
 @navbar-color:                     #777;
 @navbar-bg:                        #eee;
-@navbar-padding-horizontal:        floor(@grid-gutter-width / 2);  // ~15px
+@navbar-padding-horizontal:        floor((@grid-gutter-width / 2));  // ~15px
 @navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
 
 // Navbar links

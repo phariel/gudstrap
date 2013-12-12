@@ -18,10 +18,7 @@
     "js/tests",
     "CNAME",
     "CONTRIBUTING.md",
-    "Gruntfile.js",
-    "browserstack.json",
     "composer.json",
-    "package.json",
     "*.html"
   ],
   "dependencies": {
