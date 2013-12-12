@@ -129,7 +129,7 @@
   @icon-glyph-size: 19px;
 
   .clearfix;
-  margin-top: -(@input-height-base - ceil(@icon-glyph-size / 2)) !important; // overwrite font awesome
+  margin-top: -(@input-height-base - ceil((@icon-glyph-size / 2))) !important; // overwrite font awesome
   margin-right: @padding-small-horizontal;
   float: right;
 
@@ -144,17 +144,19 @@
 
 }
 
+
 .show-glyph-icon(@class, @bg, @icon) {
-  (~".has-@{class} .icon-glyph-@{class}:before") {
+  .has-@{class} .icon-glyph-@{class}:before {
     display: table !important;
     background-color: @bg;
     content: @icon;
   }
 }
 
-.show-glyph-icon("error", @brand-error, @remove);
-.show-glyph-icon("success", @brand-success, @ok);
-.show-glyph-icon("warning", @brand-warning, @exclamation);
+.show-glyph-icon(error, @brand-error, @remove);
+.show-glyph-icon(success, @brand-success, @ok);
+.show-glyph-icon(warning, @brand-warning, @exclamation);
+
 
 // Form control feedback states
 //

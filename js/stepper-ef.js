@@ -4,7 +4,7 @@
  * ======================================================================== */
 
 +function($) {
-  "use strict";
+  'use strict';
 
   // NUMERIC STEPPER CLASS DEFINITION
   // =========================
@@ -126,13 +126,13 @@
     .on(stepperClick, stepperBtnDownClass, function(e) {
       $(this).parents(stepperClass).stepper('decrease')
     })
-    .on(stepperFocus, stepperInputDelegateClass, function(e){
+    .on(stepperFocus, stepperInputDelegateClass, function(e) {
       $(this).val('')
     })
-    .on(stepperBlur, stepperInputDelegateClass, function(e){
+    .on(stepperBlur, stepperInputDelegateClass, function(e) {
       $(this).parents(stepperClass).stepper('set')
     })
-    .on(stepperKeydown, stepperInputDelegateClass, function(e){
+    .on(stepperKeydown, stepperInputDelegateClass, function(e) {
       if (e.keyCode === 13) $(this).trigger(stepperBlur)
     })
 
