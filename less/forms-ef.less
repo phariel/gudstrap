@@ -144,19 +144,19 @@
 
 }
 
-/*
+
 .show-glyph-icon(@class, @bg, @icon) {
-  ("~.has-@{class} .icon-glyph-@{class}:before") {
+  .has-@{class} .icon-glyph-@{class}:before {
     display: table !important;
     background-color: @bg;
     content: @icon;
   }
 }
 
-.show-glyph-icon("error", @brand-error, @remove);
-.show-glyph-icon("success", @brand-success, @ok);
-.show-glyph-icon("warning", @brand-warning, @exclamation);
-*/
+.show-glyph-icon(error, @brand-error, @remove);
+.show-glyph-icon(success, @brand-success, @ok);
+.show-glyph-icon(warning, @brand-warning, @exclamation);
+
 
 // Form control feedback states
 //
