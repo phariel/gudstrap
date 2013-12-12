@@ -7,19 +7,6 @@
 
 .gud {
   /*! normalize.css v2.1.3 | MIT License | git.io/normalize */
-  /*
-.show-glyph-icon(@class, @bg, @icon) {
-  ("~.has-@{class} .icon-glyph-@{class}:before") {
-    display: table !important;
-    background-color: @bg;
-    content: @icon;
-  }
-}
-
-.show-glyph-icon("error", @brand-error, @remove);
-.show-glyph-icon("success", @brand-success, @ok);
-.show-glyph-icon("warning", @brand-warning, @exclamation);
-*/
   /* FONT PATH
  * -------------------------- */
   /* FONT AWESOME CORE
@@ -5913,6 +5900,21 @@ select.gud .form-control.input-sm {
   color: #fff;
   text-align: center;
   border-radius: 9999px;
+}
+.gud .has-error .icon-glyph-error:before {
+  display: table !important;
+  content: "\f00d";
+  background-color: #ff0054;
+}
+.gud .has-success .icon-glyph-success:before {
+  display: table !important;
+  content: "\f00c";
+  background-color: #8aca01;
+}
+.gud .has-warning .icon-glyph-warning:before {
+  display: table !important;
+  content: "\f12a";
+  background-color: #ff9000;
 }
 .gud .has-warning .help-block,
 .gud .has-warning .control-label,

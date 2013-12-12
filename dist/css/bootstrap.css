@@ -5883,19 +5883,21 @@ select.form-control.input-sm {
   text-align: center;
   border-radius: 9999px;
 }
-/*
-.show-glyph-icon(@class, @bg, @icon) {
-  ("~.has-@{class} .icon-glyph-@{class}:before") {
-    display: table !important;
-    background-color: @bg;
-    content: @icon;
-  }
+.has-error .icon-glyph-error:before {
+  display: table !important;
+  content: "\f00d";
+  background-color: #ff0054;
 }
-
-.show-glyph-icon("error", @brand-error, @remove);
-.show-glyph-icon("success", @brand-success, @ok);
-.show-glyph-icon("warning", @brand-warning, @exclamation);
-*/
+.has-success .icon-glyph-success:before {
+  display: table !important;
+  content: "\f00c";
+  background-color: #8aca01;
+}
+.has-warning .icon-glyph-warning:before {
+  display: table !important;
+  content: "\f12a";
+  background-color: #ff9000;
+}
 .has-warning .help-block,
 .has-warning .control-label,
 .has-warning .radio,
