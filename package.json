@@ -8,7 +8,7 @@
   "author": "EF, Inc.",
   "scripts": {
     "test": "grunt test",
-    "postinstall": "bower install"
+    "prepublish": "bower install"
   },
   "repository": {
       "type": "git"
