@@ -3,7 +3,10 @@
   "description": "Sleek, intuitive, and powerful front-end framework for faster and easier web development.",
   "version": "3.0.3",
   "version-gudstrap": "1.1.1",
-  "keywords": ["bootstrap", "css"],
+  "keywords": [
+    "bootstrap",
+    "css"
+  ],
   "homepage": "http://englishtown.github.io/gudstrap/",
   "author": "EF, Inc.",
   "scripts": {
@@ -11,11 +14,11 @@
     "prepublish": "bower install"
   },
   "repository": {
-      "type": "git"
-    , "url": "https://github.com/englishtown/gudstrap.git"
+    "type": "git",
+    "url": "https://github.com/englishtown/gudstrap.git"
   },
   "bugs": {
-      "url": "https://github.com/englishtown/gudstrap/issues"
+    "url": "https://github.com/englishtown/gudstrap/issues"
   },
   "licenses": [
     {
@@ -33,7 +36,7 @@
     "grunt-contrib-copy": "~0.4.1",
     "grunt-contrib-csslint": "~0.2.0",
     "grunt-contrib-jshint": "~0.7.0",
-    "grunt-contrib-less": "~0.8.0",
+    "grunt-contrib-less": "~0.11.0",
     "grunt-contrib-qunit": "~0.3.0",
     "grunt-contrib-uglify": "~0.2.4",
     "grunt-contrib-watch": "~0.5.3",
@@ -47,13 +50,17 @@
   },
   "jspm": {
     "main": "js/bootstrap",
-    "directories": { "lib": "dist" },
+    "directories": {
+      "lib": "dist"
+    },
     "shim": {
       "js/bootstrap": {
         "imports": "jquery",
         "exports": "$"
       }
     },
-    "buildConfig": { "uglify": true }
+    "buildConfig": {
+      "uglify": true
+    }
   }
 }
