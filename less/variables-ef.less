@@ -42,14 +42,14 @@
 @brand-danger-hover:    #ff1f69;
 @brand-info-hover:      @brand-active-hover;
 
-@brand-default-disable:   fadeout(@brand-default, @brand-variant-disable);
-@brand-primary-disable:   fadeout(@brand-primary, @brand-variant-disable);
-@brand-trivia-disable:    fadeout(@brand-trivia, @brand-variant-disable);
-@brand-active-disable:    fadeout(@brand-active, @brand-variant-disable);
-@brand-success-disable:   fadeout(@brand-success, @brand-variant-disable);
-@brand-warning-disable:   fadeout(@brand-warning, @brand-variant-disable);
-@brand-danger-disable:    fadeout(@brand-danger, @brand-variant-disable);
-@brand-info-disable:      fadeout(@brand-info, @brand-variant-disable);
+@brand-default-disable:   multiply( fadeout(@brand-default, @brand-variant-disable),    #FFFFFF );
+@brand-primary-disable:   multiply( fadeout(@brand-primary, @brand-variant-disable),    #FFFFFF );
+@brand-trivia-disable:    multiply( fadeout(@brand-trivia, @brand-variant-disable),     #FFFFFF );
+@brand-active-disable:    multiply( fadeout(@brand-active, @brand-variant-disable),     #FFFFFF );
+@brand-success-disable:   multiply( fadeout(@brand-success, @brand-variant-disable),    #FFFFFF );
+@brand-warning-disable:   multiply( fadeout(@brand-warning, @brand-variant-disable),    #FFFFFF );
+@brand-danger-disable:    multiply( fadeout(@brand-danger, @brand-variant-disable),     #FFFFFF );
+@brand-info-disable:      multiply( fadeout(@brand-info, @brand-variant-disable),       #FFFFFF );
 
 // Scaffolding
 // -------------------------
