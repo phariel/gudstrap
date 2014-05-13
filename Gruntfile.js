@@ -139,7 +139,10 @@ module.exports = function (grunt) {
     less: {
       compile: {
         options: {
-          strictMath: true
+          strictMath: true,
+          modifyVars:  {
+            'FontAwesomePath': '"../fonts"'
+          }
         },
         files: {
           'dist/css/gudstrap.css': 'less/gudstrap.less',
@@ -225,10 +228,13 @@ module.exports = function (grunt) {
       options: {
         charset: 'utf-8',
         doctype: 'HTML5',
+        failHard: true,
         reset: true,
         relaxerror: [
           'Bad value X-UA-Compatible for attribute http-equiv on element meta.',
-          'Element img is missing required attribute src.'
+          'Element img is missing required attribute src.',
+          /* Ignore Private Unicode Area Error */
+          '.*?Charmod C073.*?'
         ]
       },
       files: {

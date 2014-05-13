@@ -1,6 +1,6 @@
 /*!
  * Bootstrap v3.0.3 (http://englishtown.github.io/gudstrap/)
- * Copyright 2013 EF, Inc.
+ * Copyright 2014 EF, Inc.
  * Licensed under http://www.apache.org/licenses/LICENSE-2.0
  */
 

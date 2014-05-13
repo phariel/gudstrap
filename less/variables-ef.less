@@ -186,6 +186,26 @@
 
 @input-group-addon-border-color: @input-border;
 
+@select-bg-sprite-height: 50px;
+@select-bg-y-normal-base: ( ( @input-height-base - @select-bg-sprite-height ) / 2 );
+@select-bg-y-normal-sm: ( ( @input-height-small - @select-bg-sprite-height ) / 2 );
+@select-bg-y-normal-lg: 0;
+@select-bg-y-hover-base: ( @select-bg-y-normal-base - @select-bg-sprite-height );
+@select-bg-y-hover-sm: ( @select-bg-y-normal-sm - @select-bg-sprite-height );
+@select-bg-y-hover-lg: ( @select-bg-y-normal-lg - @select-bg-sprite-height );
+@select-bg-y-focus-base: ( @select-bg-y-normal-base - ( @select-bg-sprite-height * 2 ) );
+@select-bg-y-focus-sm: ( @select-bg-y-normal-sm - ( @select-bg-sprite-height * 2 ) );
+@select-bg-y-focus-lg: ( @select-bg-y-normal-lg - ( @select-bg-sprite-height * 2 ) );
+@select-bg-y-error-base: ( @select-bg-y-normal-base - ( @select-bg-sprite-height * 3 ) );
+@select-bg-y-error-sm: ( @select-bg-y-normal-sm - ( @select-bg-sprite-height * 3 ) );
+@select-bg-y-error-lg: ( @select-bg-y-normal-lg - ( @select-bg-sprite-height * 3 ) );
+@select-bg-y-disabled-base: ( @select-bg-y-normal-base - ( @select-bg-sprite-height * 4 ) );
+@select-bg-y-disabled-sm: ( @select-bg-y-normal-sm - ( @select-bg-sprite-height * 4 ) );
+@select-bg-y-disabled-lg: ( @select-bg-y-normal-lg - ( @select-bg-sprite-height * 4 ) );
+@select-bg-y-success-base: ( @select-bg-y-normal-base - ( @select-bg-sprite-height * 5 ) );
+@select-bg-y-success-sm: ( @select-bg-y-normal-sm - ( @select-bg-sprite-height * 5 ) );
+@select-bg-y-success-lg: ( @select-bg-y-normal-lg - ( @select-bg-sprite-height * 5 ) );
+
 
 // Dropdowns
 // -------------------------
