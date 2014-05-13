@@ -6050,17 +6050,17 @@ td.gud .visible-print {
           box-shadow: none;
 }
 .gud .form-control:-moz-placeholder {
-  color: rgba(204, 204, 204, .6);
+  color: #e0e0e0;
 }
 .gud .form-control::-moz-placeholder {
-  color: rgba(204, 204, 204, .6);
+  color: #e0e0e0;
   opacity: 1;
 }
 .gud .form-control:-ms-input-placeholder {
-  color: rgba(204, 204, 204, .6);
+  color: #e0e0e0;
 }
 .gud .form-control::-webkit-input-placeholder {
-  color: rgba(204, 204, 204, .6);
+  color: #e0e0e0;
 }
 .gud .form-control:hover {
   color: #999;
@@ -6086,68 +6086,70 @@ td.gud .visible-print {
           box-shadow: none;
 }
 .gud .form-control:focus:-moz-placeholder {
-  color: rgba(0, 195, 237, .6);
+  color: #66dbf4;
 }
 .gud .form-control:focus::-moz-placeholder {
-  color: rgba(0, 195, 237, .6);
+  color: #66dbf4;
   opacity: 1;
 }
 .gud .form-control:focus:-ms-input-placeholder {
-  color: rgba(0, 195, 237, .6);
+  color: #66dbf4;
 }
 .gud .form-control:focus::-webkit-input-placeholder {
-  color: rgba(0, 195, 237, .6);
+  color: #66dbf4;
 }
 .gud .form-control[disabled],
 fieldset[disabled] .gud .form-control {
-  color: rgba(204, 204, 204, .6);
+  color: #e0e0e0;
   background-color: #fff;
-  border-color: rgba(204, 204, 204, .6);
+  border-color: #e0e0e0;
 }
 .gud .form-control[disabled]:-moz-placeholder,
 fieldset[disabled] .gud .form-control:-moz-placeholder {
-  color: rgba(204, 204, 204, .6);
+  color: #e0e0e0;
 }
 .gud .form-control[disabled]::-moz-placeholder,
 fieldset[disabled] .gud .form-control::-moz-placeholder {
-  color: rgba(204, 204, 204, .6);
+  color: #e0e0e0;
   opacity: 1;
 }
 .gud .form-control[disabled]:-ms-input-placeholder,
 fieldset[disabled] .gud .form-control:-ms-input-placeholder {
-  color: rgba(204, 204, 204, .6);
+  color: #e0e0e0;
 }
 .gud .form-control[disabled]::-webkit-input-placeholder,
 fieldset[disabled] .gud .form-control::-webkit-input-placeholder {
-  color: rgba(204, 204, 204, .6);
+  color: #e0e0e0;
 }
 .gud .form-control[disabled]:hover,
 fieldset[disabled] .gud .form-control:hover {
-  color: rgba(204, 204, 204, .6);
+  color: #e0e0e0;
   background-color: #fff;
-  border-color: rgba(204, 204, 204, .6);
+  border-color: #e0e0e0;
 }
 .gud .form-control[disabled]:hover:-moz-placeholder,
 fieldset[disabled] .gud .form-control:hover:-moz-placeholder {
-  color: rgba(204, 204, 204, .6);
+  color: #e0e0e0;
 }
 .gud .form-control[disabled]:hover::-moz-placeholder,
 fieldset[disabled] .gud .form-control:hover::-moz-placeholder {
-  color: rgba(204, 204, 204, .6);
+  color: #e0e0e0;
   opacity: 1;
 }
 .gud .form-control[disabled]:hover:-ms-input-placeholder,
 fieldset[disabled] .gud .form-control:hover:-ms-input-placeholder {
-  color: rgba(204, 204, 204, .6);
+  color: #e0e0e0;
 }
 .gud .form-control[disabled]:hover::-webkit-input-placeholder,
 fieldset[disabled] .gud .form-control:hover::-webkit-input-placeholder {
-  color: rgba(204, 204, 204, .6);
+  color: #e0e0e0;
 }
 select.gud .form-control {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  /* this is for IE(s) */
+  padding-right: 14px;
   color: #ccc;
   text-indent: .01px;
   text-overflow: '';
@@ -6199,15 +6201,15 @@ select.gud .form-control[multiple] {
 }
 select.gud .form-control[disabled],
 fieldset[disabled] select.gud .form-control {
-  color: rgba(204, 204, 204, .6);
-  background-color: rgba(74, 74, 74, .6);
+  color: #e0e0e0;
+  background-color: #929292;
   background-position: right -205px;
   border: none;
 }
 select.gud .form-control[disabled]:hover,
 fieldset[disabled] select.gud .form-control:hover {
-  color: rgba(204, 204, 204, .6);
-  background-color: rgba(74, 74, 74, .6);
+  color: #e0e0e0;
+  background-color: #929292;
   background-position: right -205px;
   border: none;
 }
