@@ -4,14 +4,6 @@
  * Licensed under http://www.apache.org/licenses/LICENSE-2.0
  */
 
-(function (factory) {
-  if (typeof define === "function" && define.amd) {
-    define(["jquery"], factory);
-  } else {
-    factory(window.jQuery);
-  }
-}(function (jQuery) {
-
 if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery")} 
 
 /* ========================================================================
@@ -2208,4 +2200,3 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   })
 
 }(jQuery);
-}));
