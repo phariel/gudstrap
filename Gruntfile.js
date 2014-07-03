@@ -21,14 +21,6 @@ module.exports = function (grunt) {
               ' * Licensed under <%= _.pluck(pkg.licenses, "url").join(", ") %>\n' +
               ' */\n\n',
     jqueryCheck: 'if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery")} \n\n',
-    umdBefore: '(function (factory) {\n' +
-               '  if (typeof define === "function" && define.amd) {\n' +
-               '    define(["jquery"], factory);\n' +
-               '  } else {\n' +
-               '    factory(window.jQuery);\n' +
-               '  }\n' +
-               '}(function (jQuery) {\n\n',
-    umdAfter: '}));',
 
     // Task configuration.
     clean: {
